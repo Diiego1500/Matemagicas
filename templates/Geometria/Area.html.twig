@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ parent() }}
+    <div class="container mt-5 pb-3" style="background-color: white; border-radius: 6px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">Area</h2>
+                <p>El Area es una unidad de medida utilizada para definir el espacio que ocupa una figura.</p>
+                <p>
+                    A las figuras geometricas se les puede sacar el area, debes tener en cuenta que para <strong>la
+                        mayoria de las figuras geométricas conformadas por lineas</strong>
+                    Tienen dos datos MUY importantes,
+                    <br>
+                    los cuales son Base (se representa con la letra <strong>B</strong>) <strong>Base = B</strong>
+                    <br>
+                    y Altura (Se representa con la letra <strong>H</strong>) <strong>Altura = h</strong>
+                </p>
+
+                <div class="jumbotron" style="border: 1px #34ce57 dashed">
+                    <h4 style="color:#34ce57 ">Tips:</h4>
+                    <ul>
+                        <li class="mb-3"><i>La base y la altura son <strong>MUY</strong> importantes para calcular el
+                                area de figuras geométricas con lineas</i></li>
+                        <li class="mb-3"><i>Aprende a sacar el area de las figuras principales y luego con práctica
+                                podrás sacar el area de cualquier figura existente</i></li>
+                        <li class="mb-3"><i>Puedes utilizar la misma formula para calcular el area de un rectangulo y un
+                                cuadrado.</i></li>
+                        <li class="mb-3"><i>El resultado del area siempre se da al cudrado con respecto a la unidad de
+                                medida del problema</i></li>
+                    </ul>
+                    <div class="text-center">
+                        <img src="{{ asset('Img/Themes/Geometry/AreaFiguras.png') }}" width="100%"/>
+                    </div>
+                </div>
+                <h4>¿confundido? <br>Veamos algunos ejemplos:</h4>
+
+                <div class="jumbotron" style="border: 1px #34ce57 dashed">
+                    <h4> Calcula el area de la cancha de futbol: </h4>
+                    <div class="row">
+                        <div class="col-md-4"><img src="{{ asset('Img/Themes/Geometry/AreaCancha.png') }}"
+                                                   alt="AreaCancha" width="100%"/></div>
+                        <div class="col-md-8">
+                            <p>Para resolver este problema, debemos definir la base (B) y la Altura (h), teniendo que:
+                                <strong>Base = 20 y Altura = 60</strong>.</p>
+                            <p>Entonces teniendo en cuenta la formula para el Area del rectángulo (Definida en la
+                                sección "<i style="color: #34ce57">Tips</i>") tenemos que
+                                Area = Base x Altura. Por lo tanto:
+                            </p>
+                            <p><strong>Area = 20 x 60</strong></p>
+                            <p><strong>Area = 1.200</strong></p>
+                            <p><i>El Area que ocupa la cancha de futbol en un terreno de tierra, o un espacio
+                                    determinado es de 1.200 M&#178</i></p>
+                            <br>
+                            <p>
+                                <small>Recuerda: Siempre debes poner el resultado al cuadrado con respecto a la unidad
+                                    de medida del problema
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-primary mt-2">
+                        ¿Cómo se saca el area de un triangulo?
+                        Multiplicas la base del triangulo por su altura y el resultado lo divides por 2 ¡Y listo!
+                    </div>
+                </div>
+
+                <h4>¿Lo notaste cierto? Y cómo se calcula el area del circulo</h4>
+                <div class="jumbotron">
+                    <div class="row">
+                        <div class="col-md-4"><img src="{{ asset('Img/Themes/Geometry/Radio.png') }}" alt="Radio_circle"
+                                                   width="100%">
+                        </div>
+                        <div class="col-md-8">
+                            <p>
+                                Ya vimos lo importante que es el Número PI y aquí, en matemágicas queremos que entiendas
+                                todo, π
+                                es un valor constante que representa un pedacito del circulo. Si quieremos calcular el
+                                area de
+                                un circulo, necesitamos el valor de dicho pedacito, así que, para calcular el area
+                                también
+                                tenemos que hacer uso de PI
+                            </p>
+                            <p>Para calcular el area del circulo necesitamos el Radio y el Valor PI. Pero no te
+                                confundas, vamos
+                                a utilizar estos valores de forma diferente a como calculamos el perimetro</p>
+                            <p>Para calcular el AREA de un circulo, utilizamos la siguiente formula:</p>
+                            <hr>
+                            <strong>A= PI X R&#178</strong>
+                            <p>Si nuestro Radio es de 5 Cm, eso significa que:</p>
+                            <p><strong>A = PI X 5&#178</strong></p>
+                            <p><strong>A = PI X 25</strong></p>
+                            <p><strong>A = 3.16 X 25</strong></p>
+                            <p><strong>A = 3.16 X 25</strong></p>
+                            <p><strong>A = 79 cm&#178</strong></p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-warning mt-3">
+                    <a href="{{ path('Angulos') }}">Siguiente lección: Angulos</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

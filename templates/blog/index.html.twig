@@ -1,0 +1,101 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Matemágicas - Blog{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <style type="text/css">
+        .title {
+            font-family: 'Acme', sans-serif;
+            font-size: 20px;
+        }
+
+        .section, .date {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .article:hover {
+            box-shadow: 2px 0px 21px -1px rgb(5, 142, 205);
+            -webkit-border-radius: 5px;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+    {{ parent() }}
+    <div class="container">
+    {#{{ dump(Articles) }}#}
+    <h3><strong>Posts</strong></h3>
+
+    <div class="row">
+        <div class="col-md-8">
+            <a href="{{ path('blog',{'Categoryname':'All'}) }}" class="mr-2"
+               style="color: #0a8ecd"><strong>#Todos</strong></a>
+            {% for i in 0..(Categories|length-1) %}
+                {% set Name = Categories[i].Name %}
+                <a href="{{ path('blog',{'Categoryname':Name}) }}" class="mr-2"
+                   style="color: #0a8ecd"><strong>#{{ Name }}</strong></a>
+            {% endfor %}
+        </div>
+        <div class="col-md-4">
+            <div class="input-group">
+                <input id="Parametro" type="text" class="form-control" placeholder="Buscar">
+                <div class="input-group-append">
+                    <button id="searchArticles" class="btn btn-secondary" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {#<img src="{{ asset('Img/src/lupa.png') }}" alt="lupa">    <hr>#}
+
+
+    <div class="count mb-3">
+        <strong>Entradas: {{ pagination.getTotalItemCount }} </strong>
+    </div>
+    {% if  pagination.getTotalItemCount == 0 %}
+       <h3> No se encontraron resultados</h3>
+    {% else %}
+
+        {% for article in pagination %}
+            {% set v1 = article.likes|split(',') %}
+            <div class="mb-3 p-3 pointer article" style="background: white; border-radius: 6px;"
+                 onclick="location.href='{{ path('Article',{'Url':article.url}) }}'">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p style="color: #0a8ecd" class="title">{{ article.title }}</p>
+                            <hr>
+                            <p>
+                                <div class=" d-none d-md-block section">
+                            <p>{{ article.Section | raw }}</p>
+                        </div>
+                        <div class="date mt-3" style="color: gray">
+                            <img src="{{ asset('Img/src/clock.svg') }}" alt="clock">
+                            {{ article.createdAt|localizeddate('long', 'none', 'es_CO') }} |
+                            Categoría: {{ article.categoria.name }} | Me gusta: {{ v1 | length }}
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        {% endfor %}
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+        </div>
+    {% endif %}
+{% endblock %}
+{% block Js %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+    <script src="{{ asset('Scripts/Templates/BlogIndex.js') }}"></script>
+{% endblock %}

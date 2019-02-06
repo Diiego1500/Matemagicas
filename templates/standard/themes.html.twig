@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ parent() }}
+    <div class="container">
+        <div class="row">
+            {% if section == 1 %}
+            {% include 'Aritmetica/PreThemes.html.twig' %}
+            {% elseif section == 2 %}
+                {% include 'Geometria/Prethemes.html.twig' %}
+            {% endif %}
+            {% for theme in themes %}
+                {% if theme.id in AvailablesThemes %}
+                    {% set loked = 'unloked' %}
+                    {% set link = path('ChooseLevel', {'idTheme': theme.id}) %}
+                {% else %}
+                    {% set loked = 'loked' %}
+                    {% set link = "#" %}
+                {% endif %}
+                <div class="col-md-6 text-center mb-5  theme {{ loked }}" onclick="location.href='{{ link }}'"
+                     style="color: #3D255E">
+                    <strong style="color: #3D255E">{{ theme.name }}</strong>
+                    <br/>
+                    <img src="{{ asset('Img/Svg/')~theme.name~'.svg' }}" alt="{{ theme.name }} " style="color: #3D255E">
+                    <p class="p-3  ThemeInfo">
+                        {{ theme.description }}
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,158 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ parent() }}
+    <div class="container mt-5 pb-3" style="background-color: white; border-radius: 6px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">Figuras geométricas</h2><br>
+                <p>
+                    En este articulo vamos a definir que es una figura geométrica y su clásificación. <strong>No te
+                        preocupes</strong>, es más fácil de lo que crees ^^
+                </p>
+                <p>
+                    <strong> Una figura geométrica es un conjunto de tres o más lineas las cuales están unidas unas con
+                        otras y que están 'CERRADAS'</strong>
+                </p>
+                <article>
+                    <h4 class="text-center mb-3 mb-3">¿Cómo así?</h4>
+                    <p>Si una pelota se puede escapar de un conjunto de lineas, entonces <strong>NO ES UNA FIGURA
+                            GEOMÉTRICA</strong></p>
+                    <div class="container">
+                        <div class="row mt-5" style="border-radius: 6px; background-color:#3D255E">
+                            <div class="col-2" style="border-radius: 6px 0 0 6px; background-color: #3D255E">
+                                <img src="{{ asset('Img/Themes/Geometry/figuras-geométricas-1.png') }}" width="100%"
+                                     height="100%">
+                            </div>
+                            <div class="col-10"
+                                 style="background-color: white; border-radius: 0 6px 6px 0; border: 1px solid #3D255E ">
+                                <div class="row align-items-center h-100">
+                                    <div class="col-12 mx-auto">
+                                        <small> Esto No es una figura geométrica. ¿Lo notas? La pelota se ha escapado de
+                                            las lineas
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row mt-5" style="border-radius: 6px; background-color:#3D255E ">
+                            <div class="col-2"
+                                 style="border-radius: 6px 0 0 6px; background-color: #3D255E">
+                                <img src="{{ asset('Img/Themes/Geometry/figuras-geométricas-2.png') }}" width="100%"
+                                     height="100%">
+                            </div>
+                            <div class="col-10"
+                                 style="background-color: white; border-radius: 0 6px 6px 0; border: 1px solid #3D255E">
+                                <div class="row align-items-center h-100">
+                                    <div class="col-12 mx-auto">
+                                        <small> Esto Si es una figura geométrica. Como puedes observar, la pelota no
+                                            puede escapar de las lineas
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <br>
+                <p class="text-center">
+                    Cada una de las lineas recibe el nombre de "Lado" así que ya conocemos nuestra primera figura
+                    geométrica, se llama <strong>Triangulo</strong> y, como su nombre lo dice, tiene 3 lados:
+                    <br><br>
+                    <img src="{{ asset('Img/Themes/Geometry/triangulo.png') }}" alt="Triangulo" title="Triangulo">
+                </p>
+                <p class="text-center">
+                    ¡Alguna vez has visto triangulos en tu vida cotidiana? seguramente sí, a ver si reconoces los
+                    siguientes
+                    <br>
+                    <img src="{{ asset('Img/Themes/Geometry/senal.png') }}" alt="Señal" width="100px" height="100px">
+                    <img src="{{ asset('Img/Themes/Geometry/Triangulo_cartabon.png') }}" alt="Regla" width="100px"
+                         height="100px">
+                </p>
+                <hr>
+            </div>
+
+
+            <div class="col-md-12">
+                <h2 class="text-center">Figruras geométricas de 4 lados</h2>
+                <p>
+                    Las figuras geometricas que tienen 4 lados reciben el nombre general "Cuadrilatero", dentro de esta
+                    familia podemos encontrar los rectánculos, los cuadrados, los rombos, entre otros.
+                </p>
+
+                <div class="row justify-content-center">
+                    <div class="col-4 text-center">
+                        <img src="{{ asset('Img/Themes/Geometry/rectangulo.png') }}" alt="Rectangulo">
+                    </div>
+                    <div class="col-4 text-center">
+                        <img src="{{ asset('Img/Themes/Geometry/cuadrado.png') }}" alt="Cuadrado">
+                    </div>
+                    <div class="col-4 text-center">
+                        <img src="{{ asset('Img/Themes/Geometry/rombo.png') }}" alt="Rombo">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 text-center"> Rectangulo</div>
+                    <div class="col-4 text-center">Cuadrado</div>
+                    <div class="col-4 text-center">Rombo</div>
+                </div>
+            </div>
+            <hr>
+            <div class="col-md-12 mt-5">
+                <h2 class="text-center">Figuras geométricas de más de 4 lados</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <p class="text-center">
+                            <img src="{{ asset('Img/Themes/Geometry/base_pentagono.png') }}" alt="Pentagono"><br>
+                            <strong>pentágono</strong> (de 5 lados)
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <p class="text-center">
+                            <img src="{{ asset('Img/Themes/Geometry/base_hexagono.png') }}" alt="Pentagono"><br>
+                            Y después tendríamos los <strong>Hexágonos</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 mt-5">
+                <h2>¿Nos falto alguno? ¡Claro, el circulo!</h2>
+
+                <p class="text-center">
+                    Resulta que esta figura es demasiado especial, se define como una figura geometrica curva, puesto
+                    que NO contiene lineas rectas como las anteriores figuras, tampoco tiene lados
+                    y para calcular su area hacemos uso de un numero MUY, MUY, MUY ESPECIAL Llamado PI, sin embargo, por
+                    el momento solo centremonos en el circulo.
+                    <br>
+                    <img src="{{ asset('Img/Themes/Geometry/circulo-grande-naranja.png') }}" alt="Circulo">
+                </p>
+
+                <div class="row">
+                    <div class="col-12">He aquí unos ejemplos de donde puedes encontrar los circulos en tu entorno:
+                    </div>
+                    <div class="col-6 text-center"><img src="{{ asset('Img/Themes/Geometry/Pelota_tenis.png') }}"
+                                                        alt="Pelota tenis"></div>
+                    <div class="col-6 text-center"><img src="{{ asset('Img/Themes/Geometry/rueda_coche.png') }}" alt="">
+                    </div>
+                </div>
+                <div class="jumbotron">
+                    <div class="row mb-5">
+                        <div class="col-md-12" style="min-height: 450px">
+                            <h4>Te recomendamos este video para que te ilustres un poco más</h4>
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/P_NZanpWT5Q"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-warning">
+                    <a href="{{ path('Pi') }}">Siguiente lección: ¿Qué es PI?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

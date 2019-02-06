@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ parent() }}
+    {% set Easy =   path('Exercise',{'idTheme':idTheme, 'level':1}) %}
+    {% set  Medium = path('Exercise',{'idTheme':idTheme, 'level':2}) %}
+    {% set Hard = path('Exercise',{'idTheme':idTheme, 'level':3}) %}
+
+    {% if idTheme in app.user.AvailableThemes %}
+        <div class="container">
+            <h1 class="text-center" style="color: #3D255E">{{ name }}</h1>
+            <h6 class="text-center mb-2" style="color: #3D255E">Escoge un nivel</h6>
+            <div><img class="mb-5" src="{{ asset('Img/src/UnlockLevel.png') }}" alt="" width="100%"></div>
+            <div class="row text-center">
+                <div class="col-4 unloked level" onclick="location.href='{{ Easy }}'">
+                    <img src="{{ asset('Img/src/Weak.svg') }}" alt="Weak" width="100%"><br>
+                    <strong style="color: #3D255E">Principiante</strong>
+                </div>
+                <div class="col-4 unloked level" onclick="location.href='{{ Medium }}'">
+                    <img src="{{ asset('Img/src/Medium.svg') }}" alt="Weak" width="100%"><br>
+                    <strong style="color: #3D255E">Intermedio</strong>
+                </div>
+                <div class="col-4 unloked level" onclick="location.href='{{ Hard }}'">
+                    <img src="{{ asset('Img/src/Strong.svg') }}" alt="Weak" width="100%"><br>
+                    <strong style="color: #3D255E">Avanzado</strong>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="container">
+            <div class="jumbotron text-center">
+                <img class="w-100" src="{{ asset('Img/Src/Error2.png') }}" alt="Error">
+            </div>
+        </div>
+    {% endif %}
+
+
+
+{% endblock %}

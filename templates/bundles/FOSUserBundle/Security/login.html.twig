@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+{% block stylesheetsOthers %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('Css/index.css') }}">
+{% endblock %}
+{% block body %}
+    {{ parent() }}
+    <div class="body-wrap boxed-container " style="background-color: rgba(255, 255, 255, .4);">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+                            <a href="#">
+                                <img src="{{ asset('Img/Pet.svg') }}" alt="Matemágicas" width="48" height="32"/>
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div class="container">
+                    <div class="hero-inner">
+                        <div class="hero-copy">
+                            <h1 class="hero-title h2-mobile mt-0 is-revealing text-center" style="font-family: 'rounded_eleganceregular';">Bienvenido</h1>
+                            <p class="hero-paragraph is-revealing text-center">En matemágicas entendemos que esta
+                                ciencia puede ser muy intimidante, ¡Ayudamos a adentrarte en este maravilloso
+                                universo!</p>
+                            {{ include('@FOSUser/Security/login_content.html.twig') }}
+                            {#<p class="hero-cta is-revealing"><a class="button button-primary button-shadow" href="#">Pricing and plans</a></p>#}
+                        </div>
+                        <div class="hero-illustration is-revealing text-center">
+                            <img src="{{ asset('Img/Pet.svg') }}" alt="Matemágicas" /><br>
+                            <h1 style="color:#E85100; font-family: 'rounded_eleganceregular';">Matemágicas</h1>
+                            <h5 style="color:#E85100; font-family: 'rounded_eleganceregular';">Comparte lo que sabes</h5>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="features section text-center">
+                {#<div class="section-square"></div>#}
+                <div class="container">
+                    <div class="features-inner section-inner">
+                        <div class="features-wrap">
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon" style="width: 100px; height: 100px; margin: 0 auto">
+                                        <img src="{{ asset('Img/learn-icon.png') }}" alt="learn">
+                                    </div>
+                                    <h4 class="feature-title h3-mobile">Aprende</h4>
+                                    <p class="text-sm">Matemágicas te da todas las herramientas para resolver los
+                                        ejercicios.</p>
+                                </div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon text-center"
+                                         style="width: 130px; height: 100px; margin: 0 auto">
+                                        <img src="{{ asset('Img/mat.png') }}" alt="math" width="100%">
+                                    </div>
+                                    <h4 class="feature-title h3-mobile">Estudia</h4>
+                                    <p class="text-sm">Invierte tu tiempo libre en el crecimiento intelectual, refuerza
+                                        las clases tomadas en tu institución.</p>
+                                </div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon" style="width: 100px; height: 100px; margin: 0 auto">
+                                        <img src="{{ asset('Img/p10-512.png') }}" alt="practice">
+                                    </div>
+                                    <h4 class="feature-title h3-mobile">Practica</h4>
+                                    <p class="text-sm">En Matemágicas, puedes practicar lo que aprendes con ejercicios
+                                        los cuales serán evaluados por el sistema.</p>
+                                </div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+                                        <img src="{{ asset('Img/NoMoney.svg') }}" alt="Free"
+                                             style="width: 100px; height: 100px; margin: 0 auto">
+                                    </div>
+                                    <h4 class="feature-title h3-mobile">Es gratis</h4>
+                                    <p class="text-sm">Nuestra misión es regalar conocimiento al mayor numero de
+                                        personas posible. <strong>Comparte nuestro sitio y ayudanos a crecer</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+{% endblock %}
+{% block Js %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+    <script src="{{ asset('Scripts/Templates/login.js') }}"></script>
+{% endblock %}

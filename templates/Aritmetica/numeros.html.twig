@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ parent() }}
+    <div class="container mt-5 pb-3" style="background-color: white; border-radius: 6px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">Numeros</h2>
+                <p>
+                    Los números son a menudo clasificados de acuerdo a su uso. Por ejemplo, los números naturales se
+                    utilizan para el conteo,
+                    los números negativos ase utilizan para describir las deudas o temperaturas bajo cero, los números
+                    racionales se utilizan
+                    para describir las fracciones como la mitad de una naranja y los números irracionales se utilizan
+                    para ciertas distancias,
+                    como la diagonal de un cuadrado de lado 1 pie, que no se puede expresar con una fracción
+                </p>
+                <hr>
+                <div class="jumbotron" style="border: 1px #34ce57 dashed">
+                    <p>
+                        <strong>Números Naturales</strong>
+                        El conjunto de los números naturales se denota con la letra ℕ y se define como el conjunto de
+                        los enteros positivos.
+                    <div class="text-center">
+                        ℕ={1,2,3,...}.
+                    </div>
+                    </p>
+                    <p>
+                        <strong> Números Racionales </strong>
+                        Los números racionales son el conjunto de números que pueden representarse como una fracción con
+                        dos números enteros. Es decir, los números racionales son aquellos números que pueden expresarse
+                        como mn, donde m y n son enteros y n≠0.
+                    <div class="text-center">
+                        13,-54 ,30=301,0=0 5,0.25=14
+                    </div>
+                    </p>
+
+                    <p>
+                        <strong>Números Enteros</strong>
+                        El conjunto de los números {...,-3 ,-2 ,-1 ,0,1,2,3,...}. se llama el conjunto de los enteros y se denota con la letra ℤ. Dentro de este conjunto hay subconjuntos diferentes. El conjunto {1,2,3,...} se llama el conjunto de los enteros positivos.
+                        <br>El conjunto {...,-3 , -2 ,-1 } se llama el conjunto de los enteros negativos. Tenga en cuenta que el número 0, a pesar de que es un número entero, no es ni positivo ni negativo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="623a447c-a2d7-446b-8c36-88e7cc732324" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="matemagicas@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="matemagicas@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="matemagicas@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="matemagicas: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-726915951">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="52" />
+          <entry key="project.open.time.0" value="10" />
+          <entry key="project.open.time.1" value="12" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.21" value="2" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.24" value="3" />
+          <entry key="project.open.time.25" value="5" />
+          <entry key="project.open.time.26" value="2" />
+          <entry key="project.open.time.27" value="3" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.47" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.51" value="1" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="55" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="PNG" value="32" />
+          <entry key="css" value="20" />
+          <entry key="env" value="2" />
+          <entry key="gitignore" value="1" />
+          <entry key="globals_tips" value="2" />
+          <entry key="html" value="2" />
+          <entry key="jpg" value="4" />
+          <entry key="js" value="17" />
+          <entry key="php" value="118" />
+          <entry key="png" value="271" />
+          <entry key="practical_exercise" value="21" />
+          <entry key="sql" value="12" />
+          <entry key="svg" value="43" />
+          <entry key="theme" value="6" />
+          <entry key="twig" value="174" />
+          <entry key="user" value="5" />
+          <entry key="yaml" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="20" />
+          <entry key="Database Element" value="34" />
+          <entry key="HTML" value="2" />
+          <entry key="Image" value="307" />
+          <entry key="JavaScript" value="17" />
+          <entry key="PHP" value="118" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="SQL" value="11" />
+          <entry key="SVG" value="43" />
+          <entry key="Scratch" value="1" />
+          <entry key="Twig" value="174" />
+          <entry key="YAML" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cell" value="2124" />
+          <entry key="css" value="132" />
+          <entry key="env" value="58" />
+          <entry key="html" value="5" />
+          <entry key="js" value="2446" />
+          <entry key="php" value="7239" />
+          <entry key="svg" value="22" />
+          <entry key="twig" value="25657" />
+          <entry key="txt" value="11" />
+          <entry key="yaml" value="36" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="132" />
+          <entry key="HTML" value="5" />
+          <entry key="JavaScript" value="2446" />
+          <entry key="PHP" value="7239" />
+          <entry key="PLAIN_TEXT" value="69" />
+          <entry key="SVG" value="22" />
+          <entry key="Scratch" value="2124" />
+          <entry key="Twig" value="25657" />
+          <entry key="YAML" value="36" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-920">
+              <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ver</find>
+      <find>mymodal</find>
+      <find>modal</find>
+      <find>myLargeModalLabel</find>
+      <find>showBoard</find>
+      <find>res</find>
+      <find>respuesta</find>
+      <find>RESPUESTA</find>
+      <find>clearInterval</find>
+      <find>See_Answers</find>
+      <find>ver re</find>
+      <find>All</find>
+      <find>searchCategoryByName</find>
+      <find>blo</find>
+      <find>width: 84%</find>
+      <find>dec</find>
+      <find>contain</find>
+      <find>CONTAIN</find>
+      <find>in_</find>
+      <find>text</find>
+      <find>Text</find>
+      <find>b</find>
+      <find>fondoo</find>
+      <find>fondo</find>
+      <find>Post</find>
+      <find>modal-lg</find>
+      <find>post</find>
+      <find>categorie</find>
+      <find>categories</find>
+      <find>title</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>white</replace>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\xampp\htdocs\Matemagicas\src\Controller</dir>
+      <dir>C:\xampp\htdocs\Matemagicas</dir>
+      <dir>C:\xampp\htdocs\Matemagicas\assets</dir>
+      <dir>C:\xampp\htdocs\matemagicas\templates</dir>
+      <dir>C:\xampp\htdocs\matemagicas</dir>
+      <dir>C:\xampp\htdocs\matemagicas\public</dir>
+      <dir>C:\xampp\htdocs\matemagicas\public\Css</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/public/Img/logo.svg" />
+        <option value="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Security/login.html.twig" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/config/packages/security.yaml" />
+        <option value="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Security/login_content.html.twig" />
+        <option value="$PROJECT_DIR$/templates/Geometria/pi.html.twig" />
+        <option value="$PROJECT_DIR$/templates/Geometria/Area.html.twig" />
+        <option value="$PROJECT_DIR$/templates/standard/themes.html.twig" />
+        <option value="$PROJECT_DIR$/templates/Aritmetica/PreThemes.html.twig" />
+        <option value="$PROJECT_DIR$/templates/Aritmetica/numeros.html.twig" />
+        <option value="$PROJECT_DIR$/templates/standard/Success.html.twig" />
+        <option value="$PROJECT_DIR$/templates/standard/Error.html.twig" />
+        <option value="$PROJECT_DIR$/templates/standard/GlobalTips.html.twig" />
+        <option value="$PROJECT_DIR$/templates/Geometria/angulos.html.twig" />
+        <option value="$PROJECT_DIR$/templates/bundles/TwigBundle/error404.html.twig" />
+        <option value="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" />
+        <option value="$PROJECT_DIR$/templates/Geometria/Perimetro.html.twig" />
+        <option value="$PROJECT_DIR$/templates/Geometria/Prethemes.html.twig" />
+        <option value="$PROJECT_DIR$/templates/Geometria/Area_Perimetro.html.twig" />
+        <option value="$PROJECT_DIR$/templates/Geometria/figurageometrica.html.twig" />
+        <option value="$PROJECT_DIR$/public/Css/main.css" />
+        <option value="$PROJECT_DIR$/src/Repository/PracticalExerciseRepository.php" />
+        <option value="$PROJECT_DIR$/src/Entity/PracticalExercise.php" />
+        <option value="$PROJECT_DIR$/public/Scripts/Templates/practicalExercises.js" />
+        <option value="$PROJECT_DIR$/public/Scripts/Templates/practicalExercises2.js" />
+        <option value="$PROJECT_DIR$/src/Controller/StandardController.php" />
+        <option value="$PROJECT_DIR$/templates/standard/ChooseLevel.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/BlogCategory.php" />
+        <option value="$PROJECT_DIR$/public/Css/fonts/stylesheet.css" />
+        <option value="$PROJECT_DIR$/config/services.yaml" />
+        <option value="$PROJECT_DIR$/templates/bundles/KNPPaginatorBundle/Paginador.html.twig" />
+        <option value="$PROJECT_DIR$/src/Repository/BlogCategoryRepository.php" />
+        <option value="$PROJECT_DIR$/templates/index/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/BlogArticle.php" />
+        <option value="$PROJECT_DIR$/public/Scripts/Templates/Blog.js" />
+        <option value="$PROJECT_DIR$/templates/standard/Base2.html.twig" />
+        <option value="$PROJECT_DIR$/templates/Base2.html.twig" />
+        <option value="$PROJECT_DIR$/public/Css/index.css" />
+        <option value="$PROJECT_DIR$/src/Repository/BlogArticleRepository.php" />
+        <option value="$PROJECT_DIR$/src/Controller/PrimaryController.php" />
+        <option value="$PROJECT_DIR$/templates/standard/matemagicas.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/templates/standard/acercade.html.twig" />
+        <option value="$PROJECT_DIR$/templates/blog/article.html.twig" />
+        <option value="$PROJECT_DIR$/templates/blog/email.html.twig" />
+        <option value="$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/BlogController.php" />
+        <option value="$PROJECT_DIR$/templates/blog/index.html.twig" />
+        <option value="$PROJECT_DIR$/public/Scripts/Templates/BlogIndex.js" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/jsonp-callback-validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/vendor/symfony/profiler-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/jsrouting-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/class-loader" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-pack" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/orm-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/twig/extensions" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="467" />
+    <option name="width" value="1460" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SearchEverywhereHistoryKey" value="blog/index.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/blog/index.html.twig&#10;index/index.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/index/index.html.twig&#10;standard/ChooseLevel.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/standard/ChooseLevel.html.twig&#10;templates\standard\Success.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/Success.html.twig&#10;kernel&#9;null&#9;null&#10;kernel.php&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/src/Kernel.php&#10;standard/boardBool.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/boardBool.html.twig&#10;standard/board.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/board.html.twig&#10;Scripts/Templates/practicalExercises.js&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Scripts/Templates/practicalExercises.js&#10;standard/Success.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/Success.html.twig&#10;standard/PracticalExercises.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/PracticalExercises.html.twig" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\matemagicas\templates" />
+      <recent name="C:\xampp\htdocs\matemagicas\public\Img\Answers\primary\frac" />
+      <recent name="C:\xampp\htdocs\matemagicas\templates\bundles\TwigBundle\Exception" />
+      <recent name="C:\xampp\htdocs\matemagicas\public\bk" />
+      <recent name="C:\xampp\htdocs\Matemagicas\public\Img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\matemagicas\public\bk" />
+      <recent name="C:\xampp\htdocs\matemagicas\public\Css\fonts" />
+      <recent name="C:\xampp\htdocs\matemagicas\public\Img\Answers\primary\sum" />
+      <recent name="C:\xampp\htdocs\matemagicas\public\Img" />
+      <recent name="C:\xampp\htdocs\matemagicas\public\Scripts" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="623a447c-a2d7-446b-8c36-88e7cc732324" name="Default" comment="" />
+      <created>1520015793128</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1520015793128</updated>
+      <workItem from="1520015795900" duration="1330000" />
+      <workItem from="1520022446738" duration="65000" />
+      <workItem from="1520293934862" duration="1814000" />
+      <workItem from="1520368334588" duration="18000" />
+      <workItem from="1522266016447" duration="2410000" />
+      <workItem from="1525633909922" duration="5525000" />
+      <workItem from="1525641654613" duration="1336000" />
+      <workItem from="1525730515233" duration="11185000" />
+      <workItem from="1525893382405" duration="4370000" />
+      <workItem from="1526397496672" duration="40000" />
+      <workItem from="1527124172500" duration="887000" />
+      <workItem from="1527278948940" duration="1803000" />
+      <workItem from="1527542424771" duration="681000" />
+      <workItem from="1528329691284" duration="2834000" />
+      <workItem from="1530658823912" duration="1464000" />
+      <workItem from="1530660807081" duration="6049000" />
+      <workItem from="1530723510553" duration="13966000" />
+      <workItem from="1530740702089" duration="91000" />
+      <workItem from="1530819044127" duration="6217000" />
+      <workItem from="1530891758115" duration="3012000" />
+      <workItem from="1530895139832" duration="1465000" />
+      <workItem from="1530900052803" duration="5351000" />
+      <workItem from="1530906737828" duration="568000" />
+      <workItem from="1531166887731" duration="6831000" />
+      <workItem from="1531266776249" duration="445000" />
+      <workItem from="1531745126888" duration="2223000" />
+      <workItem from="1531786342382" duration="3945000" />
+      <workItem from="1532460336082" duration="7865000" />
+      <workItem from="1534278149806" duration="465000" />
+      <workItem from="1534280059542" duration="5000" />
+      <workItem from="1534284486436" duration="757000" />
+      <workItem from="1534285321866" duration="2382000" />
+      <workItem from="1534288389705" duration="701000" />
+      <workItem from="1534289391289" duration="961000" />
+      <workItem from="1534298273881" duration="136000" />
+      <workItem from="1536769266985" duration="131000" />
+      <workItem from="1536772625420" duration="632000" />
+      <workItem from="1537734195986" duration="3051000" />
+      <workItem from="1537737681536" duration="3921000" />
+      <workItem from="1538515481378" duration="2958000" />
+      <workItem from="1538676110967" duration="3551000" />
+      <workItem from="1538773604381" duration="909000" />
+      <workItem from="1538780821704" duration="4145000" />
+      <workItem from="1538841636402" duration="2472000" />
+      <workItem from="1539112742705" duration="5622000" />
+      <workItem from="1539215815505" duration="7394000" />
+      <workItem from="1539235449943" duration="387000" />
+      <workItem from="1540761608424" duration="3976000" />
+      <workItem from="1540956025870" duration="159000" />
+      <workItem from="1542154217624" duration="43000" />
+      <workItem from="1542218821773" duration="1713000" />
+      <workItem from="1542305685240" duration="3001000" />
+      <workItem from="1542462651896" duration="37000" />
+      <workItem from="1542652375539" duration="2284000" />
+      <workItem from="1542735592596" duration="5072000" />
+      <workItem from="1542824231035" duration="2884000" />
+      <workItem from="1543242404786" duration="14000" />
+      <workItem from="1543853262091" duration="4400000" />
+      <workItem from="1544465340367" duration="2991000" />
+      <workItem from="1545658331215" duration="13970000" />
+      <workItem from="1545834962681" duration="23341000" />
+      <workItem from="1545916817008" duration="16004000" />
+      <workItem from="1546003885864" duration="7626000" />
+      <workItem from="1546037336602" duration="1167000" />
+      <workItem from="1546038533904" duration="57000" />
+      <workItem from="1546266027111" duration="23363000" />
+      <workItem from="1546443515347" duration="8719000" />
+      <workItem from="1546523044673" duration="610000" />
+      <workItem from="1546524816778" duration="14735000" />
+      <workItem from="1546620785923" duration="15000" />
+      <workItem from="1546696485353" duration="1322000" />
+      <workItem from="1546699002898" duration="1900000" />
+      <workItem from="1546701243723" duration="5676000" />
+      <workItem from="1546953428835" duration="691000" />
+      <workItem from="1547040907435" duration="4043000" />
+      <workItem from="1547056315244" duration="12330000" />
+      <workItem from="1547127161867" duration="4544000" />
+      <workItem from="1547645495259" duration="2170000" />
+      <workItem from="1547738440760" duration="3784000" />
+      <workItem from="1547840013159" duration="5228000" />
+      <workItem from="1547905037281" duration="2181000" />
+      <workItem from="1548077777940" duration="22305000" />
+      <workItem from="1548163052207" duration="9491000" />
+      <workItem from="1548253217625" duration="20047000" />
+      <workItem from="1548336644845" duration="7668000" />
+      <workItem from="1548355588028" duration="13248000" />
+      <workItem from="1548422991794" duration="13755000" />
+      <workItem from="1548509356614" duration="6345000" />
+      <workItem from="1548715429207" duration="16000" />
+      <workItem from="1548771026325" duration="27567000" />
+      <workItem from="1548855395024" duration="27418000" />
+      <workItem from="1548889174884" duration="26000" />
+      <workItem from="1548942666902" duration="1689000" />
+      <workItem from="1549056385550" duration="1232000" />
+      <workItem from="1549114289676" duration="5400000" />
+      <workItem from="1549121794526" duration="675000" />
+      <workItem from="1549122612778" duration="2277000" />
+      <workItem from="1549126260968" duration="234000" />
+      <workItem from="1549379622109" duration="123000" />
+      <workItem from="1549382535028" duration="683000" />
+      <workItem from="1549392503993" duration="3539000" />
+      <workItem from="1549401795897" duration="3780000" />
+      <workItem from="1549483273134" duration="260000" />
+      <workItem from="1549483555856" duration="2929000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="485297000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="467" y="0" width="1460" height="1047" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32858709" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5010799" side_tool="true" weight="0.32968238" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="8" weight="0.3253012" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49892008" visible="true" weight="0.524644" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.329718" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" sideWeight="0.49964002" weight="0.32968238" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.026428571" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/Scripts/Templates/practicalExercises.js</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/Img/Answers/Geometry/Area/area1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/area3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/area5.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/area6.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/area4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Img/Answers/Geometry/Area/Template_Mesa de trabajo 1 copia 19.png" />
+    <entry file="file://$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/area8.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/area9.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/area10.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/area11.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="das://07894bf9-ab09-4c46-a2d9-3502ca9e91bc/schema/matemagicas/table/practical_exercise" />
+    <entry file="file://$PROJECT_DIR$/public/Img/Answers/Geometry/Area/area6.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Img/Answers/Geometry/Area/area11.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Img/Answers/Geometry/Area/area3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="das://07894bf9-ab09-4c46-a2d9-3502ca9e91bc/schema/matemagicas/table/theme">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/GlobalsTips.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-762" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/UserData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1428" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="42" column="45" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/FirstStepsController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/bundles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/UserDataRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/UserRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/ThemeRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Css/fonts/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="45" column="87" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bundles/KNPPaginatorBundle/Paginador.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/twitter_bootstrap_v4_pagination.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/bk/matemagicas.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="771" column="2" selection-start-line="771" selection-start-column="2" selection-end-line="771" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/themes.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Img/src/Like.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Css/main.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Base2.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="30" selection-start-line="30" selection-end-line="58" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/BlogCategoryRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/PrimaryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/matemagicas.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/acercade.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/StandardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="214" column="38" selection-start-line="214" selection-start-column="38" selection-end-line="214" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/article.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/email.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="118" selection-start-line="2" selection-start-column="118" selection-end-line="2" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="99" selection-start-line="99" selection-end-line="143" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Scripts/Templates/Blog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="187" selection-start-line="187" selection-end-line="188" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/BlogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="57" column="79" selection-start-line="57" selection-start-column="79" selection-end-line="57" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/BlogArticle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="20" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/BlogArticleRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Scripts/Templates/BlogIndex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/BlogCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-920">
+          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

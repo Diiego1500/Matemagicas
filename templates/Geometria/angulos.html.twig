@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ parent() }}
+    <div class="container mt-5 pb-3" style="background-color: white; border-radius: 6px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">Angulos</h2>
+                <p>Es la porción del plano que se genera entre dos semirectas</p>
+                <p>
+                    El ángulo es la porción del plano comprendida entre dos semirrectas con un origen común llamado
+                    vértice.
+                    En otros casos se hace referencia a la abertura que conforman dos lados que parten de ese punto
+                    común, o se
+                    centran en el giro que da el plano respecto de su origen
+
+                </p>
+                <div class="text-center">
+                    <img src="{{ asset('Img/Themes/Geometry/angulos.png') }}" alt="Angulos" width="100%">
+                </div>
+                <div class="jumbotron" style="border: 1px #34ce57 dashed">
+                    <h3>Tipos de ángulos</h3>
+                    <ul>
+                        <li><strong>Nulo:</strong> Es el ángulo que mide 0º</li>
+                        <li><strong>Angulo Agudo:</strong> Es el ángulo que mide entre 0º y 90º</li>
+                        <li><strong>Angulo Recto:</strong> Es el ángulo que mide exactamente 90º</li>
+                        <li><strong>Angulo Obtuso:</strong> Es el ángulo que mide entre 90º y 180º</li>
+                        <li><strong>Angulo Llano:</strong> Es el ángulo que mide Exactamente 180º</li>
+                        <li><strong>Angulo Completo:</strong> Es el ángulo que mide 360º</li>
+                    </ul>
+                </div>
+                <h3>¿Dónde usamos los ángulos? - Ángulos y sus usos</h3>
+                <p>Los angulos se utilizan en muchos lugares de los cuales no nos damos cuenta, aquí te damos dos
+                    ejemplos de donde puedes encontrar el uso de ángulos</p>
+                <div class="text-center">
+                    <img src="{{ asset('Img/Themes/Geometry/usoAngulos.png') }}" alt="Uso de los angulos" width="100%">
+                </div>
+                <div class="alert alert-warning mt-3">
+                    <h3 class="text-center">
+                        <strong>¡Felicitaciones!</strong>
+                        <br>
+                        Estás listo para empezar los ejercicios de la sección de <a href="{{ path('Geometria') }}">geometría</a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

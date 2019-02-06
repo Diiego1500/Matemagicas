@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ parent() }}
+    <div class="container mt-5 pb-3" style="background-color: white; border-radius: 6px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">Perimetro</h2>
+                <p>El perimetro es la medida de los lados o lineas que conforman una figura geometrica (en otras palabras, los
+                    bordes de la figura geometrica), para hallar el perimetro de una figura no curva, simplemente se suman sus lados</p>
+                <h3>Perimetro de figuras básicas</h3>
+                <div class="jumbotron" style="border: 1px #34ce57 dashed">
+                    <img src="{{ asset('Img/Themes/Geometry/figuras_regulares.png') }}" alt="Perimetro figuras"
+                         width="100%">
+                </div>
+                <p>Como puedes observar, sacar el perimetro de una figura de lineas rectas es <strong>MUY</strong>
+                    fácil, solo debes sumar la longitud de cada uno de sus lados y eso es todo.
+                    Si la figura esta compuesta por lados iguales, puedes multiplicar el valor de un lado por la
+                    cantidad de lados que tiene la figura. Las matemáticas no dan tanto miedo ¿Cierto?
+                </p>
+                
+                <div class="jumbotron" style="border: 1px #34ce57 dashed">
+                    <div class="row">
+                        <div class="col-md-4"><img class="w-100" src="{{ asset('Img/Src/PeriEj1.png') }}" alt="Perimetro"></div>
+                        <div class="col-md-8">
+                            <h3 class="mt-2 mb-2">Ejemplo: </h3>
+                            Este Rectangulo tiene
+                            4 lados, cada uno con sus
+                            respectivos valores:
+
+                            8 CM, 4CM, 8CM, 4CM
+                            (En sentido de las manecillas del reloj)
+
+                            Para calcular el Perimetro de este
+                            Rectangulo solo debemos sumar el
+                            valor de cada lado:
+
+                            8+4+8+4 = 24
+                        </div>
+                    </div>
+
+                </div>
+                <h3>¿Y qué onda con el perimetro de los circulos?</h3>
+                <div class="jumbotron" style="border: 1px #34ce57 dashed">
+                    ¿Qué crees? Al no tener linea recta, el perimetro de un circulo se calcula utilizando dos
+                    valores: El PI y el Radio.
+                    <div class="row mt-5">
+                        <div class="col-md-4"><img src="{{ asset('Img/Themes/Geometry/Radio.png') }}" alt="Radio_circle"
+                                                   width="100%"></div>
+                        <div class="col-md-8">
+                            <p>El Radio es la distancia que hay entre El CENTRO del circulo y su
+                                <strong>Perimetro</strong> y se representa con la letra <strong>R</strong></p>
+                            <p><strong>PI es el número Racional 3.1416</strong></p>
+                            <p>
+                            <h5>¿Cómo calcular la longitud de una circunferencia?</h5>
+                            <strong>Multiplicas 2π x Radio</strong>
+                            </p>
+                            <hr>
+                            <p>Entonces, suponiendo que el radio de mi circulo sea de 3cm, la formula para calcular el
+                                perimetro sería:
+                                <hr>
+                                <strong>P= {(2*(3.1416))*3}</strong>
+                                <hr>
+                                ¿Notas como aplicamos los conocimientos adquiridos en la sección de matemática y aritmética? ¡Si señor,
+                                estamnos avanzando!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-warning">
+                    <a href="{{ path('Area') }}">Siguiente lección: ¿Qué es el Area?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

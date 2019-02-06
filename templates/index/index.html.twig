@@ -1,0 +1,217 @@
+{% extends 'base.html.twig' %}
+
+    {% block stylesheets %}
+        {{ parent() }}
+        <link rel="stylesheet" href="{{ asset('Css/morris/morris.css') }}">
+        <style>
+            #linkImage:hover {
+                cursor: pointer;
+            }
+        </style>
+    {% endblock %}
+{% block body %}
+    {{ parent() }}
+    <div style="width: 90%; margin: 0 auto">
+        <h4 class="text-center mt-3 mb-5" style="font-family: 'rounded_eleganceregular';"> Bienvenido {{ app.user.username }} </h4>
+
+            {% for flash_message in app.session.flashbag.get('notice') %}
+                <div class="alert alert-success mt-3">
+                    <strong>{{ flash_message }}</strong>
+                </div>
+            {% endfor %}
+
+        <div class="text-center d-md-block d-lg-none">
+            <div class="p-5 m-3" style="background-color: white; border-radius: 6px">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{ asset('Img/ads/ad1.jpg') }}" alt="First slide"
+                                 style="border-radius: 6px">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{ asset('Img/ads/ad2.jpg') }}" alt="Second slide"
+                                 style="border-radius: 6px">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{ asset('Img/ads/ad3.jpg') }}" alt="Third slide"
+                                 style="border-radius: 6px">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{ asset('Img/ads/ad1.png') }}" alt="Third slide"
+                                 style="border-radius: 6px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2 m-3" style="background-color: #3D255E; border-radius: 6px">
+                <img src="{{ asset('Img/tempIcons/11.png') }}" width="100%" style="border-radius: 6px">
+            </div>
+            <div class="p-1 m-3" style="background-color: #3D255E; border-radius: 6px">
+                <div class="col-md-12 mt-3" style="background-color: white; border-radius: 6px"><img
+                            src="{{ asset('Img/tempIcons/22.png') }}" width="100%"></div>
+            </div>
+            <div class="p-1 m-3">
+                <div class="col-md-12 mt-3" style="background-color: white; border-radius: 6px">
+                    <h4 class="text-center pt-3">Mis evaluaciones</h4>
+                    <hr>
+                    <div id="DonutChart" style="width: 100%; "></div>
+                    <div>
+                        <div id="gauge" style="width:250px; height:250px;  margin: 0 auto"></div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 ml-5 pb-2 d-none d-lg-block mb-5" style="background-color: white; width: 48%; float: left; border-radius: 15px 15px 15px 15px;">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <h1 class="text-center mb-5 mt-3">Tu anuncio aparecerá aquí</h1>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{{ asset('Img/ads/ad1.jpg') }}" alt="First slide"
+                             style="border-radius: 6px">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ asset('Img/ads/ad2.jpg') }}" alt="Second slide"
+                             style="border-radius: 6px">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ asset('Img/ads/ad3.jpg') }}" alt="Third slide"
+                             style="border-radius: 6px">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ asset('Img/ads/ad1.png') }}" alt="Third slide"
+                             style="border-radius: 6px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container d-none d-lg-block mr-5 mb-5" style="width: 40%; float: right">
+            <div class="row mt-5">
+                <div class="col-md-12"   style=" background-color: white; border-radius: 15px 15px 15px 15px; margin-left: 15px">
+                    <img src="{{ asset('Img/tempIcons/11.png') }}" width="100%">
+                </div>
+                <div class="col-md-12 mt-2"
+                     style="background-color: white; border-radius: 15px 15px 15px 15px; margin-left: 15px">
+                    <img src="{{ asset('Img/tempIcons/22.png') }}" width="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-5" style="width: 84%; margin: 0 auto; background-color: white; clear: both; border-radius: 6px">
+        <div class="container mb-5" style="background-color: white; width: 100%; border-radius: 15px 15px 15px 15px; clear: both;">
+            <h4 class="pt-3 mb-3">¿Algún aporte, comentario o recomendación?</h4>
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="{{ asset('Img/feedback.png') }}" alt="Feedback" width="100%">
+                </div>
+                <div class="col-md-8" style=" background-color: #FFE45C">
+                    <div class="row align-items-center h-100">
+                        <h6 class="mt-3">Leeré tu aporte lo más rápido posible. Este espacio también puede ser utilizado como formulario de contacto.</h6>
+                        <div class="col-12 mx-auto">
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">
+                                    Nombre
+                                </label>
+                                <div class="col-sm-8">
+                                    {{ form_widget(form.Nombre, {'attr':{'class':'form-control'}}) }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">
+                                    Email
+                                </label>
+                                <div class="col-sm-8">
+                                    {{ form_widget(form.Email, {'attr':{'class':'form-control'}}) }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">
+                                    Mensaje
+                                </label>
+                                <div class="col-sm-8">
+                                    {{ form_widget(form.Mensaje, {'attr':{'class':'form-control'}}) }}
+                                </div>
+                            </div>
+                            {{ form_widget(form.Enviar, {'attr':{'class':'btn btn-success mb-3'}}) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ form_end(form) }}
+            <br>
+        </div>
+    </div>
+
+{% endblock %}
+{% block Js %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+    <script src="{{ asset('Scripts/morris/raphael-min.js') }}"></script>
+    <script src="{{ asset('Scripts/morris/morris.min.js') }}"></script>
+    <script src="{{ asset('Scripts/justGage/justgage.js') }}"></script>
+    <script src="{{ asset('Scripts/Templates/index.js') }}"></script>
+    <script>
+        Morris.Donut({
+            element: 'DonutChart',
+            colors: ["#38e019", '#ff0000'],
+            data: [
+                {label: "Intentos Correctos", value: {{ app.user.statistics.successRate }} },
+                {label: "Intentos Fallidos", value: {{ app.user.statistics.errorRate }}},
+            ]
+        });
+        var g = new JustGage({
+            id: "gauge",
+            value: {{ solvedExercises|length }},
+            min: 0,
+            max: {{ lengthExercises }},
+            title: "Ejercicios Resueltos",
+            label: "",
+            levelColors: ["#ff0000", "#fcff29", "#38e019"]
+        });
+    </script>
+{% endblock %}
+        {#======================Cambiar Foto=================#}
+        {#<div class="text-center mb-5">#}
+        {#<a id="linkImage" data-toggle="modal" data-target="#exampleModal">#}
+        {#<img src="{{ asset('Img/photos/')~app.user.imgProfile }}" style="border: 1px solid black"#}
+        {#class="rounded-circle changerImage" width="20%" height="20%"> <br>#}
+        {#</a>#}
+        {#{% for i in 1..app.user.starts %}#}
+        {#<img src="{{ asset('Img/tempIcons/star.svg') }}" width="30px" height="30px">#}
+        {#{% endfor %}#}
+        {#</div>#}
+        {#======================Cambiar Foto=================#}
+
+
+{#<!-- Modal -->#}
+{#<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"#}
+         {#aria-hidden="true">#}
+        {#<div class="modal-dialog" role="document">#}
+            {#<div class="modal-content">#}
+                {#<div class="modal-header">#}
+                    {#<h5 class="modal-title" id="exampleModalLabel">Cambiar tu imágen de perfil</h5>#}
+                    {#<button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
+                        {#<span aria-hidden="true">&times;</span>#}
+                    {#</button>#}
+                {#</div>#}
+                {#<div class="modal-body text-center">#}
+                    {#<form method="post" action="" enctype="multipart/form-data" id="myform">#}
+                        {#<div>#}
+                            {#<img id="img" src="{{ asset('Img/photos/')~app.user.imgProfile }}"#}
+                                 {#style="border: 1px solid black" class="rounded-circle changerImage" width="150px"#}
+                                 {#height="150px"> <br>#}
+                        {#</div>#}
+                        {#<div>#}
+                            {#<input class="btn btn-warning mb-3 mt-3" type="file" id="file" name="file"/><br/>#}
+                            {#<input type="button" class="btn btn-warning button" value="Cambiar foto" id="but_upload">#}
+                        {#</div>#}
+                    {#</form>#}
+                {#</div>#}
+                {#<div class="modal-footer">#}
+
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}

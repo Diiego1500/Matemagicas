@@ -1,0 +1,353 @@
+body > .container {
+    /*padding: 75px 15px 0;*/
+    padding: 60px 15px 0;
+}
+
+.dividerVertical {
+    /*border-left: 2px solid #ccc;
+    padding-left: 5px;*/
+    height: 40px;
+    margin-left: 1em;
+    margin-right: 0.2em;
+    border-left: 1px solid #f2f2f2;
+    border-right: 1px solid #ffffff;
+}
+
+.marginLastNavbarItem {
+    margin-left: 1em;
+}
+
+.Titulo{
+
+    text-shadow: 5px 5px 5px #ccc;
+    padding-top: 1.20em;
+}
+
+/*footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: #f5f5f5;
+}
+
+footer p {
+    margin-bottom: .25rem;
+}*/
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-image:url('../Img/fondo3.png');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size:100% auto;
+    background-color: #E9E9E9;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    line-height: 4rem;
+    background-color: #f5f5f5;
+}
+
+footer p {
+    margin-bottom: .05rem;
+}
+/*=============icons icomoon================================*/
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon/icomoon.eot?h03y9d');
+    src:  url('../fonts/icomoon/icomoon.eot?h03y9d#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?h03y9d') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?h03y9d') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?h03y9d#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-prestamistas:before {
+    content: "\e900";
+}
+.icon-money-coins:before {
+    content: "\e901";
+}
+.icon-money-dollars:before {
+    content: "\e902";
+}
+.icon-wallet-money:before {
+    content: "\e903";
+}
+.icon-home:before {
+    content: "\e904";
+}
+.icon-report:before {
+    content: "\e926";
+}
+.icon-coin-dollar:before {
+    content: "\e93b";
+}
+.icon-address-book:before {
+    content: "\e944";
+}
+.icon-location:before {
+    content: "\e947";
+}
+.icon-location2:before {
+    content: "\e948";
+}
+.icon-users:before {
+    content: "\e972";
+}
+.icon-search:before {
+    content: "\e986";
+}
+.icon-clipboard:before {
+    content: "\e9b8";
+}
+.icon-warning:before {
+    content: "\ea07";
+}
+.icon-enter:before {
+    content: "\ea13";
+}
+.icon-exit:before {
+    content: "\ea14";
+}
+.icon-report-pdf:before {
+    content: "\eadf";
+}
+
+
+/* Color navbar li hover
+-------------------------------------------------- */
+/*ul > li :hover {*/
+  /*background-color: #0c60b5;*/
+/*}*/
+
+/*=======================================================================
+=========================================================================
+Customize Navbar Colors
+=========================================================================
+=======================================================================*/
+
+.navbar {
+  background-color: #343a40;
+}
+.navbar .navbar-brand {
+  color: #ffffff;
+}
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+  color: #ccd489;
+}
+.navbar .navbar-text {
+  color: #ffffff;
+}
+.navbar .navbar-text a {
+  color: #ccd489;
+}
+.navbar .navbar-text a:hover,
+.navbar .navbar-text a:focus {
+  color: #ccd489; 
+}
+.navbar .navbar-nav .nav-link {
+  color: #ffffff;
+  border-radius: .25rem;
+  margin: 0 0.25em;
+}
+.navbar .navbar-nav .nav-link:not(.disabled):hover,
+.navbar .navbar-nav .nav-link:not(.disabled):focus {
+  color: #ccd489;
+}
+.navbar .navbar-nav .dropdown-menu {
+  background-color: #5bc0de;
+  border-color: #0c60b5;
+}
+.navbar .navbar-nav .dropdown-menu .dropdown-item {
+  color: #ffffff;
+}
+.navbar .navbar-nav .dropdown-menu .dropdown-item:hover,
+.navbar .navbar-nav .dropdown-menu .dropdown-item:focus,
+.navbar .navbar-nav .dropdown-menu .dropdown-item.active {
+  color: #ccd489;
+  background-color: #0c60b5;
+}
+.navbar .navbar-nav .dropdown-menu .dropdown-divider {
+  border-top-color: #0c60b5;
+}
+.navbar .navbar-nav .nav-item.active .nav-link,
+.navbar .navbar-nav .nav-item.active .nav-link:hover,
+.navbar .navbar-nav .nav-item.active .nav-link:focus,
+.navbar .navbar-nav .nav-item.show .nav-link,
+.navbar .navbar-nav .nav-item.show .nav-link:hover,
+.navbar .navbar-nav .nav-item.show .nav-link:focus {
+  color: #ccd489;
+  background-color: #0c60b5;
+}
+.navbar .navbar-toggle {
+  border-color: #0c60b5;
+}
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:focus {
+  background-color: #0c60b5;
+}
+.navbar .navbar-toggle .navbar-toggler-icon {
+  color: #ffffff;
+}
+.navbar .navbar-collapse,
+.navbar .navbar-form {
+  border-color: #ffffff;
+}
+.navbar .navbar-link {
+  color: #ffffff;
+}
+.navbar .navbar-link:hover {
+  color: #ccd489;
+}
+
+@media (max-width: 575px) {
+  .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item {
+    color: #ffffff;
+  }
+  .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+  .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+    color: #ccd489;
+  }
+  .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item.active {
+    color: #ccd489;
+    background-color: #0c60b5;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item {
+    color: #ffffff;
+  }
+  .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+  .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+    color: #ccd489;
+  }
+  .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item.active {
+    color: #ccd489;
+    background-color: #0c60b5;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item {
+    color: #ffffff;
+  }
+  .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+  .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+    color: #ccd489;
+  }
+  .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item.active {
+    color: #ccd489;
+    background-color: #0c60b5;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item {
+    color: #ffffff;
+  }
+  .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+  .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+    color: #ccd489;
+  }
+  .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item.active {
+    color: #ccd489;
+    background-color: #0c60b5;
+  }
+}
+
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item {
+  color: #ffffff;
+}
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+  color: #ccd489;
+}
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item.active {
+  color: #ccd489;
+  background-color: #0c60b5;
+}
+
+/*===================
+=====================
+Other styles
+=====================
+===================*/
+.fsz1 {
+  font-size: 1.12em;
+}
+
+.fsz2 {
+  font-size: 2em;
+}
+
+.fsz3 {
+  font-size: 1.29em;
+}
+
+nav, .navbar{
+    background-color: #EFB60B;
+    color:white;
+}
+
+.ThemeInfo{
+    text-align: justify;
+}
+
+.theme strong, .level strong{
+    color: orange;
+}
+
+.unloked:hover{
+    cursor: pointer;
+    -ms-transform: scaleY(1.5); /* IE 9 */
+    -webkit-transform: scaleY(1.5); /* Safari 3-8 */
+    transform: scale(1.1);
+    transition: 2s;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.loked{
+    opacity: 0.6;
+    cursor: no-drop;
+}
+
+.vl {
+    border-left: 6px solid #3D255E;
+}
+/**{*/
+    /*font-family: 'Short Stack', cursive;*/
+
+/*}*/
+
+
+

@@ -1,0 +1,197 @@
+{% extends 'base.html.twig' %}
+    {% block stylesheets %}
+        {{ parent() }}
+        <link rel="stylesheet" href="{{ asset('Css/templates/PracticalExercises.css') }}">
+        <link rel="stylesheet" href="{{ asset('Css/templates/Boards.css') }}">
+        <link rel="stylesheet" href="{{ asset('Css/introJs/introjs.css') }}">
+    {% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    {% if  Exercise.idTheme in app.user.AvailableThemes %}
+        {% set img = '' %}
+        {% set board = '' %}
+        {% set container = '' %}
+        {% if  Exercise.idTheme == 12 %}
+            {% set img = 'col-md-5' %}
+            {% set board = 'col-md-7' %}
+        {% else %}
+            {% set img = 'col-md-4' %}
+            {% set board = 'col-md-8' %}
+            {% set container = 'container' %}
+        {% endif %}
+        {#{{ dump(Exercise) }}#}
+        <div class="container" data-step="1" data-intro="¡Bienvenido! Esta es tu sección de ejercicios.">
+            <div class="row">
+                <div class="{{ img }}">
+                    <div>
+                        <img src="{{ asset('Img/Exercises/')~Exercise.problemPath }}" data-step="2"
+                             data-intro="Este es el problema que te proponemos. Asegurate de leer el enunciado y analizar las operaciones que debes realizar."
+                             width="100%">
+                        <br/>
+                        {% if Exercise.Seeanswer %}
+                            <button id="See_Answers" type="button" data-toggle="modal" data-id="{{ Exercise.id }}"
+                                    data-target=".bd-example-modal-lg" class="btn btn-warning mt-3" style="width: 100%">
+                                Ver Respuesta en <span id="MIN">15</span>: <span id="SEC">60</span>
+                                <div style="width: 100%">
+                                    <small>trata de resolver el problema <br> por tí mismo.</small>
+                                </div>
+                            </button>
+                        {% endif %}
+                        {% if ThemeSources|length > 0 %}
+                            <!-- Button trigger modal -->
+                            <div class="text-center mt-2">
+                                <button class="btn btn-info" onclick="javascript:introJs().start();" data-step="8"
+                                        data-intro="Siempre estaré aquí para que puedas volver a ver esta guía c:">
+                                    ¿Necesitas
+                                    ayuda? Click aquí
+                                </button>
+                                <button type="button" class="btn btn-primary mt-3" data-toggle="modal"
+                                        data-target="#exampleModalLong"
+                                        data-step="7"
+                                        data-intro="Este botón contiene todo el material explicativo del tema, con el cual podrás resolver este desafio">
+                                    Recursos
+                                </button>
+                            </div>
+                            <!-- Modal -->
+                            <!-- Modal -->
+                            <!-- Modal -->
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                                 aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <ul class="nav nav-tabs">
+                                                {% set j = 0 %}
+                                                {% set i = 0 %}
+                                                {% for li in ThemeSources %}
+                                                    <li class="nav-link">
+                                                        <a href="#{{ i }}a" data-toggle="tab">Recurso {{ i + 1 }}</a>
+                                                    </li>
+                                                    {% set i = i+1 %}
+                                                {% endfor %}
+                                            </ul>
+                                            <div class="tab-content clearfix">
+                                                {% for source in ThemeSources %}
+                                                    <div class="tab-pane text-center mt-3" id="{{ j }}a">
+                                                        {% if 'youtube' in source %}
+                                                            <iframe width="100%" height="500px"
+                                                                    src="{{ source }}">
+                                                            </iframe>
+                                                        {% else %}
+                                                            <img src="{{ asset('Img/src/'~source) }}" width="100%"
+                                                                 height="100%"/>
+                                                        {% endif %}
+                                                    </div>
+                                                    {% set j = j+1 %}
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                            </button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+                            <!-- Modal -->
+                            <!-- Modal -->
+
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="{{ board }}" style=" box-shadow: grey 5px 5px 5px">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="d-none d-lg-block">
+                                {% if Exercise.boardType == 0 %} {# Primaria #}
+                                    {{ include('standard/board.html.twig') }}
+                                {% elseif Exercise.boardType == 1 %} {# Booleano #}
+                                    {{ include('standard/boardBool.html.twig') }}
+                                {% endif %}
+                                <br>
+                                <button id="ShowBoard" class="btn btn-warning mb-5" style="width: 100%; font-size: 80%">
+                                    Cambiar Tablero
+                                </button>
+                            </div>
+                            <div class="d-block d-lg-none">
+                                {% include 'standard/boardButton.html.twig' %}
+                            </div>
+
+                        </div>
+                        <div class="col-md-8 d-none d-lg-block" style="min-height: 300px" data-step="5"
+                             data-intro="Si deseas, puedes realizar tu procedimiento en esta sección, ¡No te limites! también puedes realizar el procedimiento en tu cuaderno y arrastrar tu solución a la sección de respuestas">
+                            <h6 class="text-center">Realiza aquí tu procedimiento <br>
+                                <small>(Utiliza el tablero para arrastrar tu respuesta a la sección de respuestas)
+                                </small>
+                                {% include 'standard/GlobalTips.html.twig' %}
+                                {#-> {{ dump(boardKind) }}#}
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <audio id="success" controls style="display:none;">
+            <source type="audio/wav" src="{{ asset('audio/success.wav') }}">
+        </audio>
+        <audio id="wrong" controls style="display:none;">
+            <source type="audio/wav" src="{{ asset('audio/wrong.wav') }}">
+        </audio>
+        <hr/>
+        <div id="outer-dropzone" class="AnswerDropZone" style="min-width: 270px" data-step="3"
+             data-intro="Esta es tu sección de respuestas">
+            <p class="text-center"><strong>SECCIÓN DE RESPUESTAS</strong></p>
+            <table align="center">
+                <tr id="table_Answers">
+                </tr>
+            </table>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-success" data-id="{{ Exercise.id }}" data-next="{{ Exercise.nextExercise }}"
+                    id="VerifyAnswerDiv" data-step="6"
+                    data-intro="Tu respuesta será evaluada al darme click, si es correcta se te redigirá a otro ejercicio para que sigas practicando.">
+                Verificar
+                Respuesta
+            </button>
+
+            <img id="loader" src="{{ asset('Img/src/loader.gif') }}" width="30px" height="30px" style="display:none;">
+        </div>
+    {% else %}
+        <div class="container">
+            <div class="jumbotron text-center">
+                <img class="w-100" src="{{ asset('Img/Src/Error2.png') }}" alt="Error">
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <img id="AnswerImg" src="#" width="100%">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block Js %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+    <script src="{{ asset('Scripts/interact/intetarct.min.js') }}"></script>
+    {#<script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.6/interact.min.js"></script>#}
+    <script src="{{ asset('Scripts/introJs/intro.js') }}"></script>
+    <script src="{{ asset('Scripts/Templates/practicalExercises.js') }}"></script>
+    {% if Exercise.Seeanswer %}
+    <script src="{{ asset('Scripts/Templates/practicalExercises2.js') }}"></script>
+    {% endif %}
+{% endblock %}

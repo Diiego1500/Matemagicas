@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('Img/pet.png') }}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
+    <meta name="theme-color" content="#EDAE21">
+    <title>{% block title %}Matemágicas{% endblock %}</title>
+    {% block stylesheets %}
+        {#<link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet">#}
+        <link rel="stylesheet" href="{{ asset('Css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('Css/font-awesome.min.css') }}">
+        <link rel="stylesheetgit " href="{{ asset('Css/animate.css') }}">
+        <link rel="stylesheet" href="{{ asset('Css/pace-theme-flash.css') }}">
+        {#<link rel="stylesheet" href="{{ asset('Css/fonts/stylesheet.css') }}">#}
+        <link rel="stylesheet" href="{{ asset('Css/fonts/stylesheet.css') }}" type="text/css" charset="utf-8"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style type="text/css">
+            * {
+                font-family: 'rounded_eleganceregular';
+            }
+        </style>
+        <link rel="stylesheet" href="{{ asset('Css/main.css') }}">
+    {% endblock %}
+    {% block stylesheetsOthers %}
+    {% endblock %}
+    {% set All = 'All' %}
+</head>
+<body>
+{% block body %}
+    {% if is_granted('ROLE_ADMIN') %}
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container">
+                <a class="navbar-brand" href="{{ path('index') }}" style="color: white"><img
+                            src="{{ asset('Img/Pet.svg') }}"><strong>Matemágicas</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        {#<li class="nav-item">#}
+                        {#<a class="nav-link" href="{{ path('section',{'section':0}) }}" style="color: white"><strong>Primeros pasos</strong> <span#}
+                        {#class="sr-only">(current)</span></a>#}
+                        {#</li>#}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('MatematicaAritmetica') }}" style="color: white"><strong>Matemática
+                                    y Aritmética</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            {% if 450 in app.user.solvedExercises %}
+                                <a class="nav-link" href="{{ path('Geometria') }}"
+                                   style="color: white"><strong>Geometría</strong>
+                                </a>
+                            {% else %}
+                                <a class="nav-link" href="#" style="color: white">
+                                    <img src="{{ asset('Img/tempIcons/Candado.png') }}" width="25px"
+                                         height="20px"/><strong>Geometría</strong>
+                                </a>
+                            {% endif %}
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('blog',{'Categoryname':All}) }}" style="color: white">
+                                <strong>Blog</strong>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: white">
+                                <span>
+                                <img src="{{ asset('Img/tempIcons/Candado.png') }}" width="25px" height="20px"/>
+                                <strong style="color: gray">Muy pronto - Algebra - Trigo - Cálculo</strong>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('Salir') }}" style="color: white"></span>
+                                <strong>Salir</strong></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    {% elseif  is_granted('ROLE_USER') %}
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container">
+                <a class="navbar-brand" href="{{ path('index') }}" style="color: white"><img
+                            src="{{ asset('Img/Pet.svg') }}"><strong>Matemágicas</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('MatematicaAritmetica') }}" style="color: white"><strong>Matemática
+                                    y Aritmética</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            {% if 450 in app.user.solvedExercises %}
+                                <a class="nav-link" href="{{ path('Geometria') }}"
+                                   style="color: white"><strong>Geometría</strong>
+                                </a>
+                            {% else %}
+                                <a class="nav-link" href="#" style="color: white">
+                                    <img src="{{ asset('Img/tempIcons/Candado.png') }}" width="25px"
+                                         height="20px"/><strong>Geometría</strong>
+                                </a>
+                            {% endif %}
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('blog',{'Categoryname':All}) }}" style="color: white">
+                                <strong>Blog</strong>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: white">
+                                <span>
+                                <img src="{{ asset('Img/tempIcons/Candado.png') }}" width="25px" height="20px"/>
+                                <strong style="color: gray">Muy pronto - Algebra - Trigo - Cálculo</strong>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('Salir') }}" style="color: white"></span>
+                                <strong>Salir</strong></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    {% elseif  is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container">
+                <a class="navbar-brand" href="{{ path('index') }}" style="color: white"><img
+                            src="{{ asset('Img/Pet.svg') }}"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('blog',{'Categoryname':'All'}) }}" style="color: white">
+                                <strong>Blog</strong>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white" href="{{ path('definicion') }}">
+                                <strong>¿Qué es Matemágicas?</strong>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white" href="{{ path('AcercaDe') }}">
+                                <strong>Acerca de</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    {% endif %}
+
+{% endblock %}
+{% block Js %}
+    <script src="{{ asset('Scripts/jquery.min.js') }}"></script>
+    <script src="{{ asset('Scripts/bootstrap.min.js') }}"></script>
+    {#<script src="{{ asset('Scripts/pace.min.js') }}"></script>#}
+    <script src="{{ asset('Scripts/sw2/sweetalert2.js') }}"></script>
+{% endblock %}
+
+</body>
+</html>

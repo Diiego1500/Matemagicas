@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ parent() }}
+    <div class="container">
+        <div class="row">
+
+
+                {% if IdTheme not in AvailableThemes %}
+                    <div class="text-center">
+                        Felicitaciones! sigue trabajando duro.
+                        <br>
+                        <img src="{{ asset('Img/Pet.svg') }}">
+                        <small>Equipo Matemágicas.</small>
+                    </div>
+
+                {% else %}
+                    <div class="col-md-3">
+                        <img src="{{ asset('Img/tempIcons/crigth.png') }}">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-center">
+                            <h1 class="mb-5">¡Felicitaciones!</h1>
+                            <h4 class="mb-5">Logros alcanzados:</h4>
+                            <h4 class="mb-5">Has avanzado en el tema de : <strong>{{ Theme }}</strong></h4>
+                            {% if IdTheme in AvailableThemes %}
+                                <h4 class="mb-5">Ahora puedes realizar los ejercicios de:
+                                    <a href="{{ path('ChooseLevel',{'idTheme':IdTheme}) }}"><strong>{{ ThemeUnloked }}</strong></a>
+                                </h4>
+                            {% else %}
+                                <h4 class="mb-5">
+                                    ¡Sigue esforzandote!
+                                    <br>
+                                    <small>
+                                        Debes completar el nivel medio de {{ Theme }} para poder realizar los ejercicios
+                                        de {{ ThemeUnloked }}
+                                    </small>
+                                </h4>
+                            {% endif %}
+                            <img src="{{ asset('Img/tempIcons/aleft.png') }}" width="100px" height="100px">
+                            <img src="{{ asset('Img/Pet.svg') }}">
+                            <img src="{{ asset('Img/tempIcons/arigth.png') }}" width="100px" height="100px">
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-right">
+                        <img src="{{ asset('Img/tempIcons/cleft.png') }}">
+                    </div>
+                {% endif %}
+
+        </div>
+    </div>
+
+
+{% endblock %}

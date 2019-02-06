@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ parent() }}
+<div class="container mt-5 pb-3" style="background-color: white; border-radius: 6px;">
+    <div class="row">
+        <div class="col-md-12" >
+            <h2 class="text-center">Diferencia entre Area y Perimetro.</h2>
+            <p>
+                Matemágicas entiende que este tema puede ser confuso, así que te dejamos esta imágen de ejemplo:
+            </p>
+            <div class="jumbotron" style="border: 1px #34ce57 dashed">
+                <img src="{{ asset('Img/src/dif.png') }}" alt="Diferencias" width="100%">
+                <h4 class="mt-3">He aquí la diferencia:</h4>
+                <p>
+                    El borde rojo de las figuras geometricas es el Perimetro de la figura
+                </p>
+                <p>La sección verde es el Area de la figura.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

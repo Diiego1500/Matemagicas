@@ -1,0 +1,47 @@
+<div class="text-center mt-5" style=" background-color: white; clear: both; border-radius: 6px">
+
+    <h4 class="pt-3 mb-3">Puedes darme Feedback o proponerme un tema para la siguiente entrada. Lo tendré en cuenta y ¡Te lo agradeceré mucho!</h4>
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{{ asset('Img/feedback.png') }}" alt="Feedback" width="100%">
+        </div>
+        <div class="col-md-8" style=" background-color: #FFE45C">
+            <div class="row align-items-center h-100">
+                <h6 class="mt-3">
+                    Leeré tu aporte lo más rápido posible. Este espacio también puede ser utilizado como formulario de contacto.
+                </h6>
+                <div class="col-12 mx-auto">
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">
+                            Nombre
+                        </label>
+                        <div class="col-sm-8">
+                            {{ form_widget(form.Nombre, {'attr':{'class':'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">
+                            Email
+                        </label>
+                        <div class="col-sm-8">
+                            {{ form_widget(form.Email, {'attr':{'class':'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">
+                            Mensaje
+                        </label>
+                        <div class="col-sm-8">
+                            {{ form_widget(form.Mensaje, {'attr':{'class':'form-control'}}) }}
+                        </div>
+                    </div>
+                    {{ form_widget(form.Enviar, {'attr':{'class':'btn btn-success mb-3'}}) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ form_end(form) }}
+    <br>
+
+</div>

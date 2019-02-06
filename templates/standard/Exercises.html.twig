@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ parent() }}
+    <div class="container text-center">
+        {% if level == 1 %}
+            <h1>Nivel Facil</h1>
+        {% elseif level == 2 %}
+            <h1>Nivel Medio</h1>
+        {% else %}
+            <h1>Nivel Dificil</h1>
+        {% endif %}
+        {{ dump(Exercises) }}
+        {#{{ dump(solved)  }}#}
+        {% for exercise in  Exercises %}
+            {% if exercise.id in solved %}
+                <a href="{{ path('PracticeExercise', {idExercise:exercise.id}) }}">{{ exercise.level }} - Solved</a>
+            {% else %}
+                <a href="{{ path('PracticeExercise', {idExercise:exercise.id}) }}">{{ exercise.level }}</a>
+
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}
