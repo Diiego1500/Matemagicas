@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="623a447c-a2d7-446b-8c36-88e7cc732324" name="Default" comment="" />
+    <list default="true" id="623a447c-a2d7-446b-8c36-88e7cc732324" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/Comunidad/comunidad.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,10 +50,11 @@
     <session id="-726915951">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="52" />
+          <entry key="project.closed" value="53" />
           <entry key="project.open.time.0" value="10" />
           <entry key="project.open.time.1" value="12" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.21" value="2" />
           <entry key="project.open.time.23" value="1" />
@@ -58,7 +64,7 @@
           <entry key="project.open.time.27" value="3" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.30" value="2" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.47" value="1" />
@@ -66,7 +72,7 @@
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="55" />
+          <entry key="project.opened" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -79,13 +85,13 @@
           <entry key="html" value="2" />
           <entry key="jpg" value="4" />
           <entry key="js" value="17" />
-          <entry key="php" value="118" />
+          <entry key="php" value="137" />
           <entry key="png" value="271" />
           <entry key="practical_exercise" value="21" />
           <entry key="sql" value="12" />
           <entry key="svg" value="43" />
           <entry key="theme" value="6" />
-          <entry key="twig" value="174" />
+          <entry key="twig" value="176" />
           <entry key="user" value="5" />
           <entry key="yaml" value="10" />
         </counts>
@@ -97,12 +103,12 @@
           <entry key="HTML" value="2" />
           <entry key="Image" value="307" />
           <entry key="JavaScript" value="17" />
-          <entry key="PHP" value="118" />
+          <entry key="PHP" value="137" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="SQL" value="11" />
           <entry key="SVG" value="43" />
           <entry key="Scratch" value="1" />
-          <entry key="Twig" value="174" />
+          <entry key="Twig" value="176" />
           <entry key="YAML" value="10" />
         </counts>
       </usages-collector>
@@ -113,9 +119,9 @@
           <entry key="env" value="58" />
           <entry key="html" value="5" />
           <entry key="js" value="2446" />
-          <entry key="php" value="7239" />
+          <entry key="php" value="8490" />
           <entry key="svg" value="22" />
-          <entry key="twig" value="25657" />
+          <entry key="twig" value="25778" />
           <entry key="txt" value="11" />
           <entry key="yaml" value="36" />
         </counts>
@@ -125,11 +131,11 @@
           <entry key="CSS" value="132" />
           <entry key="HTML" value="5" />
           <entry key="JavaScript" value="2446" />
-          <entry key="PHP" value="7239" />
+          <entry key="PHP" value="8490" />
           <entry key="PLAIN_TEXT" value="69" />
           <entry key="SVG" value="22" />
           <entry key="Scratch" value="2124" />
-          <entry key="Twig" value="25657" />
+          <entry key="Twig" value="25778" />
           <entry key="YAML" value="36" />
         </counts>
       </usages-collector>
@@ -137,11 +143,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-920">
-              <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            <state relative-caret-position="1411">
+              <caret line="193" column="25" selection-start-line="193" selection-start-column="20" selection-end-line="193" selection-end-column="25" />
+              <folding>
+                <element signature="e#30#78#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Form/ComunityQuestionType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+              <folding>
+                <element signature="e#28#60#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Entity/ComunityQuestion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="130" column="4" selection-start-line="130" selection-start-column="4" selection-end-line="130" selection-end-column="4" />
+              <folding>
+                <element signature="e#30#78#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/ComunidadController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="e#34#66#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,17 +195,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ver</find>
-      <find>mymodal</find>
-      <find>modal</find>
-      <find>myLargeModalLabel</find>
-      <find>showBoard</find>
-      <find>res</find>
-      <find>respuesta</find>
-      <find>RESPUESTA</find>
-      <find>clearInterval</find>
-      <find>See_Answers</find>
-      <find>ver re</find>
       <find>All</find>
       <find>searchCategoryByName</find>
       <find>blo</find>
@@ -180,6 +214,17 @@
       <find>categorie</find>
       <find>categories</find>
       <find>title</find>
+      <find>null</find>
+      <find>nullable</find>
+      <find>practicalExercise</find>
+      <find>PracticalExercise</find>
+      <find>user</find>
+      <find>id</find>
+      <find>getid</find>
+      <find>$id</find>
+      <find>$usuario</find>
+      <find>userid</find>
+      <find>userId</find>
     </findStrings>
     <replaceStrings>
       <replace>white</replace>
@@ -201,12 +246,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/Img/logo.svg" />
-        <option value="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Security/login.html.twig" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/config/packages/security.yaml" />
-        <option value="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Security/login_content.html.twig" />
         <option value="$PROJECT_DIR$/templates/Geometria/pi.html.twig" />
         <option value="$PROJECT_DIR$/templates/Geometria/Area.html.twig" />
         <option value="$PROJECT_DIR$/templates/standard/themes.html.twig" />
@@ -252,6 +291,12 @@
         <option value="$PROJECT_DIR$/templates/blog/index.html.twig" />
         <option value="$PROJECT_DIR$/public/Scripts/Templates/BlogIndex.js" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/ComunityAnswer.php" />
+        <option value="$PROJECT_DIR$/templates/Comunidad/comunidad.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/ComunityQuestionType.php" />
+        <option value="$PROJECT_DIR$/src/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/Controller/ComunidadController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/ComunityQuestion.php" />
       </list>
     </option>
   </component>
@@ -371,8 +416,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="467" />
-    <option name="width" value="1460" />
+    <option name="x" value="439" />
+    <option name="width" value="1488" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -381,6 +426,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -388,16 +434,26 @@
               <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
               <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="SearchEverywhereHistoryKey" value="blog/index.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/blog/index.html.twig&#10;index/index.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/index/index.html.twig&#10;standard/ChooseLevel.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/standard/ChooseLevel.html.twig&#10;templates\standard\Success.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/Success.html.twig&#10;kernel&#9;null&#9;null&#10;kernel.php&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/src/Kernel.php&#10;standard/boardBool.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/boardBool.html.twig&#10;standard/board.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/board.html.twig&#10;Scripts/Templates/practicalExercises.js&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Scripts/Templates/practicalExercises.js&#10;standard/Success.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/Success.html.twig&#10;standard/PracticalExercises.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/PracticalExercises.html.twig" />
+    <property name="SearchEverywhereHistoryKey" value="Comunidad/comunidad.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/Comunidad/comunidad.html.twig&#10;blog/index.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/blog/index.html.twig&#10;index/index.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/index/index.html.twig&#10;standard/ChooseLevel.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/standard/ChooseLevel.html.twig&#10;templates\standard\Success.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/Success.html.twig&#10;kernel&#9;null&#9;null&#10;kernel.php&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/src/Kernel.php&#10;standard/boardBool.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/boardBool.html.twig&#10;standard/board.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/board.html.twig&#10;Scripts/Templates/practicalExercises.js&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Scripts/Templates/practicalExercises.js&#10;standard/Success.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/Success.html.twig&#10;standard/PracticalExercises.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/PracticalExercises.html.twig" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -545,17 +601,20 @@
       <workItem from="1549392503993" duration="3539000" />
       <workItem from="1549401795897" duration="3780000" />
       <workItem from="1549483273134" duration="260000" />
-      <workItem from="1549483555856" duration="2929000" />
+      <workItem from="1549483555856" duration="5190000" />
+      <workItem from="1549658658727" duration="5876000" />
+      <workItem from="1549665662680" duration="1021000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="485297000" />
+    <option name="totallyTimeSpent" value="494455000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="467" y="0" width="1460" height="1047" extended-state="0" />
+    <frame x="439" y="0" width="1488" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22829132" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -568,7 +627,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5010799" side_tool="true" weight="0.32968238" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="8" weight="0.3253012" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49892008" visible="true" weight="0.524644" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49892008" visible="true" weight="0.2694414" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.329718" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" sideWeight="0.49964002" weight="0.32968238" />
@@ -576,7 +635,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.026428571" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.025910364" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,28 +656,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/Img/Answers/Geometry/Area/area1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/area3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/area5.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/area6.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/area4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Img/Answers/Geometry/Area/Template_Mesa de trabajo 1 copia 19.png" />
-    <entry file="file://$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/area8.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/area9.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/area10.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -639,23 +676,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/GlobalsTips.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-762" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/UserData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1428" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="42" column="45" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -861,8 +881,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-920">
-          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        <state relative-caret-position="340">
+          <caret line="77" column="77" selection-start-line="77" selection-start-column="77" selection-end-line="77" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/UserData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/PracticalExercise.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/GlobalsTips.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Theme.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="112" column="40" selection-start-line="112" selection-start-column="23" selection-end-line="112" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/ComunityAnswer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="38" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/UserDataType.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Comunidad/comunidad.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="193" column="25" selection-start-line="193" selection-start-column="20" selection-end-line="193" selection-end-column="25" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ComunidadController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#34#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/ComunityQuestionType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+          <folding>
+            <element signature="e#28#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/ComunityQuestion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="130" column="4" selection-start-line="130" selection-start-column="4" selection-end-line="130" selection-end-column="4" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

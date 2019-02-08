@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
 
@@ -62,13 +63,19 @@ class User extends BaseUser
     //tipo de tablero (drag and drop - clickeable) escogido por el usuario
     private $BoardKind=true;
 
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\ComunityQuestion", mappedBy="usuario")
+     */
+    private $preguntas;
+
+
     /**
      * User constructor.
      */
     public function __construct()
     {
-        parent::__construct();
-        // your own logic
+        $this->preguntas= new ArrayCollection();
     }
 
     /**
@@ -166,6 +173,29 @@ class User extends BaseUser
     {
         $this->BoardKind = $BoardKind;
     }
+
+    public function addQuestion(ComunityQuestion $Question){
+        $this->preguntas->add($Question);
+        return $this->preguntas;
+    }
+
+    public function RemoveElement(ComunityQuestion $comunityQuestion)
+    {
+        $this->preguntas->removeElement($comunityQuestion);
+    }
+
+    public function getQuestions(){
+        return $this->preguntas;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
 
 
 

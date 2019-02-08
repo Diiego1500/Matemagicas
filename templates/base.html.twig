@@ -62,18 +62,24 @@
                             {% endif %}
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: white">
+                                <span>
+                                <img src="{{ asset('Img/tempIcons/Candado.png') }}" width="25px" height="20px"/>
+                                    <strong style="color: gray"><small>Algebra - Trigo - Cálculo Pronto</small></strong>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ path('blog',{'Categoryname':All}) }}" style="color: white">
                                 <strong>Blog</strong>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: white">
-                                <span>
-                                <img src="{{ asset('Img/tempIcons/Candado.png') }}" width="25px" height="20px"/>
-                                <strong style="color: gray">Muy pronto - Algebra - Trigo - Cálculo</strong>
-                                </span>
+                            <a class="nav-link" href="{{ path('comunidad') }}" style="color: white">
+                                <strong>Comunidad</strong>
                             </a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ path('Salir') }}" style="color: white"></span>
                                 <strong>Salir</strong></a>
@@ -93,6 +99,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
+                        {#<li class="nav-item">#}
+                        {#<a class="nav-link" href="{{ path('section',{'section':0}) }}" style="color: white"><strong>Primeros pasos</strong> <span#}
+                        {#class="sr-only">(current)</span></a>#}
+                        {#</li>#}
                         <li class="nav-item">
                             <a class="nav-link" href="{{ path('MatematicaAritmetica') }}" style="color: white"><strong>Matemática
                                     y Aritmética</strong></a>
@@ -110,18 +120,24 @@
                             {% endif %}
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: white">
+                                <span>
+                                <img src="{{ asset('Img/tempIcons/Candado.png') }}" width="25px" height="20px"/>
+                                    <strong style="color: gray"><small>Algebra - Trigo - Cálculo Pronto</small></strong>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ path('blog',{'Categoryname':All}) }}" style="color: white">
                                 <strong>Blog</strong>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: white">
-                                <span>
-                                <img src="{{ asset('Img/tempIcons/Candado.png') }}" width="25px" height="20px"/>
-                                <strong style="color: gray">Muy pronto - Algebra - Trigo - Cálculo</strong>
-                                </span>
+                            <a class="nav-link" href="{{ path('comunidad') }}" style="color: white">
+                                <strong>Comunidad</strong>
                             </a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ path('Salir') }}" style="color: white"></span>
                                 <strong>Salir</strong></a>
