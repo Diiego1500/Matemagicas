@@ -1,6 +1,88 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <style type="text/css">
+        .title {
+            font-family: 'Acme', sans-serif;
+            font-size: 20px;
+        }
+
+        .section, .date {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .article:hover {
+            box-shadow: 2px 0px 21px -1px rgb(5, 142, 205);
+            -webkit-border-radius: 5px;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+    </style>
+{% endblock %}
 {% block body %}
     {{ parent() }}
 
-    {{ form(formulario) }}
+    <div class="container">
+        <div class="jumbotron">
+            <h2 class="text-center">¡Preguntale algo a la comunidad!</h2>
+            {{ form_start(formulario, {'attr': {'novalidate': 'novalidate'}}) }}
+            <div class="form-group">
+                <label for="exampleInputEmail1"><h3>Titulo</h3></label>
+                {{ form_widget(formulario.title, {'attr':{'class':'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1"><h3>Pregunta</h3></label>
+                {{ form_widget(formulario.question, {'attr':{'class':'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_widget(formulario.Enviar, {'attr':{'class':'btn btn-success btn-block'}}) }}
+            </div>
+            {{ form_end(formulario) }}
+        </div>
+        <div class="container">
+            {% for article in pagination %}
+              <div>
+                <div class="mb-3 p-3 pointer article" style="background: white; border-radius: 6px;"
+                     onclick="location.href='{{ path('SeeQuestion',{'url':article.url}) }}'">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p style="color: #0a8ecd" class="title">{{ article.title }}</p>
+                                <hr>
+                                <p>
+                                    <div class=" d-none d-md-block section">
+                                <p>{{ article.question | raw }}</p>
+                            </div>
+                        </div>
+                        <div class="date mt-3" style="color: gray">
+                            <img src="{{ asset('Img/src/clock.svg') }}"
+                                 alt="clock"> {{ article.date|localizeddate('long', 'none', 'es_CO') }}
+                            | {% if article.solved %}
+                                <span class="alert-success p-1 rounded" role="alert">
+                            Resuelto
+                        </span>
+                            {% else %}
+                                <span class="alert-danger p-1 rounded" role="alert">
+                            No resuelto
+                        </span>
+                            {% endif %}
+                        </div>
+                        </p>
+                    </div>
+                </div>
+              </div>
+            {% endfor %}
+        </div>
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    </div>
+
+
+
 {% endblock %}

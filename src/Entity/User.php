@@ -71,6 +71,12 @@ class User extends BaseUser
 
 
     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\ComunityAnswer", mappedBy="usuario")
+     */
+    private $Respuestas;
+
+
+    /**
      * User constructor.
      */
     public function __construct()
@@ -195,6 +201,40 @@ class User extends BaseUser
     {
         return $this->id;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getRespuestas()
+    {
+        return $this->Respuestas;
+    }
+
+    /**
+     * @param mixed $Respuestas
+     */
+    public function setRespuestas($Respuestas)
+    {
+        $this->Respuestas = $Respuestas;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPreguntas()
+    {
+        return $this->preguntas;
+    }
+
+    /**
+     * @param mixed $preguntas
+     */
+    public function setPreguntas($preguntas)
+    {
+        $this->preguntas = $preguntas;
+    }
+
+
 
 
 

@@ -19,16 +19,12 @@ class ComunityQuestionRepository extends ServiceEntityRepository
         parent::__construct($registry, ComunityQuestion::class);
     }
 
-    /*
-    public function findBySomething($value)
-    {
-        return $this->createQueryBuilder('c')
-            ->where('c.something = :value')->setParameter('value', $value)
-            ->orderBy('c.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
+    public function SearchQuestions(){
+        return $this->getEntityManager()
+            ->createQuery('
+                SELECT pregunta.title, pregunta.question, pregunta.url, pregunta.date, pregunta.solved
+                FROM App\Entity\ComunityQuestion pregunta
+                ORDER BY pregunta.id DESC
+            ');
     }
-    */
 }

@@ -52,6 +52,16 @@ class ComunityQuestion
 
 
     /**
+     * @ORM\Column(type="string")
+     */
+    private $url;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $solved;
+
+    /**
      * ComunityQuestion constructor.
      * @param $title
      * @param $question
@@ -62,7 +72,7 @@ class ComunityQuestion
         $this->title = $title;
         $this->question = $question;
         $this->image = $image;
-
+        $this->solved =false;
         $this->date = new \DateTime('now');
         $this->respuestas= new ArrayCollection();
     }
@@ -145,6 +155,58 @@ class ComunityQuestion
     {
         $this->usuario = $usuario;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+
+    /**
+     * @param mixed $url
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSolved()
+    {
+        return $this->solved;
+    }
+
+    /**
+     * @param mixed $solved
+     */
+    public function setSolved($solved)
+    {
+        $this->solved = $solved;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param mixed $date
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+    }
+
+
+
+
 
 
 

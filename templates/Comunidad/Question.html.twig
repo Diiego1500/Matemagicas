@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ parent() }}
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                {% if Question.solved %}
+                    <span class="alert alert-success" role="alert">
+                Resuelto
+            </span>
+                {% else %}
+                    <span class="alert alert-danger" role="alert">
+               No Resuelto
+            </span>
+                {% endif %}
+            </div>
+            <div class="col-10">
+                <h2>{{ Question.title }}</h2>
+            </div>
+        </div>
+
+        <div class="rounded container p-5" style="background-color: white">
+            <p style="color: gray">Fecha de publicación: {{ Question.date|localizeddate('long', 'none', 'es_CO') }} <br>
+                Preguntado por: {{ Question.usuario.username }}</p>
+            <p>{{ Question.question |  raw }}</p>
+        </div>
+        <div class="jumbotron mt-5" style="border: 1px #34ce57 dashed">
+            {{ form_start(form) }}
+            <div class="form-group">
+                <label for="exampleInputEmail1"><h3>¿Sabes la respuesta? Ayuda a {{ Question.usuario.username }}</h3>
+                </label>
+                {{ form_widget(form.answer, {'attr':{'class':'form-control'}}) }}
+            </div>
+            {{ form_end(form) }}
+            <h2 class="mt-5 mb-3">Respuestas: </h2>
+            <div class="container ">
+
+                <div class="container">
+                    {% for article in pagination %}
+                        <div>
+                            <div class="mb-3 p-3 pointer article" style="background: white; border-radius: 6px;">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            {#<p style="color: #0a8ecd" class="title">{{ article.title }}</p>#}
+                                            {#<hr>#}
+                                            {#<p>#}
+                                                <div class=" d-none d-md-block section">
+                                            <p>{{ article.answer }}</p> <br>
+                                                    <p style="color: gray"> Respondido por: {{ article.getUsuario.username }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+{% endblock %}

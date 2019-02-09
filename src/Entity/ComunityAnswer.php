@@ -27,9 +27,9 @@ class ComunityAnswer
     private $img;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="Respuestas")
      */
-    private $userId;
+    private $usuario;
 
 
 
@@ -46,11 +46,10 @@ class ComunityAnswer
      * @param $img
      * @param $userId
      */
-    public function __construct($answer, $img, $userId)
+    public function __construct($answer=null, $img=null)
     {
         $this->answer = $answer;
         $this->img = $img;
-        $this->userId = $userId;
     }
 
     /**
@@ -96,18 +95,37 @@ class ComunityAnswer
     /**
      * @return mixed
      */
-    public function getUserId()
+    public function getUsuario()
     {
-        return $this->userId;
+        return $this->usuario;
     }
 
     /**
-     * @param mixed $userId
+     * @param mixed $usuario
      */
-    public function setUserId($userId)
+    public function setUsuario($usuario)
     {
-        $this->userId = $userId;
+        $this->usuario = $usuario;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPregunta()
+    {
+        return $this->pregunta;
+    }
+
+    /**
+     * @param mixed $pregunta
+     */
+    public function setPregunta($pregunta)
+    {
+        $this->pregunta = $pregunta;
+    }
+
+
+
 
 
 }
