@@ -142,7 +142,7 @@ footer p {
 /* Color navbar li hover
 -------------------------------------------------- */
 /*ul > li :hover {*/
-  /*background-color: #0c60b5;*/
+  /*background-color: #D89E0B;*/
 /*}*/
 
 /*=======================================================================
@@ -169,7 +169,7 @@ Customize Navbar Colors
 }
 .navbar .navbar-text a:hover,
 .navbar .navbar-text a:focus {
-  color: #ccd489; 
+  color: #ccd489;
 }
 .navbar .navbar-nav .nav-link {
   color: #ffffff;
@@ -191,7 +191,7 @@ Customize Navbar Colors
 .navbar .navbar-nav .dropdown-menu .dropdown-item:focus,
 .navbar .navbar-nav .dropdown-menu .dropdown-item.active {
   color: #ccd489;
-  background-color: #0c60b5;
+  background-color: #D89E0B;
 }
 .navbar .navbar-nav .dropdown-menu .dropdown-divider {
   border-top-color: #0c60b5;
@@ -202,15 +202,15 @@ Customize Navbar Colors
 .navbar .navbar-nav .nav-item.show .nav-link,
 .navbar .navbar-nav .nav-item.show .nav-link:hover,
 .navbar .navbar-nav .nav-item.show .nav-link:focus {
-  color: #ccd489;
-  background-color: #0c60b5;
+  color: white;
+  background-color: #D89E0B;
 }
 .navbar .navbar-toggle {
   border-color: #0c60b5;
 }
 .navbar .navbar-toggle:hover,
 .navbar .navbar-toggle:focus {
-  background-color: #0c60b5;
+  background-color: #D89E0B;
 }
 .navbar .navbar-toggle .navbar-toggler-icon {
   color: #ffffff;
@@ -236,7 +236,7 @@ Customize Navbar Colors
   }
   .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item.active {
     color: #ccd489;
-    background-color: #0c60b5;
+    background-color: #D89E0B;
   }
 }
 
@@ -250,7 +250,7 @@ Customize Navbar Colors
   }
   .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item.active {
     color: #ccd489;
-    background-color: #0c60b5;
+    background-color: #D89E0B;
   }
 }
 
@@ -264,7 +264,7 @@ Customize Navbar Colors
   }
   .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item.active {
     color: #ccd489;
-    background-color: #0c60b5;
+    background-color: #D89E0B;
   }
 }
 
@@ -278,7 +278,7 @@ Customize Navbar Colors
   }
   .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item.active {
     color: #ccd489;
-    background-color: #0c60b5;
+    background-color: #D89E0B;
   }
 }
 
@@ -291,7 +291,7 @@ Customize Navbar Colors
 }
 .navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item.active {
   color: #ccd489;
-  background-color: #0c60b5;
+  background-color: #D89E0B;
 }
 
 /*===================

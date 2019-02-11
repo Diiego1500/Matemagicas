@@ -38,7 +38,15 @@ class ComunityAnswer
      */
     private $pregunta;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $correct;
 
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $Creationdate;
 
     /**
      * ComunityAnswer constructor.
@@ -50,6 +58,8 @@ class ComunityAnswer
     {
         $this->answer = $answer;
         $this->img = $img;
+        $this->correct=false;
+        $this->Creationdate = new \DateTime('now');
     }
 
     /**
@@ -123,6 +133,50 @@ class ComunityAnswer
     {
         $this->pregunta = $pregunta;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCorrect()
+    {
+        return $this->correct;
+    }
+
+    /**
+     * @param mixed $correct
+     */
+    public function setCorrect($correct)
+    {
+        $this->correct = $correct;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCreationdate()
+    {
+        return $this->Creationdate;
+    }
+
+    /**
+     * @param mixed $Creationdate
+     */
+    public function setCreationdate($Creationdate)
+    {
+        $this->Creationdate = $Creationdate;
+    }
+
+
+
+
 
 
 

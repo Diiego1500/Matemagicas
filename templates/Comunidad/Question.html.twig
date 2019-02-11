@@ -1,69 +1,81 @@
 {% extends 'base.html.twig' %}
 {% block body %}
     {{ parent() }}
-    <div class="container">
-        <div class="row">
-            <div class="col-2">
-                {% if Question.solved %}
-                    <span class="alert alert-success" role="alert">
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            {% if Question.solved %}
+                <span class="alert alert-success" role="alert">
                 Resuelto
             </span>
-                {% else %}
-                    <span class="alert alert-danger" role="alert">
+            {% else %}
+                <span class="alert alert-danger" role="alert">
                No Resuelto
             </span>
-                {% endif %}
-            </div>
-            <div class="col-10">
-                <h2>{{ Question.title }}</h2>
-            </div>
+            {% endif %}
         </div>
-
-        <div class="rounded container p-5" style="background-color: white">
-            <p style="color: gray">Fecha de publicación: {{ Question.date|localizeddate('long', 'none', 'es_CO') }} <br>
-                Preguntado por: {{ Question.usuario.username }}</p>
-            <p>{{ Question.question |  raw }}</p>
+        <div class="col-md-10">
+            <h3>{{ Question.title }}</h3>
         </div>
-        <div class="jumbotron mt-5" style="border: 1px #34ce57 dashed">
-            {{ form_start(form) }}
-            <div class="form-group">
-                <label for="exampleInputEmail1"><h3>¿Sabes la respuesta? Ayuda a {{ Question.usuario.username }}</h3>
-                </label>
-                {{ form_widget(form.answer, {'attr':{'class':'form-control'}}) }}
-            </div>
-            {{ form_end(form) }}
-            <h2 class="mt-5 mb-3">Respuestas: </h2>
-            <div class="container ">
-
-                <div class="container">
-                    {% for article in pagination %}
-                        <div>
-                            <div class="mb-3 p-3 pointer article" style="background: white; border-radius: 6px;">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            {#<p style="color: #0a8ecd" class="title">{{ article.title }}</p>#}
-                                            {#<hr>#}
-                                            {#<p>#}
-                                                <div class=" d-none d-md-block section">
-                                            <p>{{ article.answer }}</p> <br>
-                                                    <p style="color: gray"> Respondido por: {{ article.getUsuario.username }}</p>
-                                        </div>
+    </div>
+    <div class="rounded container p-5" style="background-color: white">
+        <p style="color: gray">Fecha de publicación: {{ Question.date|localizeddate('long', 'none', 'es_CO') }} <br>
+            Preguntado por: {{ Question.usuario.username }}</p>
+        <p>{{ (Question.question | raw ) | nl2br }}</p>
+    </div>
+    <div class="jumbotron mt-5" style="border: 1px #34ce57 dashed">
+        {{ form_start(form) }}
+        <div class="form-group">
+            <label for="exampleInputEmail1"><h3>¿Sabes la respuesta? Ayuda a {{ Question.usuario.username }}</h3>
+            </label>
+            {{ form_widget(form.answer, {'attr':{'class':'form-control', 'placeholder':'Por favor, se amable y especifico en tu respuesta.'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_widget(form.enviar, {'attr':{'class':'btn btn-success'}}) }}
+        </div>
+        {{ form_end(form) }}
+        <h2 class="mt-5 mb-3">Respuestas: </h2>
+        <div class="container ">            <div class="container">
+                {% for article in pagination %}
+                <div>
+                    <div class="mb-3 p-3 article" style="background: white; border-radius: 6px; border: 1px #34ce57 dashed" >
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="section">
+                                        <hr><p>{{ article.answer |nl2br }}</p> <hr>
+                                        <p style="color: gray">
+                                            {% if article.correct %}
+                                                <img src="{{ asset('Img/src/Correct.svg') }}" alt="Correct">
+                                                <span style="color: gray">
+                                                {{ Question.usuario.username }} Ha marcado esta respuesta como correcta.
+                                                 </span>
+                                            {% endif %}
+                                            <br>
+                                            Respondido por: {{ article.getUsuario.username }} |
+                                            <img src="{{ asset('Img/src/clock.svg') }}" alt="clock">
+                                            {{ article.Creationdate|localizeddate('long', 'none', 'es_CO') }}
+                                        </p>
+                                        {% if Question.usuario.id == app.user.id and not Question.solved %}
+                                            <button class="btn btn-info CorrectAnswer" onclick="markCheck(this)" data-id="{{ article.id }}">Respuesta correcta.
+                                            </button>
+                                            {% elseif Question.usuario.id == app.user.id and Question.solved %}
+                                            <p style="color: #34ce57">Ya has marcado la pregunta como respondida</p>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     {% endfor %}
                 </div>
-
-
             </div>
         </div>
-
-
     </div>
-
-
-
-
+    {% endblock %}
+{% block Js %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+    <script src="{{ asset('Scripts/Templates/Question.js') }}"></script>
 {% endblock %}

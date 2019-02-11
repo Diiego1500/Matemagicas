@@ -27,37 +27,39 @@
 {% block body %}
     {{ parent() }}
 
-    <div class="container">
-        <div class="jumbotron">
-            <h2 class="text-center">¡Preguntale algo a la comunidad!</h2>
-            {{ form_start(formulario, {'attr': {'novalidate': 'novalidate'}}) }}
-            <div class="form-group">
-                <label for="exampleInputEmail1"><h3>Titulo</h3></label>
-                {{ form_widget(formulario.title, {'attr':{'class':'form-control'}}) }}
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1"><h3>Pregunta</h3></label>
-                {{ form_widget(formulario.question, {'attr':{'class':'form-control'}}) }}
-            </div>
-            <div class="form-group">
-                {{ form_widget(formulario.Enviar, {'attr':{'class':'btn btn-success btn-block'}}) }}
-            </div>
-            {{ form_end(formulario) }}
+<div class="container">
+    <div class="jumbotron" style="border: 1px #34ce57 dashed">
+        <h2 class="text-center">¡Preguntale algo a la comunidad!</h2>
+        {{ form_start(formulario, {'attr': {'novalidate': 'novalidate'}}) }}
+        <div class="form-group">
+            <label for="exampleInputEmail1"><h3>Titulo</h3></label>
+            {{ form_widget(formulario.title, {'attr':{'class':'form-control'}}) }}
         </div>
-        <div class="container">
-            {% for article in pagination %}
-              <div>
-                <div class="mb-3 p-3 pointer article" style="background: white; border-radius: 6px;"
-                     onclick="location.href='{{ path('SeeQuestion',{'url':article.url}) }}'">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <p style="color: #0a8ecd" class="title">{{ article.title }}</p>
-                                <hr>
-                                <p>
-                                    <div class=" d-none d-md-block section">
-                                <p>{{ article.question | raw }}</p>
+        <div class="form-group">
+            <label for="exampleInputEmail1"><h3>Pregunta</h3></label>
+            {{ form_widget(formulario.question, {'attr':{'class':'form-control','placeholder':'Dirigete a la comunidad con respeto y trata de explicarte de la mejor manera posible.'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_widget(formulario.Enviar, {'attr':{'class':'btn btn-success btn-block'}}) }}
+        </div>
+        {{ form_end(formulario) }}
+    </div>
+    <div class="container">
+        {% for article in pagination %}
+        <div>
+            <div class="mb-3 p-3 pointer article" style="background: white; border-radius: 6px;"
+                 onclick="location.href='{{ path('SeeQuestion',{'url':article.url}) }}'">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p style="color: #0a8ecd" class="title">{{ article.title }}</p>
+                            <hr>
+
+                            <div class=" d-none d-md-block section collapse">
+
+                                {{ article.question |nl2br }}
                             </div>
+
                         </div>
                         <div class="date mt-3" style="color: gray">
                             <img src="{{ asset('Img/src/clock.svg') }}"
@@ -75,14 +77,15 @@
                         </p>
                     </div>
                 </div>
-              </div>
+            </div>
             {% endfor %}
         </div>
         <div class="navigation">
             {{ knp_pagination_render(pagination) }}
         </div>
     </div>
-
-
+    {% endblock %}
+    {% block Js %}
+    {{ parent() }}
 
 {% endblock %}
