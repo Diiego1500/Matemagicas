@@ -1,5 +1,6 @@
 var answerArray = [];
 var Board2 = document.getElementsByClassName('b2');
+var ListaPlano =  ["moon", "rabbit", "robot", "rocket", "star"];
 
 for (var i = 0; i < Board2.length; i++) {
     Board2[i].addEventListener("click", function () {
@@ -101,7 +102,13 @@ interact('.draggable')
                     var content = '<img id="' + id + '" class="draggable drag-drop tablet animated zoomIn" src="/Matemagicas/public/Img/tempIcons/' + id + '.png" width="30px" height="30px"> ';
                 }
                 else {
-                    var content = '<img id="' + id + '" class="draggable drag-drop tablet animated zoomIn" style="position: absolute;  margin: auto;" src="/Matemagicas/public/Img/tempIcons/' + id + '.png" width="30px" height="30px"> ';
+                    if(ListaPlano.includes(id)){
+                        var content = '<img id="' + id + '" class="draggable drag-drop tablet animated zoomIn" style="position: absolute;  margin: auto;" src="/Matemagicas/public/Img/tempIcons/' + id + '.png" width="95px" height="95px">';
+                    }else{
+                        var content = '<img id="' + id + '" class="draggable drag-drop tablet animated zoomIn" style="position: absolute;  margin: auto;" src="/Matemagicas/public/Img/tempIcons/' + id + '.png" width="30px" height="30px"> ';
+                    }
+
+                    console.log(content);
                 }
             }
             var td = $('#td' + id);

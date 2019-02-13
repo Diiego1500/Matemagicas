@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="623a447c-a2d7-446b-8c36-88e7cc732324" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/Scripts/Templates/Question.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/standard/BoardPlanos.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/standard/PlanosButton.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/standard/Resources.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/Css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Scripts/Templates/BlogIndex.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Scripts/Templates/BlogIndex.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ComunidadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ComunidadController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/ComunityAnswer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ComunityAnswer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Comunidad/Question.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Comunidad/Question.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Comunidad/comunidad.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Comunidad/comunidad.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/twitter_bootstrap_v4_pagination.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/twitter_bootstrap_v4_pagination.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Img/Exercises/Geometry/Plano Cartesiano/Plano Cartesiano .ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Scripts/Templates/practicalExercises.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Scripts/Templates/practicalExercises.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/StandardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/StandardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +58,7 @@
     <session id="-726915951">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="56" />
+          <entry key="project.closed" value="57" />
           <entry key="project.open.time.0" value="11" />
           <entry key="project.open.time.1" value="12" />
           <entry key="project.open.time.11" value="1" />
@@ -75,6 +74,7 @@
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.30" value="2" />
+          <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.47" value="1" />
@@ -82,7 +82,7 @@
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="60" />
+          <entry key="project.opened" value="61" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -94,14 +94,14 @@
           <entry key="globals_tips" value="2" />
           <entry key="html" value="2" />
           <entry key="jpg" value="4" />
-          <entry key="js" value="22" />
-          <entry key="php" value="181" />
-          <entry key="png" value="271" />
+          <entry key="js" value="25" />
+          <entry key="php" value="184" />
+          <entry key="png" value="272" />
           <entry key="practical_exercise" value="21" />
           <entry key="sql" value="13" />
           <entry key="svg" value="43" />
           <entry key="theme" value="6" />
-          <entry key="twig" value="207" />
+          <entry key="twig" value="220" />
           <entry key="user" value="5" />
           <entry key="yaml" value="12" />
         </counts>
@@ -111,14 +111,14 @@
           <entry key="CSS" value="21" />
           <entry key="Database Element" value="34" />
           <entry key="HTML" value="2" />
-          <entry key="Image" value="307" />
-          <entry key="JavaScript" value="22" />
-          <entry key="PHP" value="181" />
+          <entry key="Image" value="308" />
+          <entry key="JavaScript" value="25" />
+          <entry key="PHP" value="184" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="SQL" value="12" />
           <entry key="SVG" value="43" />
           <entry key="Scratch" value="1" />
-          <entry key="Twig" value="207" />
+          <entry key="Twig" value="220" />
           <entry key="YAML" value="12" />
         </counts>
       </usages-collector>
@@ -128,10 +128,10 @@
           <entry key="css" value="138" />
           <entry key="env" value="58" />
           <entry key="html" value="5" />
-          <entry key="js" value="2446" />
-          <entry key="php" value="10681" />
+          <entry key="js" value="2635" />
+          <entry key="php" value="10709" />
           <entry key="svg" value="22" />
-          <entry key="twig" value="28302" />
+          <entry key="twig" value="29457" />
           <entry key="txt" value="11" />
           <entry key="yaml" value="36" />
         </counts>
@@ -139,13 +139,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="138" />
-          <entry key="HTML" value="5" />
-          <entry key="JavaScript" value="2446" />
-          <entry key="PHP" value="10681" />
+          <entry key="HTML" value="8" />
+          <entry key="JavaScript" value="2632" />
+          <entry key="PHP" value="10709" />
           <entry key="PLAIN_TEXT" value="69" />
           <entry key="SVG" value="22" />
           <entry key="Scratch" value="2124" />
-          <entry key="Twig" value="28302" />
+          <entry key="Twig" value="29457" />
           <entry key="YAML" value="36" />
         </counts>
       </usages-collector>
@@ -154,99 +154,48 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/ComunityQuestion.php">
+        <entry file="file://$PROJECT_DIR$/public/Scripts/Templates/practicalExercises.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="145" column="30" selection-start-line="145" selection-start-column="20" selection-end-line="145" selection-end-column="30" />
+            <state relative-caret-position="714">
+              <caret line="113" column="17" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
               <folding>
-                <element signature="e#30#78#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#small#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Comunidad/comunidad.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-95">
-              <caret line="39" column="180" selection-start-line="39" selection-start-column="180" selection-end-line="39" selection-end-column="180" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/blog/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="99" column="57" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/Scripts/Templates/BlogIndex.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="45" column="57" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#strong#0;n#a#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#nav#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/bundles/KNPPaginatorBundle/Paginador.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="71" selection-end-line="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/services.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-44" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/twitter_bootstrap_v4_pagination.html.twig">
+        <entry file="file://$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            <state relative-caret-position="92">
+              <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+              <folding>
+                <element signature="e#4919#4938#0#HTML" expanded="true" />
+                <element signature="e#5093#5112#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/Css/main.css">
+        <entry file="file://$PROJECT_DIR$/templates/standard/board.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="187" column="17" selection-start-line="187" selection-start-column="17" selection-end-line="187" selection-end-column="17" />
+            <state relative-caret-position="738">
+              <caret line="83" column="40" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Comunidad/Question.html.twig">
+        <entry file="file://$PROJECT_DIR$/templates/standard/Resources.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="138" selection-start-line="30" selection-start-column="138" selection-end-line="30" selection-end-column="138" />
+            <state relative-caret-position="323">
+              <caret line="19" column="84" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -255,23 +204,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fondo</find>
-      <find>Post</find>
-      <find>modal-lg</find>
-      <find>post</find>
-      <find>categorie</find>
-      <find>categories</find>
-      <find>title</find>
-      <find>null</find>
-      <find>nullable</find>
-      <find>practicalExercise</find>
-      <find>PracticalExercise</find>
-      <find>user</find>
-      <find>id</find>
-      <find>getid</find>
-      <find>$id</find>
-      <find>$usuario</find>
-      <find>userid</find>
       <find>userId</find>
       <find>v1</find>
       <find>comunity</find>
@@ -285,6 +217,23 @@
       <find>hover</find>
       <find>background-color: #0c60b5;</find>
       <find>color: #ccd489;</find>
+      <find>png</find>
+      <find>aqui</find>
+      <find>Impo</find>
+      <find>rea</find>
+      <find>ver</find>
+      <find>Ver</find>
+      <find>realiza a</find>
+      <find>necei</find>
+      <find>camb</find>
+      <find>cambiar</find>
+      <find>recurs</find>
+      <find>ThemeSources</find>
+      <find>ver re</find>
+      <find>recursos</find>
+      <find>mb</find>
+      <find>mt</find>
+      <find>data</find>
     </findStrings>
     <replaceStrings>
       <replace>white</replace>
@@ -308,10 +257,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/standard/Error.html.twig" />
-        <option value="$PROJECT_DIR$/templates/standard/GlobalTips.html.twig" />
-        <option value="$PROJECT_DIR$/templates/Geometria/angulos.html.twig" />
-        <option value="$PROJECT_DIR$/templates/bundles/TwigBundle/error404.html.twig" />
         <option value="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" />
         <option value="$PROJECT_DIR$/templates/Geometria/Perimetro.html.twig" />
         <option value="$PROJECT_DIR$/templates/Geometria/Prethemes.html.twig" />
@@ -319,9 +264,7 @@
         <option value="$PROJECT_DIR$/templates/Geometria/figurageometrica.html.twig" />
         <option value="$PROJECT_DIR$/src/Repository/PracticalExerciseRepository.php" />
         <option value="$PROJECT_DIR$/src/Entity/PracticalExercise.php" />
-        <option value="$PROJECT_DIR$/public/Scripts/Templates/practicalExercises.js" />
         <option value="$PROJECT_DIR$/public/Scripts/Templates/practicalExercises2.js" />
-        <option value="$PROJECT_DIR$/src/Controller/StandardController.php" />
         <option value="$PROJECT_DIR$/templates/standard/ChooseLevel.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/BlogCategory.php" />
         <option value="$PROJECT_DIR$/public/Css/fonts/stylesheet.css" />
@@ -337,17 +280,14 @@
         <option value="$PROJECT_DIR$/src/Repository/BlogArticleRepository.php" />
         <option value="$PROJECT_DIR$/src/Controller/PrimaryController.php" />
         <option value="$PROJECT_DIR$/templates/standard/matemagicas.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/templates/standard/acercade.html.twig" />
         <option value="$PROJECT_DIR$/templates/blog/article.html.twig" />
         <option value="$PROJECT_DIR$/templates/blog/email.html.twig" />
-        <option value="$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/BlogController.php" />
         <option value="$PROJECT_DIR$/src/Form/ComunityQuestionType.php" />
         <option value="$PROJECT_DIR$/src/Repository/ComunityQuestionRepository.php" />
         <option value="$PROJECT_DIR$/src/Entity/ComunityQuestion.php" />
         <option value="$PROJECT_DIR$/templates/blog/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Form/AnswerType.php" />
         <option value="$PROJECT_DIR$/src/Form/ComunityAnswerType.php" />
         <option value="$PROJECT_DIR$/src/Entity/ComunityAnswer.php" />
@@ -359,6 +299,15 @@
         <option value="$PROJECT_DIR$/public/Css/main.css" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/twitter_bootstrap_v4_pagination.html.twig" />
+        <option value="$PROJECT_DIR$/templates/standard/board.html.twig" />
+        <option value="$PROJECT_DIR$/public/Scripts/Templates/practicalExercises.js" />
+        <option value="$PROJECT_DIR$/templates/standard/BoardPlanos.html.twig" />
+        <option value="$PROJECT_DIR$/templates/standard/PlanosButton.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/StandardController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/User.php" />
+        <option value="$PROJECT_DIR$/templates/standard/Resources.html.twig" />
+        <option value="$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig" />
       </list>
     </option>
   </component>
@@ -488,7 +437,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -499,80 +447,35 @@
             <path>
               <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
               <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
               <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
               <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="bundles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
               <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="bundles" type="462c0819:PsiDirectoryNode" />
-              <item name="KNPPaginatorBundle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="knplabs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="knplabs" type="462c0819:PsiDirectoryNode" />
-              <item name="knp-paginator-bundle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="knplabs" type="462c0819:PsiDirectoryNode" />
-              <item name="knp-paginator-bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="knplabs" type="462c0819:PsiDirectoryNode" />
-              <item name="knp-paginator-bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="knplabs" type="462c0819:PsiDirectoryNode" />
-              <item name="knp-paginator-bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Pagination" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="SearchEverywhereHistoryKey" value="Scripts/Templates/BlogIndex.js&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/public/Scripts/Templates/BlogIndex.js&#10;Scripts/Templates/practicalExercises2.js&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/public/Scripts/Templates/practicalExercises2.js&#10;Comunidad/Question.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/Comunidad/Question.html.twig&#10;Comunidad/comunidad.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/Comunidad/comunidad.html.twig&#10;blog/index.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/blog/index.html.twig&#10;index/index.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/index/index.html.twig&#10;standard/ChooseLevel.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/standard/ChooseLevel.html.twig&#10;templates\standard\Success.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/Success.html.twig&#10;kernel&#9;null&#9;null&#10;kernel.php&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/src/Kernel.php&#10;standard/boardBool.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/boardBool.html.twig&#10;standard/board.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/board.html.twig&#10;Scripts/Templates/practicalExercises.js&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Scripts/Templates/practicalExercises.js&#10;standard/Success.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/Success.html.twig&#10;standard/PracticalExercises.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/PracticalExercises.html.twig" />
+    <property name="SearchEverywhereHistoryKey" value="standard/board.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/standard/board.html.twig&#10;standard/Resources.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/standard/Resources.html.twig&#10;Scripts/Templates/practicalExercises.js&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/public/Scripts/Templates/practicalExercises.js&#10;Scripts/Templates/practicalExercises2.js&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/public/Scripts/Templates/practicalExercises2.js&#10;Scripts/Templates/BlogIndex.js&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/public/Scripts/Templates/BlogIndex.js&#10;Comunidad/Question.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/Comunidad/Question.html.twig&#10;Comunidad/comunidad.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/Comunidad/comunidad.html.twig&#10;blog/index.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/blog/index.html.twig&#10;index/index.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/index/index.html.twig&#10;standard/ChooseLevel.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/standard/ChooseLevel.html.twig&#10;templates\standard\Success.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/Success.html.twig&#10;kernel&#9;null&#9;null&#10;kernel.php&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/src/Kernel.php&#10;standard/boardBool.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/boardBool.html.twig&#10;standard/Success.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/Success.html.twig&#10;standard/PracticalExercises.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/PracticalExercises.html.twig" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/proyecto/proyectoActualizado/inventarioOrtopedica" />
@@ -580,19 +483,19 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\matemagicas\public\Img\tempIcons" />
+      <recent name="C:\xampp\htdocs\matemagicas\public\bk" />
+      <recent name="C:\xampp\htdocs\matemagicas\templates" />
+      <recent name="C:\xampp\htdocs\matemagicas\public\Img\Answers\primary\frac" />
+      <recent name="C:\xampp\htdocs\matemagicas\templates\bundles\TwigBundle\Exception" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\matemagicas\public\bk" />
       <recent name="C:\xampp\htdocs\matemagicas\public\Css\fonts" />
       <recent name="C:\xampp\htdocs\matemagicas\public\Img\Answers\primary\sum" />
       <recent name="C:\xampp\htdocs\matemagicas\public\Img" />
       <recent name="C:\xampp\htdocs\matemagicas\public\Scripts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\matemagicas\public\bk" />
-      <recent name="C:\xampp\htdocs\matemagicas\templates" />
-      <recent name="C:\xampp\htdocs\matemagicas\public\Img\Answers\primary\frac" />
-      <recent name="C:\xampp\htdocs\matemagicas\templates\bundles\TwigBundle\Exception" />
-      <recent name="C:\xampp\htdocs\Matemagicas\public\Img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -725,17 +628,19 @@
       <workItem from="1549665662680" duration="1167000" />
       <workItem from="1549719705098" duration="11712000" />
       <workItem from="1549891379921" duration="8877000" />
-      <workItem from="1549911652240" duration="10767000" />
+      <workItem from="1549911652240" duration="10958000" />
+      <workItem from="1550072923588" duration="16118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="525957000" />
+    <option name="totallyTimeSpent" value="542266000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18176973" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13752665" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -748,7 +653,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5010799" side_tool="true" weight="0.32968238" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="8" weight="0.3253012" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49892008" visible="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49892008" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.329718" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" sideWeight="0.49964002" weight="0.32968238" />
@@ -777,62 +682,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controller/PrimaryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/standard/matemagicas.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/standard/acercade.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blog/article.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blog/email.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="118" selection-start-line="2" selection-start-column="118" selection-end-line="2" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="99" selection-start-line="99" selection-end-line="143" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Scripts/Templates/Blog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/BlogController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="57" column="79" selection-start-line="57" selection-start-column="79" selection-end-line="57" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/BlogArticle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1105">
@@ -911,13 +760,6 @@
         <state relative-caret-position="-51" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2305">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/ComunityQuestionRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -943,42 +785,11 @@
     <entry file="file://$PROJECT_DIR$/src/Repository/ComunityAnswerRepository.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/Scripts/Templates/practicalExercises2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" selection-start-line="28" selection-end-line="36" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="194" column="67" lean-forward="true" selection-start-line="194" selection-start-column="27" selection-end-line="194" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/standard/GlobalTips.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/standard/Exercises.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/StandardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1354">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="17" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
@@ -1029,29 +840,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="145" column="30" selection-start-line="145" selection-start-column="20" selection-end-line="145" selection-end-column="30" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Comunidad/Question.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="138" selection-start-line="30" selection-start-column="138" selection-end-line="30" selection-end-column="138" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/config/packages/framework.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Comunidad/comunidad.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
+        <state relative-caret-position="663">
           <caret line="39" column="180" selection-start-line="39" selection-start-column="180" selection-end-line="39" selection-end-column="180" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/blog/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
+        <state relative-caret-position="1683">
           <caret line="99" column="57" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="57" />
         </state>
       </provider>
@@ -1063,33 +867,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/Css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="187" column="17" selection-start-line="187" selection-start-column="17" selection-end-line="187" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="765">
           <caret line="45" column="57" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#strong#0;n#a#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#nav#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/framework.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/bundles/KNPPaginatorBundle/Paginador.html.twig">
@@ -1099,10 +881,135 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/twitter_bootstrap_v4_pagination.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="1122">
+          <caret line="66" column="44" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3179">
+          <caret line="187" column="17" selection-start-line="187" selection-start-column="17" selection-end-line="187" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Comunidad/Question.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="138" selection-start-line="30" selection-start-column="138" selection-end-line="30" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Scripts/Templates/practicalExercises2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="54" lean-forward="true" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Base2.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Img/tempIcons/moon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/boardButton.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="772">
+          <caret line="68" column="8" selection-end-line="68" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/PlanosButton.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="67" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/BoardPlanos.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="144" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="144" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#4;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Scripts/Templates/practicalExercises.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="113" column="17" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/StandardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="83" column="26" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="197" column="42" selection-start-line="197" selection-start-column="42" selection-end-line="197" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/Resources.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="84" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/board.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="83" column="40" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+          <folding>
+            <element signature="e#4919#4938#0#HTML" expanded="true" />
+            <element signature="e#5093#5112#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

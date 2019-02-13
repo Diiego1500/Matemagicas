@@ -81,6 +81,7 @@ class StandardController extends Controller
         return $this->render('standard/PracticalExercises.html.twig', array(
             'Exercise' => $Exercise,
             'ThemeSources' => $themeSources,
+            'ThemeSources2' => $themeSources,
             'boardKind' => $user->getBoardKind()
         ));
     }

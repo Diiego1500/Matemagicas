@@ -1,0 +1,25 @@
+<ul class="nav nav-tabs">
+    {% set j = 0 %}
+    {% set i = 0 %}
+    {% for li in ThemeSources %}
+        <li class="nav-link">
+            <a href="#{{ i }}a" data-toggle="tab">
+                <small>Recurso {{ i + 1 }}</small>
+            </a>
+        </li>
+        {% set i = i+1 %}
+    {% endfor %}
+</ul>
+<div class="tab-content clearfix">
+    {% for source in ThemeSources %}
+        <div class="tab-pane text-center mt-3" id="{{ j }}a">
+            {% if 'youtube' in source %}
+                <iframe width="100%" src="{{ source }}" class="rounded">
+                </iframe>
+            {% else %}
+                <img src="{{ asset('Img/src/'~source) }}" class="w-100 h-100 rounded"/>
+            {% endif %}
+        </div>
+        {% set j = j+1 %}
+    {% endfor %}
+</div>

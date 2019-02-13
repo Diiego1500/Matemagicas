@@ -61,7 +61,7 @@ class User extends BaseUser
      * @ORM\Column(type="boolean")
      */
     //tipo de tablero (drag and drop - clickeable) escogido por el usuario
-    private $BoardKind=true;
+    private $BoardKind=false;
 
 
     /**

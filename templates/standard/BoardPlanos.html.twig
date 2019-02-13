@@ -1,0 +1,41 @@
+{% if boardKind %}
+    <table id="board" align="center" width="100px" data-step="4" border="1"
+           data-intro="Este es tu tablero. Cada uno de los elementos del tablero se pueden arrastrar a la sección de respuesta. La cual evaluará tu solución.">
+        <thead>
+        <th colspan="3">Tablero</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td id="tdmoon" style="vertical-align:top; width: 100px; height: 100px" >
+                <img id="moon" class="draggable drag-drop tablet" src="{{ asset('/Matemagicas/public/Img/tempIcons/moon.png') }}" width="100%"/>
+            </td>
+        </tr>
+        <tr>
+            <td id="tdrabbit" style="vertical-align:top; width: 100px; height: 100px" >
+                <img id="rabbit" class="draggable drag-drop tablet" src="{{ asset('/Matemagicas/public/Img/tempIcons/rabbit.png') }}" width="100%"/>
+            </td>
+        </tr>
+        <tr>
+            <td id="tdrobot" style="vertical-align:top; width: 100px; height: 100px" >
+                <img id="robot" class="draggable drag-drop tablet"
+                     src="{{ asset('/Matemagicas/public/Img/tempIcons/robot.png') }}" width="100%"/>
+            </td>
+        </tr>
+        <tr>
+            <td id="tdrocket" style="vertical-align:top; width: 100px; height: 100px" >
+                <img id="rocket" class="draggable drag-drop tablet" src="{{ asset('Img/tempIcons/rocket.png') }}" width="100%" alt="rocket">
+            </td>
+        </tr>
+        <tr>
+            <td id="tdstar" style="vertical-align:top; width: 100px; height: 100px" >
+                <img id="star" class="draggable drag-drop tablet" src="{{ asset('Img/tempIcons/star.png') }}" width="100%" alt="rocket">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+{% endif %}
+
+
+{% if not boardKind %}
+    {% include 'standard/PlanosButton.html.twig' %}
+{% endif %}
