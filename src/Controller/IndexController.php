@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\ComunityAnswer;
+use App\Entity\ComunityQuestion;
 use App\Entity\PracticalExercise;
 use App\Entity\User;
 use App\Entity\UserData;
@@ -37,8 +39,6 @@ class IndexController extends Controller
     {
         $user = $this->getUser();
         if ($user) {
-            if (in_array('ROLE_ADMIN', $user->getRoles()) || in_array('ROLE_USER', $user->getRoles())) {
-
                 $em = $this->getDoctrine()->getManager();
                 $solvedExercises = json_decode($user->getSolvedExercises());
                 $lengthSolvedExercises = count($solvedExercises);
@@ -75,7 +75,6 @@ class IndexController extends Controller
                         'isBlog'=>false
                     ));
                 }
-            }
         } else {
             return $this->loginAction(new Request());
         }
@@ -176,6 +175,29 @@ class IndexController extends Controller
     public function Acercade(){
         return $this->render('standard/acercade.html.twig');
     }
+
+
+    /**
+     * @Route("/MyQuestions/", name="UserQuestions")
+     */
+    public function UserQuestions(Request $request){
+        $userId=$this->getUser()->getId();
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->getRepository(ComunityQuestion::class)->SearchUserQuestion($userId);
+
+
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $query, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            10/*limit per page*/
+        );
+
+        return $this->render('standard/userAnswers.html.twig', array('pagination'=>$pagination));
+    }
+
+
 
     private function CreateAndRegisterUser($email, $username, $password)
     {

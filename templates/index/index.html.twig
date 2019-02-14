@@ -12,13 +12,14 @@
 {% block body %}
     {{ parent() }}
     <div style="width: 90%; margin: 0 auto">
-        <h4 class="text-center mt-3 mb-5" style="font-family: 'rounded_eleganceregular';"> Bienvenido {{ app.user.username }} </h4>
+        <h4 class="text-center mt-3 mb-5" style="font-family: 'rounded_eleganceregular';">
+            Bienvenido {{ app.user.username }} </h4>
 
-            {% for flash_message in app.session.flashbag.get('notice') %}
-                <div class="alert alert-success mt-3">
-                    <strong>{{ flash_message }}</strong>
-                </div>
-            {% endfor %}
+        {% for flash_message in app.session.flashbag.get('notice') %}
+            <div class="alert alert-success mt-3">
+                <strong>{{ flash_message }}</strong>
+            </div>
+        {% endfor %}
 
         <div class="text-center d-md-block d-lg-none">
             <div class="p-5 m-3" style="background-color: white; border-radius: 6px">
@@ -62,7 +63,8 @@
                 </div>
             </div>
         </div>
-        <div class="container mt-5 ml-5 pb-2 d-none d-lg-block mb-5" style="background-color: white; width: 48%; float: left; border-radius: 15px 15px 15px 15px;">
+        <div class="container mt-5 ml-5 pb-2 d-none d-lg-block mb-5"
+             style="background-color: white; width: 48%; float: left; border-radius: 15px 15px 15px 15px;">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                 <h1 class="text-center mb-5 mt-3">Tu anuncio aparecerá aquí</h1>
                 <div class="carousel-inner">
@@ -87,7 +89,8 @@
         </div>
         <div class="container d-none d-lg-block mr-5 mb-5" style="width: 40%; float: right">
             <div class="row mt-5">
-                <div class="col-md-12"   style=" background-color: white; border-radius: 15px 15px 15px 15px; margin-left: 15px">
+                <div class="col-md-12"
+                     style=" background-color: white; border-radius: 15px 15px 15px 15px; margin-left: 15px">
                     <img src="{{ asset('Img/tempIcons/11.png') }}" width="100%">
                 </div>
                 <div class="col-md-12 mt-2"
@@ -97,8 +100,19 @@
             </div>
         </div>
     </div>
-    <div class="text-center mt-5" style="width: 84%; margin: 0 auto; background-color: white; clear: both; border-radius: 6px">
-        <div class="container mb-5" style="background-color: white; width: 100%; border-radius: 15px 15px 15px 15px; clear: both;">
+    <div style="width: 86%; margin: 0 auto">
+        <div class="container" style="clear: both">
+            <div class="text-center row align-items-center">
+                <div class="col-md-5 text-center rounded ml-2 mx-auto mt-2 pointer" style="background-color: white;" onclick="window.location.href='{{ path('UserQuestions') }}'">
+                    <h4>Mis Preguntas <img src="{{ asset('Img/src/question.png') }}" alt="answer"></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-5"
+         style="width: 84%; margin: 0 auto; background-color: white; clear: both; border-radius: 6px">
+        <div class="container mb-5"
+             style="background-color: white; width: 100%; border-radius: 15px 15px 15px 15px; clear: both;">
             <h4 class="pt-3 mb-3">¿Algún aporte, comentario o recomendación?</h4>
             {{ form_start(form) }}
             <div class="row">
@@ -107,7 +121,8 @@
                 </div>
                 <div class="col-md-8" style=" background-color: #FFE45C">
                     <div class="row align-items-center h-100">
-                        <h6 class="mt-3">Leeré tu aporte lo más rápido posible. Este espacio también puede ser utilizado como formulario de contacto.</h6>
+                        <h6 class="mt-3">Leeré tu aporte lo más rápido posible. Este espacio también puede ser utilizado
+                            como formulario de contacto.</h6>
                         <div class="col-12 mx-auto">
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label">
@@ -172,46 +187,3 @@
         });
     </script>
 {% endblock %}
-        {#======================Cambiar Foto=================#}
-        {#<div class="text-center mb-5">#}
-        {#<a id="linkImage" data-toggle="modal" data-target="#exampleModal">#}
-        {#<img src="{{ asset('Img/photos/')~app.user.imgProfile }}" style="border: 1px solid black"#}
-        {#class="rounded-circle changerImage" width="20%" height="20%"> <br>#}
-        {#</a>#}
-        {#{% for i in 1..app.user.starts %}#}
-        {#<img src="{{ asset('Img/tempIcons/star.svg') }}" width="30px" height="30px">#}
-        {#{% endfor %}#}
-        {#</div>#}
-        {#======================Cambiar Foto=================#}
-
-
-{#<!-- Modal -->#}
-{#<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"#}
-         {#aria-hidden="true">#}
-        {#<div class="modal-dialog" role="document">#}
-            {#<div class="modal-content">#}
-                {#<div class="modal-header">#}
-                    {#<h5 class="modal-title" id="exampleModalLabel">Cambiar tu imágen de perfil</h5>#}
-                    {#<button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
-                        {#<span aria-hidden="true">&times;</span>#}
-                    {#</button>#}
-                {#</div>#}
-                {#<div class="modal-body text-center">#}
-                    {#<form method="post" action="" enctype="multipart/form-data" id="myform">#}
-                        {#<div>#}
-                            {#<img id="img" src="{{ asset('Img/photos/')~app.user.imgProfile }}"#}
-                                 {#style="border: 1px solid black" class="rounded-circle changerImage" width="150px"#}
-                                 {#height="150px"> <br>#}
-                        {#</div>#}
-                        {#<div>#}
-                            {#<input class="btn btn-warning mb-3 mt-3" type="file" id="file" name="file"/><br/>#}
-                            {#<input type="button" class="btn btn-warning button" value="Cambiar foto" id="but_upload">#}
-                        {#</div>#}
-                    {#</form>#}
-                {#</div>#}
-                {#<div class="modal-footer">#}
-
-                {#</div>#}
-            {#</div>#}
-        {#</div>#}
-    {#</div>#}

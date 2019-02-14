@@ -60,6 +60,7 @@ class ComunityAnswer
         $this->img = $img;
         $this->correct=false;
         $this->Creationdate = new \DateTime('now');
+        $this->pregunta=null;
     }
 
     /**
@@ -129,7 +130,7 @@ class ComunityAnswer
     /**
      * @param mixed $pregunta
      */
-    public function setPregunta($pregunta)
+    public function setPregunta(ComunityQuestion $pregunta)
     {
         $this->pregunta = $pregunta;
     }
@@ -173,6 +174,7 @@ class ComunityAnswer
     {
         $this->Creationdate = $Creationdate;
     }
+
 
 
 

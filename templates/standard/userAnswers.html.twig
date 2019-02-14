@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ parent() }}
+
+    <div class="count">
+        {{ pagination.getTotalItemCount }}
+    </div>
+
+        <div class="container">
+        {% for article in pagination %}
+            <div class="mb-3 p-3 pointer article" style="background: white; border-radius: 6px;"
+                 onclick="location.href='{{ path('SeeQuestion',{'url':article.url}) }}'">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p style="color: #0a8ecd" class="title">{{ article.title }}</p>
+                            <hr>
+                        </div>
+                        <div class="date mt-3" style="color: gray">
+                            <img src="{{ asset('Img/src/clock.svg') }}" alt="clock">
+                            {{ article.date|localizeddate('long', 'none', 'es_CO') }}
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+
+
+{% endblock %}

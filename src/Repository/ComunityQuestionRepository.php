@@ -27,4 +27,15 @@ class ComunityQuestionRepository extends ServiceEntityRepository
                 ORDER BY pregunta.id DESC
             ');
     }
+
+    public function SearchUserQuestion($idUser){
+        return $this->getEntityManager()
+            ->createQuery('
+                SELECT pregunta.title, pregunta.url, pregunta.date
+                FROM App\Entity\ComunityQuestion pregunta
+                WHERE pregunta.usuario=:idUser
+                ORDER BY pregunta.id DESC
+            ')
+            ->setParameter('idUser',$idUser);
+    }
 }
