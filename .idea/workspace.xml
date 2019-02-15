@@ -440,7 +440,7 @@
       <path value="$PROJECT_DIR$/vendor/twig/extensions" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="502" />
     <option name="width" value="1425" />
     <option name="height" value="1047" />
