@@ -12,7 +12,11 @@
 </ul>
 <div class="tab-content clearfix">
     {% for source in ThemeSources %}
+        {% if j==0 %}
+    <div class="tab-pane in active text-center mt-3" id="{{ j }}a">
+            {% else %}
         <div class="tab-pane text-center mt-3" id="{{ j }}a">
+            {% endif %}
             {% if 'youtube' in source %}
                 <iframe width="100%" height="250px" src="{{ source }}" class="rounded">
                 </iframe>

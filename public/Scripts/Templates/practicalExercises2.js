@@ -1,6 +1,6 @@
 var See_Answers = $('#See_Answers');
 var CLOCK = {MIN: document.getElementById('MIN'), SEC: document.getElementById('SEC')};
-var TIMER = {MIN: 0, SEC: 10};
+var TIMER = {MIN: 15, SEC: 59};
 
 function showRemaining() {
     if (TIMER.SEC != 0) {
@@ -15,7 +15,7 @@ function showRemaining() {
             answerAjax();
         } else {
             CLOCK.MIN.innerText = ('0' + TIMER.MIN--).slice(-2);
-            TIMER.SEC = 10;
+            TIMER.SEC = 59;
         }
     }
 }
@@ -32,6 +32,7 @@ function answerAjax() {
         data: ({id:Id}),
         dataType:"json",
         success:function (data) {
+            See_Answers.removeAttr("disabled");
             $('#AnswerImg').attr('src',data['Route']);
         }
     })
