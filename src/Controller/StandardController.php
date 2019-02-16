@@ -6,6 +6,7 @@ use App\Entity\GlobalsTips;
 use App\Entity\Theme;
 use App\Entity\User;
 use Symfony\Component\Config\Definition\Exception\Exception;
+use Symfony\Component\Debug\Exception\ContextErrorException;
 use Symfony\Component\Debug\Exception\FatalThrowableError;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -34,36 +35,40 @@ class StandardController extends Controller
      */
     public function exerciseTheme($idTheme, $level)
     {
-        $em = $this->getDoctrine()->getManager();
-        $Exercises = $em->getRepository(PracticalExercise::class)->searchExercisesByThemeId($idTheme);
-        $EasyArray = array();
-        $MediumArray = array();
-        $HardArray = array();
-        foreach ($Exercises as $Exercise) {
-            switch ($Exercise['level']) {
+        try {
+            $em = $this->getDoctrine()->getManager();
+            $Exercises = $em->getRepository(PracticalExercise::class)->searchExercisesByThemeId($idTheme);
+            $EasyArray = array();
+            $MediumArray = array();
+            $HardArray = array();
+            foreach ($Exercises as $Exercise) {
+                switch ($Exercise['level']) {
+                    case 1:
+                        $EasyArray[] = $Exercise;
+                        break;
+                    case 2:
+                        $MediumArray[] = $Exercise;
+                        break;
+                    case 3:
+                        $HardArray[] = $Exercise;
+                        break;
+                }
+            }
+            //$user = $this->getUser();
+            //$solvedExercises = json_decode($user->getSolvedExercises());
+            switch ($level) {
                 case 1:
-                    $EasyArray[] = $Exercise;
+                    return $this->forward('App\Controller\StandardController::PracticeExerciseTemplate', array('idExercise' => $EasyArray[0]['id']));
                     break;
                 case 2:
-                    $MediumArray[] = $Exercise;
+                    return $this->forward('App\Controller\StandardController::PracticeExerciseTemplate', array('idExercise' => $MediumArray[0]['id']));
                     break;
                 case 3:
-                    $HardArray[] = $Exercise;
+                    return $this->forward('App\Controller\StandardController::PracticeExerciseTemplate', array('idExercise' => $HardArray[0]['id']));
                     break;
             }
-        }
-        $user = $this->getUser();
-        $solvedExercises = json_decode($user->getSolvedExercises());
-        switch ($level) {
-            case 1:
-                return $this->forward('App\Controller\StandardController::PracticeExerciseTemplate', array('idExercise' => $EasyArray[0]['id']));
-                break;
-            case 2:
-                return $this->forward('App\Controller\StandardController::PracticeExerciseTemplate', array('idExercise' => $MediumArray[0]['id']));
-                break;
-            case 3:
-                return $this->forward('App\Controller\StandardController::PracticeExerciseTemplate', array('idExercise' => $HardArray[0]['id']));
-                break;
+        } catch (\Exception $exception) {
+            return $this->render('');
         }
     }
 
@@ -126,7 +131,7 @@ class StandardController extends Controller
         $statistics = $user->getStatistics();
         $solvedExercises = json_decode($user->getSolvedExercises());
         $statistics->setTryings(($statistics->getTryings()) + 1);
-        if ($Execercise->getAnswer() == $answer || \strpos((string) $Execercise->getAnswerString(), (string) $answer) || $Execercise->getAnswerString() == $answer ) {
+        if ($Execercise->getAnswer() == $answer || \strpos((string)$Execercise->getAnswerString(), (string)$answer) || $Execercise->getAnswerString() == $answer) {
             if (!(in_array($id, $solvedExercises))) {
                 $solvedExercises[] = $id;
                 $user->setSolvedExercises(json_encode($solvedExercises));
@@ -147,25 +152,26 @@ class StandardController extends Controller
      * @throws \Exception
      * @Route("/GetImageAnswer/", options={"expose"=true}, name="GetImageAnswer")
      */
-    public function GetImageAnswer(Request $request){
-        if(!$request->isXmlHttpRequest()){
+    public function GetImageAnswer(Request $request)
+    {
+        if (!$request->isXmlHttpRequest()) {
             throw new \Exception('Ups! this is not an Ajax Call');
         }
         $em = $this->getDoctrine()->getManager();
         $id = $request->request->get('id');
         $Exercise = $em->getRepository(PracticalExercise::class)->find($id);
-        $ProblemPathArray = explode("/",$Exercise->getproblemPath());
+        $ProblemPathArray = explode("/", $Exercise->getproblemPath());
         $Route = "";
-        for($i = 0; $i<count($ProblemPathArray);$i++){
-            if($i+1 == count($ProblemPathArray)){
-                $Route = $Route.$ProblemPathArray[$i];
-            }else{
-                $Route = $Route.$ProblemPathArray[$i].'/';
+        for ($i = 0; $i < count($ProblemPathArray); $i++) {
+            if ($i + 1 == count($ProblemPathArray)) {
+                $Route = $Route . $ProblemPathArray[$i];
+            } else {
+                $Route = $Route . $ProblemPathArray[$i] . '/';
             }
 
         }
-        $AnswerArray = PracticalExercise::ANSWER.$Route;
-        return new JsonResponse(["Route"=>$AnswerArray]);
+        $AnswerArray = PracticalExercise::ANSWER . $Route;
+        return new JsonResponse(["Route" => $AnswerArray]);
 
     }
 
@@ -223,7 +229,7 @@ class StandardController extends Controller
             }
         }
         if ($NextTheme) {
-            return $this->render('standard/Success.html.twig', array('AvailableThemes' => $AvailablesThemes,'ThemeUnloked' => $NextTheme->getName(),'Theme' => $Theme->getName(),'IdTheme' => $NextTheme->getId()));
+            return $this->render('standard/Success.html.twig', array('AvailableThemes' => $AvailablesThemes, 'ThemeUnloked' => $NextTheme->getName(), 'Theme' => $Theme->getName(), 'IdTheme' => $NextTheme->getId()));
         } else {
             return $this->render('standard/Success.html.twig', array(
                 'AvailableThemes' => $AvailablesThemes,

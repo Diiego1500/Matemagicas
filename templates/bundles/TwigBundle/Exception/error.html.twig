@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row align-items-center h-100">
+                    <div class="col-12 mx-auto text-center">
+                        <div class="m-5 p-3" style="background-color: #FFC23E; color: black">
+                            Error 404!
+                        </div>
+                        <img class="w-50" src="{{ asset('Img/src/404.png') }}" alt="Error" width="100%">
+                        <div class="m-5 p-2" style="background-color: #FFC23E; color: black">
+                            <small>Umm, al parecer no encontramos lo que buscabas...</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
