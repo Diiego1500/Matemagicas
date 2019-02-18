@@ -59,6 +59,7 @@ $('#VerifyAnswerDiv').click(function () {
         dataType: "json",
         beforeSend: function () {
             $('#loader').show();
+            console.log(answerArray);
         },
         success: function (data) {
             if (data['answer'] == true) {

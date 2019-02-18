@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="623a447c-a2d7-446b-8c36-88e7cc732324" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/standard/romanBoard.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Img/Exercises/Geometry/Cartesiano/planos.ai" beforeDir="false" afterPath="$PROJECT_DIR$/public/Img/Exercises/Geometry/Cartesiano/planos.ai" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/StandardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/StandardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/zareas.ai" beforeDir="false" afterPath="$PROJECT_DIR$/public/Img/Exercises/Geometry/Area/zareas.ai" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Img/Exercises/Geometry/Cartesiano/Plano Cartesiano .ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Img/Exercises/Geometry/Cartesiano/plano1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Img/Exercises/Geometry/Cartesiano/plano1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Img/Exercises/Geometry/Cartesiano/planos.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Img/Exercises/Geometry/Cartesiano/planos.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Img/tempIcons/V.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Img/tempIcons/V.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Scripts/Templates/practicalExercises.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Scripts/Templates/practicalExercises.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/standard/acercade.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/standard/acercade.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/standard/boardButton.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/standard/boardButton.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +58,7 @@
     <session id="-726915951">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="62" />
+          <entry key="project.closed" value="63" />
           <entry key="project.open.time.0" value="11" />
           <entry key="project.open.time.1" value="12" />
           <entry key="project.open.time.11" value="1" />
@@ -64,7 +72,7 @@
           <entry key="project.open.time.26" value="3" />
           <entry key="project.open.time.27" value="3" />
           <entry key="project.open.time.28" value="1" />
-          <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.29" value="2" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.30" value="2" />
           <entry key="project.open.time.31" value="2" />
@@ -77,7 +85,7 @@
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="66" />
+          <entry key="project.opened" value="67" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -89,14 +97,14 @@
           <entry key="globals_tips" value="2" />
           <entry key="html" value="2" />
           <entry key="jpg" value="4" />
-          <entry key="js" value="27" />
-          <entry key="php" value="206" />
-          <entry key="png" value="273" />
-          <entry key="practical_exercise" value="21" />
-          <entry key="sql" value="13" />
+          <entry key="js" value="29" />
+          <entry key="php" value="207" />
+          <entry key="png" value="274" />
+          <entry key="practical_exercise" value="23" />
+          <entry key="sql" value="14" />
           <entry key="svg" value="43" />
           <entry key="theme" value="6" />
-          <entry key="twig" value="243" />
+          <entry key="twig" value="248" />
           <entry key="user" value="5" />
           <entry key="yaml" value="12" />
         </counts>
@@ -104,29 +112,29 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="21" />
-          <entry key="Database Element" value="34" />
+          <entry key="Database Element" value="36" />
           <entry key="HTML" value="2" />
-          <entry key="Image" value="309" />
-          <entry key="JavaScript" value="27" />
-          <entry key="PHP" value="206" />
+          <entry key="Image" value="310" />
+          <entry key="JavaScript" value="29" />
+          <entry key="PHP" value="207" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="SQL" value="12" />
+          <entry key="SQL" value="13" />
           <entry key="SVG" value="43" />
           <entry key="Scratch" value="1" />
-          <entry key="Twig" value="243" />
+          <entry key="Twig" value="248" />
           <entry key="YAML" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cell" value="2124" />
+          <entry key="cell" value="2268" />
           <entry key="css" value="138" />
           <entry key="env" value="78" />
           <entry key="html" value="5" />
-          <entry key="js" value="2661" />
-          <entry key="php" value="11874" />
+          <entry key="js" value="2681" />
+          <entry key="php" value="11943" />
           <entry key="svg" value="22" />
-          <entry key="twig" value="30364" />
+          <entry key="twig" value="30549" />
           <entry key="txt" value="11" />
           <entry key="yaml" value="36" />
         </counts>
@@ -135,12 +143,12 @@
         <counts>
           <entry key="CSS" value="138" />
           <entry key="HTML" value="8" />
-          <entry key="JavaScript" value="2658" />
-          <entry key="PHP" value="11874" />
+          <entry key="JavaScript" value="2678" />
+          <entry key="PHP" value="11943" />
           <entry key="PLAIN_TEXT" value="89" />
           <entry key="SVG" value="22" />
-          <entry key="Scratch" value="2124" />
-          <entry key="Twig" value="30364" />
+          <entry key="Scratch" value="2268" />
+          <entry key="Twig" value="30549" />
           <entry key="YAML" value="36" />
         </counts>
       </usages-collector>
@@ -148,38 +156,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/StandardController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="70" column="34" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="19" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+            <state relative-caret-position="415">
+              <caret line="220" column="67" lean-forward="true" selection-start-line="220" selection-start-column="67" selection-end-line="220" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -188,7 +169,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.navbar .navbar-nav .nav-item.active .nav-link, .navbar .navbar-nav .nav-item.active .nav-link:hover, .navbar .navbar-nav .nav-item.active .nav-link:focus, .navbar .navbar-nav .nav-item.show .nav-link, .navbar .navbar-nav .nav-item.show .nav-link:hover, .navbar .navbar-nav .nav-item.show .nav-link:focus {     color: #ccd489;     background-color: #0c60b5; }</find>
       <find>#0c60b5</find>
       <find>hover</find>
       <find>background-color: #0c60b5;</find>
@@ -197,7 +177,6 @@
       <find>aqui</find>
       <find>Impo</find>
       <find>rea</find>
-      <find>ver</find>
       <find>Ver</find>
       <find>realiza a</find>
       <find>necei</find>
@@ -218,6 +197,8 @@
       <find>setp</find>
       <find>See_Answers</find>
       <find>deb</find>
+      <find>rest</find>
+      <find>ver</find>
     </findStrings>
     <replaceStrings>
       <replace>white</replace>
@@ -225,6 +206,7 @@
       <replace>background-color: #D89E0B;</replace>
       <replace>background-color: whi</replace>
       <replace>btn btn-info b2 btn-block</replace>
+      <replace>-</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\Matemagicas\src\Controller</dir>
@@ -242,8 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Entity/PracticalExercise.php" />
-        <option value="$PROJECT_DIR$/templates/standard/ChooseLevel.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/BlogCategory.php" />
         <option value="$PROJECT_DIR$/public/Css/fonts/stylesheet.css" />
         <option value="$PROJECT_DIR$/config/services.yaml" />
@@ -257,7 +237,6 @@
         <option value="$PROJECT_DIR$/src/Repository/BlogArticleRepository.php" />
         <option value="$PROJECT_DIR$/src/Controller/PrimaryController.php" />
         <option value="$PROJECT_DIR$/templates/standard/matemagicas.html.twig" />
-        <option value="$PROJECT_DIR$/templates/standard/acercade.html.twig" />
         <option value="$PROJECT_DIR$/templates/blog/article.html.twig" />
         <option value="$PROJECT_DIR$/templates/blog/email.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/BlogController.php" />
@@ -273,13 +252,11 @@
         <option value="$PROJECT_DIR$/public/Css/main.css" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/twitter_bootstrap_v4_pagination.html.twig" />
-        <option value="$PROJECT_DIR$/public/Scripts/Templates/practicalExercises.js" />
         <option value="$PROJECT_DIR$/templates/standard/BoardPlanos.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/User.php" />
         <option value="$PROJECT_DIR$/templates/standard/board.html.twig" />
         <option value="$PROJECT_DIR$/templates/standard/boardBool.html.twig" />
         <option value="$PROJECT_DIR$/templates/standard/PlanosButton.html.twig" />
-        <option value="$PROJECT_DIR$/templates/standard/boardButton.html.twig" />
         <option value="$PROJECT_DIR$/src/Repository/ComunityAnswerRepository.php" />
         <option value="$PROJECT_DIR$/src/Entity/ComunityAnswer.php" />
         <option value="$PROJECT_DIR$/src/Entity/ComunityQuestion.php" />
@@ -288,11 +265,16 @@
         <option value="$PROJECT_DIR$/src/Repository/ComunityQuestionRepository.php" />
         <option value="$PROJECT_DIR$/templates/standard/userAnswers.html.twig" />
         <option value="$PROJECT_DIR$/templates/standard/Resources.html.twig" />
-        <option value="$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig" />
         <option value="$PROJECT_DIR$/public/Scripts/Templates/practicalExercises2.js" />
-        <option value="$PROJECT_DIR$/src/Controller/StandardController.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error.html.twig" />
+        <option value="$PROJECT_DIR$/public/bk/matemagicas.sql" />
+        <option value="$PROJECT_DIR$/templates/standard/acercade.html.twig" />
+        <option value="$PROJECT_DIR$/public/Scripts/Templates/practicalExercises.js" />
+        <option value="$PROJECT_DIR$/templates/standard/romanBoard.html.twig" />
+        <option value="$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig" />
+        <option value="$PROJECT_DIR$/templates/standard/boardButton.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/StandardController.php" />
       </list>
     </option>
   </component>
@@ -411,10 +393,10 @@
       <path value="$PROJECT_DIR$/vendor/twig/extensions" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="554" />
-    <option name="width" value="1373" />
-    <option name="height" value="995" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="409" />
+    <option name="width" value="1503" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -432,28 +414,13 @@
             <path>
               <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
               <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
               <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="bundles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="bundles" type="462c0819:PsiDirectoryNode" />
-              <item name="TwigBundle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="matemagicas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="matemagicas" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="bundles" type="462c0819:PsiDirectoryNode" />
-              <item name="TwigBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Exception" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -623,18 +590,19 @@
       <workItem from="1550185435406" duration="57000" />
       <workItem from="1550253690693" duration="4376000" />
       <workItem from="1550270863381" duration="350000" />
-      <workItem from="1550323765182" duration="2128000" />
+      <workItem from="1550323765182" duration="2640000" />
+      <workItem from="1550508541829" duration="6714000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="571684000" />
+    <option name="totallyTimeSpent" value="578910000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="554" y="0" width="1373" height="995" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18126428" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16684435" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -647,7 +615,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5010799" side_tool="true" weight="0.32968238" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="8" weight="0.3253012" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49892008" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49892008" weight="0.31106243" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.329718" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" sideWeight="0.49964002" weight="0.32968238" />
@@ -655,8 +623,32 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.02817974" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.20682302" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16701317" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32858709" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5010799" side_tool="true" weight="0.32968238" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="8" weight="0.3253012" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49892008" weight="0.31106243" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.329718" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" sideWeight="0.49964002" weight="0.32968238" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.025641026" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -676,31 +668,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Repository/BlogArticleRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/AnswerType.php" />
-    <entry file="file://$PROJECT_DIR$/src/Form/ComunityAnswerType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/bk/matemagicas.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="90" column="43" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/standard/GlobalTips.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/standard/Exercises.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -825,13 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/standard/boardButton.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="54" lean-forward="true" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/Img/src/question.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -939,45 +899,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Scripts/Templates/practicalExercises2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Scripts/Templates/practicalExercises.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1921">
-          <caret line="113" column="17" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/standard/Resources.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/StandardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="70" column="34" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -988,10 +913,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        <state relative-caret-position="323">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/bk/matemagicas.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="604" column="51" selection-start-line="604" selection-start-column="47" selection-end-line="604" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Img/tempIcons/popen.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/romanBoard.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Scripts/Templates/practicalExercises.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="890">
+          <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://07894bf9-ab09-4c46-a2d9-3502ca9e91bc/schema/matemagicas/table/practical_exercise">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/boardButton.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="61" column="91" selection-start-line="61" selection-start-column="91" selection-end-line="61" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Scripts/Templates/practicalExercises2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/acercade.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="e#241#311#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/StandardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="220" column="67" lean-forward="true" selection-start-line="220" selection-start-column="67" selection-end-line="220" selection-end-column="67" />
         </state>
       </provider>
     </entry>
