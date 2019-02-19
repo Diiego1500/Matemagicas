@@ -168,11 +168,9 @@ class StandardController extends Controller
             } else {
                 $Route = $Route . $ProblemPathArray[$i] . '/';
             }
-
         }
         $AnswerArray = PracticalExercise::ANSWER . $Route;
         return new JsonResponse(["Route" => $AnswerArray]);
-
     }
 
     /**
