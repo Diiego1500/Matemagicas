@@ -12,9 +12,9 @@
 </ul>
 <div class="tab-content clearfix">
     {% for source in ThemeSources %}
-        {% if j==0 %}
-    <div class="tab-pane in active text-center mt-3" id="{{ j }}a">
-            {% else %}
+    {% if j==0 %}
+    <div id="Active" class="tab-pane in active text-center mt-3" id="{{ j }}a">
+        {% else %}
         <div class="tab-pane text-center mt-3" id="{{ j }}a">
             {% endif %}
             {% if 'youtube' in source %}
@@ -25,5 +25,6 @@
             {% endif %}
         </div>
         {% set j = j+1 %}
-    {% endfor %}
+        {% endfor %}
+
 </div>
