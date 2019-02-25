@@ -24,7 +24,7 @@ class BlogArticleRepository extends ServiceEntityRepository
     {
         return $this->getEntityManager()
             ->createQuery('
-            SELECT article.id, article.title, article.Section, article.createdAt, article.url , IDENTITY(article.categoria) as categoria, article.Likes
+            SELECT article.id, article.title, article.Section, article.createdAt, article.url , IDENTITY(article.categoria) as categoria, article.Likes, article.Img
             FROM App\Entity\BlogArticle article
             ');
     }
@@ -33,7 +33,7 @@ class BlogArticleRepository extends ServiceEntityRepository
     {
         return $this->getEntityManager()
             ->createQuery('
-            SELECT article.id, article.title, article.Section, article.createdAt, article.url , IDENTITY(article.categoria) as categoria, article.Likes
+            SELECT article.id, article.title, article.Section, article.createdAt, article.url , IDENTITY(article.categoria) as categoria, article.Likes, article.Img
             FROM App\Entity\BlogArticle article
             WHERE article.categoria =:CategoryId
             ')

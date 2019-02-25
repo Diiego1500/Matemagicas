@@ -1,101 +1,208 @@
 {% extends 'base.html.twig' %}
+{% block title %}
 
-{% block title %}Matemágicas - Blog{% endblock %}
+{% endblock %}
 {% block stylesheets %}
     {{ parent() }}
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
-    <style type="text/css">
-        .title {
-            font-family: 'Acme', sans-serif;
-            font-size: 20px;
-        }
+    <meta name="viewport" content="width=device-width">
 
-        .section, .date {
-            font-family: 'Roboto Slab', serif;
-        }
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100">
+    <link rel="stylesheet"
+          href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,500,500italic,700,900">
 
-        .article:hover {
-            box-shadow: 2px 0px 21px -1px rgb(5, 142, 205);
-            -webkit-border-radius: 5px;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            transition: all 0.3s;
-        }
-    </style>
+
+
+    <link rel="stylesheet" href="{{ asset('Css/templatemo-misc.css') }}">
+    <link rel="stylesheet" href="{{ asset('Css/templatemo-style.css') }}">
+    <script src="{{ asset('Scripts/vendor/modernizr-2.6.1-respond-1.1.0.min.js') }}"></script>
+
 {% endblock %}
 {% block body %}
     {{ parent() }}
-    <div class="container">
-    {#{{ dump(Articles) }}#}
-    <h3><strong>Posts</strong></h3>
-
-    <div class="row">
-        <div class="col-md-8">
-            <a href="{{ path('blog',{'Categoryname':'All'}) }}" class="mr-2"
-               style="color: #0a8ecd"><strong>#Todos</strong></a>
-            {% for i in 0..(Categories|length-1) %}
-                {% set Name = Categories[i].Name %}
-                <a href="{{ path('blog',{'Categoryname':Name}) }}" class="mr-2"
-                   style="color: #0a8ecd"><strong>#{{ Name }}</strong></a>
-            {% endfor %}
-        </div>
-        <div class="col-md-4">
-            <div class="input-group">
-                <input id="Parametro" type="text" class="form-control" placeholder="Buscar">
-                <div class="input-group-append">
-                    <button id="searchArticles" class="btn btn-secondary" type="button">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    {#<img src="{{ asset('Img/src/lupa.png') }}" alt="lupa">    <hr>#}
-
-
-    <div class="count mb-3">
-        <strong>Entradas: {{ pagination.getTotalItemCount }} </strong>
-    </div>
-    {% if  pagination.getTotalItemCount == 0 %}
-        <h3> No se encontraron resultados</h3>
-    {% else %}
-
-        {% for article in pagination %}
-            {% set v1 = article.likes|split(',') %}
-            <div class="mb-3 p-3 pointer article" style="background: white; border-radius: 6px;"
-                 onclick="location.href='{{ path('Article',{'Url':article.url}) }}'">
-                <div class="container-fluid">
+    {#<div class="content-wrapper">#}
+    <div>
+        <div class="inner-container container">
+            <div class="row">
+                <div class="section-header col-md-12">
+                    <h2>Blog Matemágico</h2>
+                    <div class="count mb-3">
+                        <strong>Entradas: {{ pagination.getTotalItemCount }} </strong>
+                    </div>
                     <div class="row">
-                        <div class="col-md-12">
-                            <p style="color: #0a8ecd" class="title">{{ article.title }}</p>
-                            <hr>
-                            <p>
-                                <div class=" d-none d-md-block section">
-                            <p>{{ article.Section | raw }}</p>
+                        <div class="col-md-8">
+                            <a href="{{ path('blog',{'Categoryname':'All'}) }}" class="mr-2"
+                               style="color: #0a8ecd"><strong>#Todos</strong></a>
+                            {% for i in 0..(Categories|length-1) %}
+                                {% set Name = Categories[i].Name %}
+                                <a href="{{ path('blog',{'Categoryname':Name}) }}" class="mr-2"
+                                   style="color: #0a8ecd"><strong>#{{ Name }}</strong></a>
+                            {% endfor %}
                         </div>
-                        <div class="date mt-3" style="color: gray">
-                            <img src="{{ asset('Img/src/clock.svg') }}" alt="clock">
-                            {{ article.createdAt|localizeddate('long', 'none', 'es_CO') }} |
-                            Categoría: {{ article.categoria.name }} | Me gusta: {{ v1 | length }}
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <input id="Parametro" type="text" class="form-control" placeholder="Buscar">
+                                <div class="input-group-append">
+                                    <button id="searchArticles" class="btn btn-secondary" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        </p>
                     </div>
                 </div>
             </div>
+
+
+            <div class="row">
+
+                {% if  pagination.getTotalItemCount == 0 %}
+                    <h3> No se encontraron resultados</h3>
+                {% else %}
+
+                    {% for article in pagination %}
+                        {% set v1 = article.likes|split(',') %}
+                        <div class="post-masonry col-md-4 col-sm-6">
+                            <div class="blog-thumb">
+                                {#{{ dump(article) }}#}
+                                <img src="{{ asset('Img/Blog/'~article.Img) }}" alt="">
+                                <div class="overlay-b">
+                                    <div class="overlay-inner">
+                                        <a href="{{ path('Article',{'Url':article.url}) }}" class="fa fa-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-body">
+                                <div class="box-content">
+                                    <h3 class="post-title"><a
+                                                href="{{ path('Article',{'Url':article.url}) }}">{{ article.title }}</a>
+                                    </h3>
+                                    <span class="blog-meta">
+                                       {#<img src="{{ asset('Img/src/clock.svg') }}" alt="clock">#}
+                                        <p>{{ article.createdAt|localizeddate('long', 'none', 'es_CO') }}</p>
+                                        <p>Categoría: {{ article.categoria.name }} | Me gusta: {{ v1 | length }} </p>
+                                    </span>
+                                    <p>{{ (article.Section | raw)|slice(0, 150) }} </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+
+                {% endif %}
+
+
             </div>
-        {% endfor %}
-        <div class="navigation">
-            {{ knp_pagination_render(pagination) }}
+
         </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="container">
+            <div class="navigation">
+                {{ knp_pagination_render(pagination) }}
+            </div>
         </div>
-    {% endif %}
+    </div>
 {% endblock %}
-{% block Js %}
-    {{ parent() }}
-    <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
-    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
-    <script src="{{ asset('Scripts/Templates/BlogIndex.js') }}"></script>
-{% endblock %}
+{#{% extends 'base.html.twig' %}#}
+
+{#{% block title %}Matemágicas - Blog{% endblock %}#}
+{#{% block stylesheets %}#}
+    {#{{ parent() }}#}
+    {#<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">#}
+    {#<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">#}
+    {#<style type="text/css">#}
+        {#.title {#}
+            {#font-family: 'Acme', sans-serif;#}
+            {#font-size: 20px;#}
+        {#}#}
+
+        {#.section, .date {#}
+            {#font-family: 'Roboto Slab', serif;#}
+        {#}#}
+
+        {#.article:hover {#}
+            {#box-shadow: 2px 0px 21px -1px rgb(5, 142, 205);#}
+            {#-webkit-border-radius: 5px;#}
+            {#-webkit-transition: all 0.3s;#}
+            {#-moz-transition: all 0.3s;#}
+            {#-o-transition: all 0.3s;#}
+            {#-ms-transition: all 0.3s;#}
+            {#transition: all 0.3s;#}
+        {#}#}
+    {#</style>#}
+{#{% endblock %}#}
+{#{% block body %}#}
+    {#{{ parent() }}#}
+    {#<div class="container">#}
+    {#{{ dump(Articles) }}#}
+    {#<h3><strong>Posts</strong></h3>#}
+
+    {#<div class="row">#}
+        {#<div class="col-md-8">#}
+            {#<a href="{{ path('blog',{'Categoryname':'All'}) }}" class="mr-2"#}
+               {#style="color: #0a8ecd"><strong>#Todos</strong></a>#}
+            {#{% for i in 0..(Categories|length-1) %}#}
+                {#{% set Name = Categories[i].Name %}#}
+                {#<a href="{{ path('blog',{'Categoryname':Name}) }}" class="mr-2"#}
+                   {#style="color: #0a8ecd"><strong>#{{ Name }}</strong></a>#}
+            {#{% endfor %}#}
+        {#</div>#}
+        {#<div class="col-md-4">#}
+            {#<div class="input-group">#}
+                {#<input id="Parametro" type="text" class="form-control" placeholder="Buscar">#}
+                {#<div class="input-group-append">#}
+                    {#<button id="searchArticles" class="btn btn-secondary" type="button">#}
+                        {#<i class="fa fa-search"></i>#}
+                    {#</button>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
+    {#<img src="{{ asset('Img/src/lupa.png') }}" alt="lupa">    <hr>#}
+
+
+    {#<div class="count mb-3">#}
+        {#<strong>Entradas: {{ pagination.getTotalItemCount }} </strong>#}
+    {#</div>#}
+    {#{% if  pagination.getTotalItemCount == 0 %}#}
+        {#<h3> No se encontraron resultados</h3>#}
+    {#{% else %}#}
+
+        {#{% for article in pagination %}#}
+            {#{% set v1 = article.likes|split(',') %}#}
+            {#<div class="mb-3 p-3 pointer article" style="background: white; border-radius: 6px;"#}
+                 {#onclick="location.href='{{ path('Article',{'Url':article.url}) }}'">#}
+                {#<div class="container-fluid">#}
+                    {#<div class="row">#}
+                        {#<div class="col-md-12">#}
+                            {#<p style="color: #0a8ecd" class="title">{{ article.title }}</p>#}
+                            {#<hr>#}
+                            {#<p>#}
+                                {#<div class=" d-none d-md-block section">#}
+                            {#<p>{{ article.Section | raw }}</p>#}
+                        {#</div>#}
+                        {#<div class="date mt-3" style="color: gray">#}
+                            {#<img src="{{ asset('Img/src/clock.svg') }}" alt="clock">#}
+                            {#{{ article.createdAt|localizeddate('long', 'none', 'es_CO') }} |#}
+                            {#Categoría: {{ article.categoria.name }} | Me gusta: {{ v1 | length }}#}
+                        {#</div>#}
+                        {#</p>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+            {#</div>#}
+        {#{% endfor %}#}
+        {#<div class="navigation">#}
+            {#{{ knp_pagination_render(pagination) }}#}
+        {#</div>#}
+        {#</div>#}
+    {#{% endif %}#}
+{#{% endblock %}#}
+{#{% block Js %}#}
+    {#{{ parent() }}#}
+    {#<script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>#}
+    {#<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>#}
+    {#<script src="{{ asset('Scripts/Templates/BlogIndex.js') }}"></script>#}
+{#{% endblock %}#}

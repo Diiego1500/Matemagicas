@@ -34,7 +34,7 @@ class BlogController extends Controller
 
 //            $Articles = $em->getRepository(BlogArticle::class)->searchArticlesByCategory($Category);
         }
-        $pagination = $paginator->paginate($Articles, $request->query->getInt('page', 1), 2);
+        $pagination = $paginator->paginate($Articles, $request->query->getInt('page', 1), 4);
         $pagination->setTemplate('bundles/KNPPaginatorBundle/Paginador.html.twig');
 
         return $this->render('blog/index.html.twig', array('pagination' => $pagination, "Categories" => $Categories,));
