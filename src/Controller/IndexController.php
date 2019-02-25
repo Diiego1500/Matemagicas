@@ -39,42 +39,42 @@ class IndexController extends Controller
     {
         $user = $this->getUser();
         if ($user) {
-                $em = $this->getDoctrine()->getManager();
-                $solvedExercises = json_decode($user->getSolvedExercises());
-                $lengthSolvedExercises = count($solvedExercises);
-                $lengthExercises = $em->getRepository(PracticalExercise::class)->getCountExercisesRegisters();
-                if ($lengthExercises > 100 and $lengthSolvedExercises < 250) {
-                    $user->setStarts(1);
-                } elseif ($lengthExercises >= 250 and $lengthSolvedExercises < 450) {
-                    $user->setStarts(2);
-                } elseif ($lengthSolvedExercises >= 450 and $lengthSolvedExercises < 700) {
-                    $user->setStarts(3);
-                }
-                $defaultData = array('message' => 'Type your message here');
-                $form = $this->createFormBuilder($defaultData)
-                    ->add('Nombre', TextType::class)
-                    ->add('Email', EmailType::class)
-                    ->add('Mensaje', TextareaType::class)
-                    ->add('Enviar', SubmitType::class)
-                    ->getForm();
-                $form->handleRequest($request);
-                if ($form->isSubmitted() && $form->isValid()) {
-                    $data = $form->getData();
-                    $message = (new \Swift_Message('FeedBack'))
-                        ->setFrom('info@foodies24-7.com')
-                        ->setTo('disenosolyluna@gmail.com')
-                        ->setBody($data['Nombre'].'-'.$data['Email'].'-'.$data["Mensaje"]);
-                    $mailer->send($message);
-                    $this->addFlash('notice','Tu mensaje se ha enviado');
-                    return $this->redirectToRoute('index');
-                } else {
-                    return $this->render('index/index.html.twig', array(
-                        'solvedExercises' => $solvedExercises,
-                        'lengthExercises' => $lengthExercises,
-                        'form' => $form->createView(),
-                        'isBlog'=>false
-                    ));
-                }
+            $em = $this->getDoctrine()->getManager();
+            $solvedExercises = json_decode($user->getSolvedExercises());
+            $lengthSolvedExercises = count($solvedExercises);
+            $lengthExercises = $em->getRepository(PracticalExercise::class)->getCountExercisesRegisters();
+            if ($lengthExercises > 100 and $lengthSolvedExercises < 250) {
+                $user->setStarts(1);
+            } elseif ($lengthExercises >= 250 and $lengthSolvedExercises < 450) {
+                $user->setStarts(2);
+            } elseif ($lengthSolvedExercises >= 450 and $lengthSolvedExercises < 700) {
+                $user->setStarts(3);
+            }
+            $defaultData = array('message' => 'Type your message here');
+            $form = $this->createFormBuilder($defaultData)
+                ->add('Nombre', TextType::class)
+                ->add('Email', EmailType::class)
+                ->add('Mensaje', TextareaType::class)
+                ->add('Enviar', SubmitType::class)
+                ->getForm();
+            $form->handleRequest($request);
+            if ($form->isSubmitted() && $form->isValid()) {
+                $data = $form->getData();
+                $message = (new \Swift_Message('FeedBack'))
+                    ->setFrom('info@foodies24-7.com')
+                    ->setTo('disenosolyluna@gmail.com')
+                    ->setBody($data['Nombre'] . '-' . $data['Email'] . '-' . $data["Mensaje"]);
+                $mailer->send($message);
+                $this->addFlash('notice', 'Tu mensaje se ha enviado');
+                return $this->redirectToRoute('index');
+            } else {
+                return $this->render('index/index.html.twig', array(
+                    'solvedExercises' => $solvedExercises,
+                    'lengthExercises' => $lengthExercises,
+                    'form' => $form->createView(),
+                    'isBlog' => false
+                ));
+            }
         } else {
             return $this->loginAction(new Request());
         }
@@ -163,16 +163,46 @@ class IndexController extends Controller
     }
 
     /**
+     * @Route("/DatatoEmail/", options={"expose"=true}, name="EmailData")
+     */
+    public function sendDataToEmail(Request $request, \Swift_Mailer $mailer)
+    {
+        if (!$request->isXmlHttpRequest()) {
+            throw new \Exception('Not an ajax call');
+        }
+        $em = $this->getDoctrine()->getManager();
+        $email = $request->request->get('email');
+        $user = $em->getRepository(UserData::class)->findOneBy(['email' => $email]);
+        if ($user) {
+            $message = (new \Swift_Message('Blog'))
+                ->setFrom('info@foodies24-7.com')
+                ->setTo($email)
+                ->setBody('Recientemente has solicitado los datos de acceso a Matemágicas. A continuación te los presentamos:
+                            Usuario:' . $user->getUsername() . '
+                            Contraseña:' . $user->getPassword() . '
+                   Comparte lo que sabes!
+                ');
+            $mailer->send($message);
+            return new JsonResponse(['Validation' => true]);
+        } else {
+            return new JsonResponse(['Validation' => false]);
+        }
+    }
+
+
+    /**
      * @Route("/definicion/", name="definicion")
      */
-    public function Matemagicas(){
+    public function Matemagicas()
+    {
         return $this->render('standard/matemagicas.html.twig');
     }
 
     /**
      * @Route("/Acerca-de/", name="AcercaDe")
      */
-    public function Acercade(){
+    public function Acercade()
+    {
         return $this->render('standard/acercade.html.twig');
     }
 
@@ -180,23 +210,22 @@ class IndexController extends Controller
     /**
      * @Route("/MyQuestions/", name="UserQuestions")
      */
-    public function UserQuestions(Request $request){
-        $userId=$this->getUser()->getId();
+    public function UserQuestions(Request $request)
+    {
+        $userId = $this->getUser()->getId();
         $em = $this->getDoctrine()->getManager();
         $query = $em->getRepository(ComunityQuestion::class)->SearchUserQuestion($userId);
 
 
-
-        $paginator  = $this->get('knp_paginator');
+        $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $query, /* query NOT result */
             $request->query->getInt('page', 1)/*page number*/,
             10/*limit per page*/
         );
 
-        return $this->render('standard/userAnswers.html.twig', array('pagination'=>$pagination));
+        return $this->render('standard/userAnswers.html.twig', array('pagination' => $pagination));
     }
-
 
 
     private function CreateAndRegisterUser($email, $username, $password)

@@ -35,3 +35,40 @@ $('#Register').click(function () {
         }
     });
 })
+
+
+$('#BtnForgot').click(function () {
+     var email = $('#forgotuserEmail').val();
+    $('#ForgotPassword').modal('hide');
+    var Ruta = Routing.generate('EmailData');
+    swal({
+        title: 'Confirmación',
+        text: 'Se enviará un mensaje con los datos de acceso al correio '+email,
+        type: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Aceptar',
+        cancelButtonText: 'Cancelar',
+        showLoaderOnConfirm: true,
+        focusConfirm: true,
+        allowOutsideClick: false,
+        preConfirm: function () {
+            return new Promise(function () {
+                $.ajax({
+                    type: 'POST',
+                    url: Ruta,
+                    data: ({email:email}),
+                    async: true,
+                    dataType : "json",
+                    success: function (data) {
+                        if(data['Validation']==true){
+                            swal("Correcto", "Se ha enviado un mensaje con los datos de acceso a matemagicas al correo <br> "+email+"<br><strong>Revisa la carpeta de Span o correo no deseado</strong>", "success");
+                        }else{
+                            swal("¡Ups!", "No se encontró un usuario con este correo", "error");
+                        }
+                    }
+                })
+                ;
+            })
+        }
+    });
+})
