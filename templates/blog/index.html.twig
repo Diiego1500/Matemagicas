@@ -5,17 +5,11 @@
 {% block stylesheets %}
     {{ parent() }}
     <meta name="viewport" content="width=device-width">
-
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100">
-    <link rel="stylesheet"
-          href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,500,500italic,700,900">
-
-
-
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,500,500italic,700,900">
     <link rel="stylesheet" href="{{ asset('Css/templatemo-misc.css') }}">
     <link rel="stylesheet" href="{{ asset('Css/templatemo-style.css') }}">
     <script src="{{ asset('Scripts/vendor/modernizr-2.6.1-respond-1.1.0.min.js') }}"></script>
-
 {% endblock %}
 {% block body %}
     {{ parent() }}
@@ -51,14 +45,10 @@
                     </div>
                 </div>
             </div>
-
-
             <div class="row">
-
                 {% if  pagination.getTotalItemCount == 0 %}
                     <h3> No se encontraron resultados</h3>
                 {% else %}
-
                     {% for article in pagination %}
                         {% set v1 = article.likes|split(',') %}
                         <div class="post-masonry col-md-4 col-sm-6">
@@ -85,15 +75,9 @@
                                 </div>
                             </div>
                         </div>
-
                     {% endfor %}
-
-
                 {% endif %}
-
-
             </div>
-
         </div>
     </div>
 
@@ -200,9 +184,9 @@
         {#</div>#}
     {#{% endif %}#}
 {#{% endblock %}#}
-{#{% block Js %}#}
-    {#{{ parent() }}#}
-    {#<script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>#}
-    {#<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>#}
-    {#<script src="{{ asset('Scripts/Templates/BlogIndex.js') }}"></script>#}
-{#{% endblock %}#}
+{% block Js %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+    <script src="{{ asset('Scripts/Templates/BlogIndex.js') }}"></script>
+{% endblock %}

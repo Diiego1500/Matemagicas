@@ -39,6 +39,7 @@
                     <div class="row pb-2">
                         <div class="col-md-8 d-lg-block" data-step="5"
                              data-intro="Si deseas, puedes realizar tu procedimiento en esta sección, ¡No te limites! también puedes realizar el procedimiento en tu cuaderno y arrastrar tu solución a la sección de respuestas">
+                            {#{{ dump(ThemeSources) }}#}
                             {% if ThemeSources|length > 0 %}
                                 <div>
                                     <img id="Image" src="{{ asset('Img/Exercises/')~Exercise.problemPath }}" data-step="2" class="mt-3"
