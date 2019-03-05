@@ -22,6 +22,9 @@
         <p style="color: gray">Fecha de publicación: {{ Question.date|localizeddate('long', 'none', 'es_CO') }} <br>
             Preguntado por: {{ Question.usuario.username }}</p>
         <p>{{ (Question.question | raw ) | nl2br }}</p>
+        {% if Question.file %}
+        <p><strong>Para ayudar a {{ Question.usuario.username }} revisa su archivo adjunto: </strong><a href="{{ asset('comunity/'~Question.file) }}" target="_blank">archivo</a></p>
+        {% endif %}
     </div>
     <div class="jumbotron mt-5" style="border: 1px #34ce57 dashed">
         {{ form_start(form) }}

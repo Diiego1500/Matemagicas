@@ -40,6 +40,10 @@
             {{ form_widget(formulario.question, {'attr':{'class':'form-control','placeholder':'Dirigete a la comunidad con respeto y trata de explicarte de la mejor manera posible.'}}) }}
         </div>
         <div class="form-group">
+            <label for="exampleInputEmail1"><h5>si es MUY necesario, adjunta un archivo</h5></label>
+            {{ form_widget(formulario.file, {'attr':{'class':'form-control'}}) }}
+        </div>
+        <div class="form-group">
             {{ form_widget(formulario.Enviar, {'attr':{'class':'btn btn-success btn-block'}}) }}
         </div>
         {{ form_end(formulario) }}

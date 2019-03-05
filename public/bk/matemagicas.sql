@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-02-2019 a las 20:04:13
--- Versión del servidor: 10.1.36-MariaDB
--- Versión de PHP: 7.2.11
+-- Tiempo de generación: 05-03-2019 a las 20:03:54
+-- Versión del servidor: 10.1.38-MariaDB
+-- Versión de PHP: 7.1.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -103,7 +103,11 @@ INSERT INTO `comunity_answer` (`id`, `answer`, `img`, `pregunta_id`, `usuario_id
 (15, 'Hola,ya pude solucionar, muchas gracias', NULL, 15, 2, 1, '2019-02-14'),
 (16, 'test', NULL, 15, 2, 0, '2019-02-14'),
 (17, 'test2', NULL, 15, 2, 0, '2019-02-14'),
-(18, 'SDFSDFSDF', NULL, 16, 2, 1, '2019-02-21');
+(18, 'SDFSDFSDF', NULL, 16, 2, 1, '2019-02-21'),
+(19, 'zsdasd', NULL, 16, 2, 0, '2019-03-01'),
+(20, 'asdasd', NULL, 17, 2, 1, '2019-03-01'),
+(21, '65465', NULL, 17, 2, 0, '2019-03-01'),
+(22, 'hola mundo, aqui probando mi respuesta \r\n\r\nesta es una prueba para saber si soy capaz', NULL, 19, 2, 0, '2019-03-05');
 
 -- --------------------------------------------------------
 
@@ -119,20 +123,28 @@ CREATE TABLE `comunity_question` (
   `usuario_id` int(11) DEFAULT NULL,
   `date` date NOT NULL,
   `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `solved` tinyint(1) NOT NULL
+  `solved` tinyint(1) NOT NULL,
+  `file` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `comunity_question`
 --
 
-INSERT INTO `comunity_question` (`id`, `title`, `question`, `image`, `usuario_id`, `date`, `url`, `solved`) VALUES
-(11, 'pregunta 1', 'Hola esta es mi primera pregunta.', NULL, 2, '2019-02-11', 'W2guhUGCtcTWN5bPrJyqv5l0I4VsFwXr', 1),
-(12, 'pregunta 2', 'Hola, esta es la segunda pregunta.', NULL, 2, '2019-02-11', 'Y6JyLlldNam67qPfgof2YfVvZrLHKTVP', 0),
-(13, 'hola, esta es mi tercera pregunta', 'Hola mundo, tercera pregunta', NULL, 25, '2019-02-11', 'DQKBJxJUoymUm8y9XTDkPENq2sbIgiGo', 1),
-(14, 'Lorem Ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus sem, aliquam sed lectus sit amet, iaculis ornare erat. Morbi ut eros tortor. Pellentesque vel augue facilisis purus vulputate rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec scelerisque leo. Maecenas nisi nulla, efficitur et condimentum sed, lobortis ac augue. Vivamus non ligula feugiat, imperdiet neque at, molestie mauris. Vivamus varius ex lorem, vitae luctus tellus feugiat vel. Maecenas ultrices id sapien et iaculis. Phasellus pretium eget justo id accumsan \\n\r\n\r\nInteger nec vestibulum tortor. Maecenas vehicula lorem eleifend tortor fringilla auctor. In hac habitasse platea dictumst. Suspendisse blandit, neque in finibus malesuada, justo magna porttitor odio, nec convallis mauris urna at tellus. Nulla finibus sit amet sem a suscipit. Ut scelerisque nunc neque, quis venenatis neque porttitor non. Fusce arcu nisl, tempor vel nunc nec, tincidunt venenatis arcu. Vivamus ornare consequat enim vitae varius. Nunc dui leo, consectetur nec lacus nec, semper eleifend urna. Cras nec elit scelerisque orci pretium mollis.', NULL, 2, '2019-02-11', 'noBgxakYHgetpdyfq6mB889UTX6Xi0AL', 1),
-(15, 'hola mundo', 'hola mundo\r\n\r\nsoy diego bastidas', NULL, 2, '2019-02-11', 'zZt5w763GcVidqbiirVW3pRXZCASI57x', 1),
-(16, 'prueba', 'hola mundo esta es otra prueba', NULL, 2, '2019-02-14', 'XYq0tmba3Nuop5qdl4Lw4K06cOzPpCEs', 1);
+INSERT INTO `comunity_question` (`id`, `title`, `question`, `image`, `usuario_id`, `date`, `url`, `solved`, `file`) VALUES
+(11, 'pregunta 1', 'Hola esta es mi primera pregunta.', NULL, 2, '2019-02-11', 'W2guhUGCtcTWN5bPrJyqv5l0I4VsFwXr', 1, NULL),
+(12, 'pregunta 2', 'Hola, esta es la segunda pregunta.', NULL, 2, '2019-02-11', 'Y6JyLlldNam67qPfgof2YfVvZrLHKTVP', 0, NULL),
+(13, 'hola, esta es mi tercera pregunta', 'Hola mundo, tercera pregunta', NULL, 25, '2019-02-11', 'DQKBJxJUoymUm8y9XTDkPENq2sbIgiGo', 1, NULL),
+(14, 'Lorem Ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus sem, aliquam sed lectus sit amet, iaculis ornare erat. Morbi ut eros tortor. Pellentesque vel augue facilisis purus vulputate rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec scelerisque leo. Maecenas nisi nulla, efficitur et condimentum sed, lobortis ac augue. Vivamus non ligula feugiat, imperdiet neque at, molestie mauris. Vivamus varius ex lorem, vitae luctus tellus feugiat vel. Maecenas ultrices id sapien et iaculis. Phasellus pretium eget justo id accumsan \\n\r\n\r\nInteger nec vestibulum tortor. Maecenas vehicula lorem eleifend tortor fringilla auctor. In hac habitasse platea dictumst. Suspendisse blandit, neque in finibus malesuada, justo magna porttitor odio, nec convallis mauris urna at tellus. Nulla finibus sit amet sem a suscipit. Ut scelerisque nunc neque, quis venenatis neque porttitor non. Fusce arcu nisl, tempor vel nunc nec, tincidunt venenatis arcu. Vivamus ornare consequat enim vitae varius. Nunc dui leo, consectetur nec lacus nec, semper eleifend urna. Cras nec elit scelerisque orci pretium mollis.', NULL, 2, '2019-02-11', 'noBgxakYHgetpdyfq6mB889UTX6Xi0AL', 1, NULL),
+(15, 'hola mundo', 'hola mundo\r\n\r\nsoy diego bastidas', NULL, 2, '2019-02-11', 'zZt5w763GcVidqbiirVW3pRXZCASI57x', 1, NULL),
+(16, 'prueba', 'hola mundo esta es otra prueba', NULL, 2, '2019-02-14', 'XYq0tmba3Nuop5qdl4Lw4K06cOzPpCEs', 1, NULL),
+(17, '<zx', 'dsf', NULL, 2, '2019-03-01', 'Pur79Aw5ZwvlbtPrs7BpfCfOJRcdXilM', 1, NULL),
+(18, 'Como calculo el area de un semicirculo', 'Resulta que tengo el area de este semicirculo y no tengo ni idea de como empezar, dejo el archivo adjunto', NULL, 2, '2019-03-05', 'xr3FzaySqeUDdiLxCurLwHIfEqlIlDDb', 0, '499a29ca1cb091b5d2448107b4f0830e.png'),
+(19, 'Como calculo el area de un semicirculo 2', 'asd', NULL, 2, '2019-03-05', 'z4nPq2X245xXqsWjXIt2zTkde0i8zUkV', 0, NULL),
+(20, NULL, NULL, NULL, 2, '2019-03-05', 'dEYwnmxJzk6SvY052SW7pWWCtfZoj7Ul', 0, NULL),
+(21, 'nombre dificil', 'prueba con nombre dificil', NULL, 2, '2019-03-05', 'KUi3XchwhDGARA4wK4CpkRM71QYLtvIs', 0, 'fb4b7cdcd4460bf2667300c44aadebc9.jpeg'),
+(22, 'Prueba 2', 'Desde el celular', NULL, 2, '2019-03-05', 'CxArLUpToMSFFJMBiBOkG4mybvfnJgnQ', 0, '2337f8487ca222f441cb53d109dc39cc.jpeg'),
+(23, 'CUAL ES LA INTEGRAL DE NOSEQUE', 'Dvz', NULL, 2, '2019-03-05', 'MqTciYKjgKkpIVkAMtzQxuQn82vS3QsD', 0, '0aad83c932cba4561f52d2acec7baea2.jpeg');
 
 -- --------------------------------------------------------
 
@@ -697,9 +709,9 @@ INSERT INTO `theme` (`id`, `section`, `name`, `source`, `description`, `unloker`
 (10, 1, 'Potenciación', '[\"pot1.jpg\"]', 'Imagina que una bacteria se divide en dos. Luego esas dos bacterias se dividen cada una en otras 2, luego estas cuatro bacterias se dividen cada una en dos. ¿Cómo se calcula la cantidad de bacterias que habrá en un determinado momento? Para este proceso utilizaremos la potenciación.', 393),
 (11, 1, 'Radicación', '[\"Rad1.png\",\"Rad2.png\",\"Rad3.png\"]', 'En ocasiones, necesitamos conocer en la base de una potencia, ¿Lo notas? La radicación es el proceso contrario a la potenciación. A continuación, te presentamos una sección de ejercicios para que practiques esta técnica matemática que te será muy útil en el futuro.', 412),
 (12, 1, 'Orden de evaluación o Leyes de precedencia', '[\"precedencia.png\"]', '¿Y si nos encontramos con un proceso que tiene muchas sumas, restas, multiplicaciones y divisiones? ¿Cómo podemos resolver todo este problema? ¿Por dónde empiezo? Bueno, afortunadamente existen las leyes de precedencia o también conocidas como orden de evaluación, En esta sección aprenderás la manera correcta de solucionar dichos problemas', 433),
-(13, 1, 'Recta numérica y Plano cartesiano', '[]', 'La recta numérica es el primer paso para adentrarnos al maravilloso mundo de los números enteros. ¿Alguna vez has escuchado hablar de números negativos? Seguramente sí, La recta numérica representa el punto de quiebre entre los números negativos y positivos, siendo el cero el punto neutro entre estos dos maravillosos conjuntos.', 450),
+(13, 1, 'Recta numérica y Plano cartesiano', '[\"https://www.youtube.com/embed/kzOzYY-T-50\"]', 'La recta numérica es el primer paso para adentrarnos al maravilloso mundo de los números enteros. ¿Alguna vez has escuchado hablar de números negativos? Seguramente sí, La recta numérica representa el punto de quiebre entre los números negativos y positivos, siendo el cero el punto neutro entre estos dos maravillosos conjuntos.', 450),
 (14, 2, 'Perimetros', '[\"perimetro.png\"]', 'Pongamos en práctica el cálculo de petrimetros', 470),
-(15, 2, 'Areas', '[]', 'El area es la cantidad de espacio (en segunda dimensión) que ocupa una figura.', 483),
+(15, 2, 'Areas', '[\"https://www.youtube.com/embed/NNCvHedbz84\"]', 'El area es la cantidad de espacio (en segunda dimensión) que ocupa una figura.', 483),
 (16, 2, 'Plano Cartesiano', '[\"https://www.youtube.com/embed/kzOzYY-T-50\"]', '  para la matemática, el plano cartesiano es sumamente importante debido a sus muchas aplicaciones.\r\n\r\nLa función general de esta herramienta en la matemática, es que permite representar la gráfica de cualquier función.', 500);
 
 -- --------------------------------------------------------
@@ -734,7 +746,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `statistics_id`, `username`, `username_canonical`, `email`, `email_canonical`, `enabled`, `salt`, `password`, `last_login`, `confirmation_token`, `password_requested_at`, `roles`, `solved_exercises`, `available_themes`, `starts`, `img_profile`, `board_kind`) VALUES
-(2, 1, 'dbastidas', 'dbastidas', 'diego.fernando.bastidas@correounivalle.edu.co', 'diego.fernando.bastidas@correounivalle.edu.co', 1, NULL, '$2y$13$f.GbQLAyBDlNRJpcbMYF2.jXccM9KCoGrcxiSxPit6dRwx21j8S.q', '2019-02-25 15:55:10', NULL, NULL, 'a:1:{i:0;s:10:\"ROLE_ADMIN\";}', '[\"17\",\"18\",\"19\",\"20\",\"21\",\"29\",\"30\",\"22\",\"23\",\"24\",\"25\",\"26\",\"27\",\"16\",\"15\",\"14\",\"13\",\"12\",\"11\",\"4\",\"6\",\"43\",\"42\",\"44\",\"41\",\"40\",\"39\",\"45\",\"46\",\"47\",\"48\",\"52\",\"51\",\"50\",\"49\",\"38\",\"37\",\"7\",\"8\",\"3\",\"31\",\"32\",\"33\",\"34\",\"35\",\"36\",\"5\",\"60\",\"61\",\"62\",\"63\",\"64\",\"65\",\"66\",\"59\",\"58\",\"57\",\"56\",\"55\",\"54\",\"53\",\"9\",\"10\",\"67\",\"68\",\"82\",\"83\",\"84\",\"85\",\"86\",\"87\",\"88\",\"89\",\"90\",\"91\",\"81\",\"80\",\"79\",\"69\",\"70\",\"71\",\"72\",\"73\",\"74\",\"75\",\"76\",\"77\",\"78\",\"92\",\"105\",\"106\",\"107\",\"108\",\"109\",\"110\",\"111\",\"112\",\"113\",\"104\",\"103\",\"102\",\"93\",\"94\",\"95\",\"96\",\"97\",\"98\",\"99\",\"100\",\"101\",\"114\",\"126\",\"127\",\"128\",\"129\",\"130\",\"131\",\"132\",\"133\",\"125\",\"124\",\"123\",\"115\",\"116\",\"117\",\"118\",\"119\",\"120\",\"121\",\"122\",\"134\",\"135\",\"146\",\"147\",\"148\",\"149\",\"150\",\"151\",\"152\",\"153\",\"145\",\"144\",\"136\",\"137\",\"138\",\"139\",\"140\",\"141\",\"142\",\"143\",\"154\",\"166\",\"167\",\"168\",\"169\",\"170\",\"171\",\"172\",\"173\",\"165\",\"164\",\"163\",\"155\",\"156\",\"157\",\"158\",\"159\",\"160\",\"161\",\"162\",\"174\",\"189\",\"190\",\"191\",\"192\",\"193\",\"194\",\"195\",\"196\",\"197\",\"198\",\"199\",\"188\",\"187\",\"176\",\"177\",\"178\",\"179\",\"180\",\"181\",\"182\",\"183\",\"184\",\"185\",\"186\",\"200\",\"201\",\"214\",\"213\",\"212\",\"211\",\"210\",\"209\",\"208\",\"207\",\"206\",\"205\",\"204\",\"203\",\"202\",\"215\",\"226\",\"227\",\"228\",\"229\",\"230\",\"231\",\"232\",\"233\",\"225\",\"224\",\"216\",\"217\",\"218\",\"219\",\"220\",\"221\",\"222\",\"223\",\"234\",\"246\",\"247\",\"248\",\"249\",\"250\",\"251\",\"252\",\"253\",\"245\",\"244\",\"243\",\"235\",\"236\",\"237\",\"238\",\"239\",\"240\",\"241\",\"242\",\"254\",\"255\",\"256\",\"266\",\"265\",\"264\",\"263\",\"262\",\"261\",\"260\",\"259\",\"258\",\"257\",\"267\",\"279\",\"280\",\"281\",\"282\",\"283\",\"284\",\"285\",\"286\",\"287\",\"278\",\"277\",\"268\",\"269\",\"270\",\"271\",\"272\",\"273\",\"274\",\"275\",\"276\",\"288\",\"289\",\"290\",\"291\",\"321\",\"322\",\"323\",\"335\",\"336\",\"337\",\"338\",\"339\",\"340\",\"341\",\"342\",\"343\",\"344\",\"334\",\"333\",\"332\",\"324\",\"325\",\"326\",\"327\",\"328\",\"329\",\"330\",\"331\",\"345\",\"354\",\"355\",\"356\",\"357\",\"358\",\"359\",\"353\",\"352\",\"351\",\"350\",\"349\",\"348\",\"347\",\"346\",\"360\",\"28\",\"319\",\"318\",\"317\",\"316\",\"312\",\"313\",\"314\",\"315\",\"320\",\"361\",\"368\",\"369\",\"367\",\"366\",\"365\",\"364\",\"363\",\"362\",\"370\",\"379\",\"378\",\"377\",\"376\",\"375\",\"374\",\"373\",\"372\",\"371\",\"388\",\"381\",\"382\",\"383\",\"384\",\"385\",\"386\",\"387\",\"389\",\"390\",\"391\",\"392\",\"393\",\"380\",\"394\",\"395\",\"396\",\"397\",\"398\",\"399\",\"400\",\"401\",\"402\",\"403\",\"404\",\"405\",\"406\",\"407\",\"408\",\"417\",\"416\",\"413\",\"409\",\"410\",\"418\",\"415\",\"411\",\"414\",\"412\",\"419\",\"420\",\"421\",\"422\",\"423\",\"424\",\"431\",\"430\",\"429\",\"425\",\"428\",\"427\",\"426\",\"432\",\"435\",\"434\",\"433\",\"436\",\"438\",\"437\",\"439\",\"440\",\"441\",\"446\",\"442\",\"445\",\"443\",\"444\",\"447\",\"452\",\"453\",\"451\",\"448\",\"449\",\"454\",\"458\",\"456\",\"455\",\"457\",\"450\",\"459\",\"460\",\"461\",\"462\",\"463\",\"464\",\"465\",\"472\",\"466\",\"467\",\"468\",\"469\",\"471\",\"470\",\"474\",\"486\",\"480\",\"481\",\"482\",\"484\",\"483\",\"478\",\"476\",\"477\",\"475\",\"479\",\"487\",\"488\",\"490\",\"508\",\"509\",\"511\",\"489\",\"491\",\"493\",\"495\",\"492\",\"494\",\"496\",\"506\",\"505\",\"498\",\"499\",\"500\"]', '[4,\"5\",6,7,8,9,10,11,12,13,14,15,15,16,16]', 2, 'DELjajceTqS49t8BLLACBjSFi8OCdM8H.png', 0),
+(2, 1, 'dbastidas', 'dbastidas', 'diego.fernando.bastidas@correounivalle.edu.co', 'diego.fernando.bastidas@correounivalle.edu.co', 1, NULL, '$2y$13$f.GbQLAyBDlNRJpcbMYF2.jXccM9KCoGrcxiSxPit6dRwx21j8S.q', '2019-03-05 19:38:05', NULL, NULL, 'a:1:{i:0;s:10:\"ROLE_ADMIN\";}', '[\"17\",\"18\",\"19\",\"20\",\"21\",\"29\",\"30\",\"22\",\"23\",\"24\",\"25\",\"26\",\"27\",\"16\",\"15\",\"14\",\"13\",\"12\",\"11\",\"4\",\"6\",\"43\",\"42\",\"44\",\"41\",\"40\",\"39\",\"45\",\"46\",\"47\",\"48\",\"52\",\"51\",\"50\",\"49\",\"38\",\"37\",\"7\",\"8\",\"3\",\"31\",\"32\",\"33\",\"34\",\"35\",\"36\",\"5\",\"60\",\"61\",\"62\",\"63\",\"64\",\"65\",\"66\",\"59\",\"58\",\"57\",\"56\",\"55\",\"54\",\"53\",\"9\",\"10\",\"67\",\"68\",\"82\",\"83\",\"84\",\"85\",\"86\",\"87\",\"88\",\"89\",\"90\",\"91\",\"81\",\"80\",\"79\",\"69\",\"70\",\"71\",\"72\",\"73\",\"74\",\"75\",\"76\",\"77\",\"78\",\"92\",\"105\",\"106\",\"107\",\"108\",\"109\",\"110\",\"111\",\"112\",\"113\",\"104\",\"103\",\"102\",\"93\",\"94\",\"95\",\"96\",\"97\",\"98\",\"99\",\"100\",\"101\",\"114\",\"126\",\"127\",\"128\",\"129\",\"130\",\"131\",\"132\",\"133\",\"125\",\"124\",\"123\",\"115\",\"116\",\"117\",\"118\",\"119\",\"120\",\"121\",\"122\",\"134\",\"135\",\"146\",\"147\",\"148\",\"149\",\"150\",\"151\",\"152\",\"153\",\"145\",\"144\",\"136\",\"137\",\"138\",\"139\",\"140\",\"141\",\"142\",\"143\",\"154\",\"166\",\"167\",\"168\",\"169\",\"170\",\"171\",\"172\",\"173\",\"165\",\"164\",\"163\",\"155\",\"156\",\"157\",\"158\",\"159\",\"160\",\"161\",\"162\",\"174\",\"189\",\"190\",\"191\",\"192\",\"193\",\"194\",\"195\",\"196\",\"197\",\"198\",\"199\",\"188\",\"187\",\"176\",\"177\",\"178\",\"179\",\"180\",\"181\",\"182\",\"183\",\"184\",\"185\",\"186\",\"200\",\"201\",\"214\",\"213\",\"212\",\"211\",\"210\",\"209\",\"208\",\"207\",\"206\",\"205\",\"204\",\"203\",\"202\",\"215\",\"226\",\"227\",\"228\",\"229\",\"230\",\"231\",\"232\",\"233\",\"225\",\"224\",\"216\",\"217\",\"218\",\"219\",\"220\",\"221\",\"222\",\"223\",\"234\",\"246\",\"247\",\"248\",\"249\",\"250\",\"251\",\"252\",\"253\",\"245\",\"244\",\"243\",\"235\",\"236\",\"237\",\"238\",\"239\",\"240\",\"241\",\"242\",\"254\",\"255\",\"256\",\"266\",\"265\",\"264\",\"263\",\"262\",\"261\",\"260\",\"259\",\"258\",\"257\",\"267\",\"279\",\"280\",\"281\",\"282\",\"283\",\"284\",\"285\",\"286\",\"287\",\"278\",\"277\",\"268\",\"269\",\"270\",\"271\",\"272\",\"273\",\"274\",\"275\",\"276\",\"288\",\"289\",\"290\",\"291\",\"321\",\"322\",\"323\",\"335\",\"336\",\"337\",\"338\",\"339\",\"340\",\"341\",\"342\",\"343\",\"344\",\"334\",\"333\",\"332\",\"324\",\"325\",\"326\",\"327\",\"328\",\"329\",\"330\",\"331\",\"345\",\"354\",\"355\",\"356\",\"357\",\"358\",\"359\",\"353\",\"352\",\"351\",\"350\",\"349\",\"348\",\"347\",\"346\",\"360\",\"28\",\"319\",\"318\",\"317\",\"316\",\"312\",\"313\",\"314\",\"315\",\"320\",\"361\",\"368\",\"369\",\"367\",\"366\",\"365\",\"364\",\"363\",\"362\",\"370\",\"379\",\"378\",\"377\",\"376\",\"375\",\"374\",\"373\",\"372\",\"371\",\"388\",\"381\",\"382\",\"383\",\"384\",\"385\",\"386\",\"387\",\"389\",\"390\",\"391\",\"392\",\"393\",\"380\",\"394\",\"395\",\"396\",\"397\",\"398\",\"399\",\"400\",\"401\",\"402\",\"403\",\"404\",\"405\",\"406\",\"407\",\"408\",\"417\",\"416\",\"413\",\"409\",\"410\",\"418\",\"415\",\"411\",\"414\",\"412\",\"419\",\"420\",\"421\",\"422\",\"423\",\"424\",\"431\",\"430\",\"429\",\"425\",\"428\",\"427\",\"426\",\"432\",\"435\",\"434\",\"433\",\"436\",\"438\",\"437\",\"439\",\"440\",\"441\",\"446\",\"442\",\"445\",\"443\",\"444\",\"447\",\"452\",\"453\",\"451\",\"448\",\"449\",\"454\",\"458\",\"456\",\"455\",\"457\",\"450\",\"459\",\"460\",\"461\",\"462\",\"463\",\"464\",\"465\",\"472\",\"466\",\"467\",\"468\",\"469\",\"471\",\"470\",\"474\",\"486\",\"480\",\"481\",\"482\",\"484\",\"483\",\"478\",\"476\",\"477\",\"475\",\"479\",\"487\",\"488\",\"490\",\"508\",\"509\",\"511\",\"489\",\"491\",\"493\",\"495\",\"492\",\"494\",\"496\",\"506\",\"505\",\"498\",\"499\",\"500\"]', '[4,\"5\",6,7,8,9,10,11,12,13,14,15,15,16,16]', 2, 'DELjajceTqS49t8BLLACBjSFi8OCdM8H.png', 0),
 (13, 2, 'dbastidas150', 'dbastidas150', 'diegofernando150_@hotmail.es', 'diegofernando150_@hotmail.es', 1, NULL, '$2y$13$0d9hk4oiTQg4QJZV3sna5.WtJSXheK80rFBogaZfJBT7JjkoXjTK2', '2019-02-25 19:51:58', NULL, NULL, 'a:0:{}', '[\"19\"]', '[4]', 0, 'dQeRRM5LcuEJNFiFgsUVbkbXUFVASuHp.png', 0),
 (14, 4, 'mauro', 'mauro', 'maurobastidas@hotmail.com', 'maurobastidas@hotmail.com', 1, NULL, '$2y$13$6ZLkqZnu/z65u8sGSFGDWuYjBv5PbwNWBtCsvgq5DJcqQrRUjI/1S', '2018-07-05 23:19:08', NULL, NULL, 'a:0:{}', '[\"19\",\"20\",\"21\",\"22\"]', '[4]', 0, 'pBDfywqhUhJEALgPIr4oxaN2QlivF3Nm.png', 1),
 (15, 5, 'dahiana', 'dahiana', 'dahiana@gmail.com', 'dahiana@gmail.com', 1, NULL, '$2y$13$ZfSVsVcKDji3PoRj0v1sSO.EDoW8457JmPdJqc33AxxFjZ8DgFOQ.', '2018-05-09 22:52:45', NULL, NULL, 'a:0:{}', '[\"19\",\"20\",\"21\",\"22\"]', '[4]', 1, 'PQGOw4w3alQylItB5Ci3b910lwl4hFqr.png', 1),
@@ -754,7 +766,7 @@ INSERT INTO `user` (`id`, `statistics_id`, `username`, `username_canonical`, `em
 (29, 19, 'rtest', 'rtest', 'rtest@hotmail.es', 'rtest@hotmail.es', 1, NULL, '$2y$13$5f6rGPMokoz0LcdGFOBOF.J7nFEiNnG6HujArvXEg.4mV8GHhf80u', '2019-02-13 23:17:34', NULL, NULL, 'N;', '[]', '[4]', 0, 'anonimo.jpg', 1),
 (30, 20, 'rtest2', 'rtest2', 'rtest2@hotmail.com', 'rtest2@hotmail.com', 1, NULL, '$2y$13$JgCK02N5DlVSM0yRJTNfAui8xsFiTeaRSc5ICkAOZuTuVwICcrrYm', '2019-02-14 14:37:18', NULL, NULL, 'N;', '[\"19\",\"20\",\"21\"]', '[4]', 0, 'anonimo.jpg', 0),
 (31, 21, 'dfastidas ', 'dfastidas ', 'dfbastidas@correounivalle.edu.co', 'dfbastidas@correounivalle.edu.co', 1, NULL, '$2y$13$xp5TCZX9IaBfaCXXd0PxaOwfpQNQNoOTdBmUZ2/b1JOPqXEXga1be', NULL, NULL, NULL, 'N;', '[]', '[4]', 0, 'anonimo.jpg', 0),
-(32, 22, 'dfbastidas', 'dfbastidas', 'Dfbastidas@test.com', 'dfbastidas@test.com', 1, NULL, '$2y$13$qdhfF2L6Sf/cymNS/9JgBO/oLvYfIclR30r3z6USRaPOjSPBbq0Qm', '2019-02-22 22:43:11', NULL, NULL, 'N;', '[\"19\",\"20\",\"21\",\"22\",\"23\",\"24\",\"25\",\"26\",\"27\",\"16\",\"15\",\"14\"]', '[4]', 0, 'anonimo.jpg', 0),
+(32, 22, 'dfbastidas', 'dfbastidas', 'Dfbastidas@test.com', 'dfbastidas@test.com', 1, NULL, '$2y$13$qdhfF2L6Sf/cymNS/9JgBO/oLvYfIclR30r3z6USRaPOjSPBbq0Qm', '2019-02-28 21:07:28', NULL, NULL, 'N;', '[\"19\",\"20\",\"21\",\"22\",\"23\",\"24\",\"25\",\"26\",\"27\",\"16\",\"15\",\"14\"]', '[4]', 0, 'anonimo.jpg', 0),
 (33, 23, 'daniquiceno', 'daniquiceno', 'daniquiceno@hotmail.com', 'daniquiceno@hotmail.com', 1, NULL, '$2y$13$Vz92jVK7tKMp2BM6GUq34.d6byTujJHO1uPQsF9kM.iF0ox0GiSia', NULL, NULL, NULL, 'N;', '[]', '[4]', 0, 'anonimo.jpg', 0);
 
 -- --------------------------------------------------------
@@ -938,13 +950,13 @@ ALTER TABLE `blog_category`
 -- AUTO_INCREMENT de la tabla `comunity_answer`
 --
 ALTER TABLE `comunity_answer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `comunity_question`
 --
 ALTER TABLE `comunity_question`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `globals_tips`

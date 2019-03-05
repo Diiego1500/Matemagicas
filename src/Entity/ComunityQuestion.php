@@ -61,6 +61,12 @@ class ComunityQuestion
      */
     private $solved;
 
+
+    /**
+     * @ORM\Column(type="string",length=255, nullable=true)
+     */
+    private $file;
+
     /**
      * ComunityQuestion constructor.
      * @param $title
@@ -202,6 +208,22 @@ class ComunityQuestion
     public function setDate($date)
     {
         $this->date = $date;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * @param mixed $file
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
     }
 
 
