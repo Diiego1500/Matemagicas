@@ -3,30 +3,34 @@
 {% block stylesheets %}
     {{ parent() }}
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,500,500italic,700,900">
+
+
+    {#<link rel="stylesheet" href="{{ asset('Css/templatemo-misc.css') }}">#}
+    {#<link rel="stylesheet" href="{{ asset('Css/templatemo-style.css') }}">#}
+
     <link rel="stylesheet" href="{{ asset('Css/Templates/matemagicas.css') }}">
     <link rel="stylesheet" href="{{ asset('Css/Templates/c1.css') }}">
     <link rel="stylesheet" href="{{ asset('Css/Templates/c2.css') }}">
+
 {% endblock %}
 {% block body %}
     {{ parent() }}
-    <h1>Qué es matemágicas?</h1>
-
-
-
-
+    <div style="background-color: white">
     <!-- top header -->
     <section class="top-header style-seven pad-top-150 pad-bottom-150 bg-pattern-2 mt-0 mb100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-xl-8 offset-xl-2 text-center">
-                    <h1 class="has-animation" data-delay="10">Hello, my name is Cabe Deo</h1>
-                    <p class="has-animation" data-delay="20"> I'm a developer based in Paris,have a look at my portfolio below.</p>
-                    <ul class="social-text light list-inline has-animation" data-delay="30">
-                        <li class="list-inline-item"><a class="text-facebook" href="#">facebook</a></li>
-                        <li class="list-inline-item"><a class="text-twiiter" href="#">Twitter</a></li>
-                        <li class="list-inline-item"><a class="text-linkedin" href="#">Linkedin</a></li>
-                        <li class="list-inline-item"><a class="text-instagram" href="#">Instagram</a></li>
-                    </ul>
+                    <h1 class="has-animation" data-delay="10">Matemágicas, la plataforma perfecta para aprender matemáticas</h1>
+                    <p class="has-animation" data-delay="20">Refuerza tus habilidades desarrollando ejercicios y problemas de matemáticas con un sistema que te califica de inmediato</p>
+                    {#<ul class="social-text light list-inline has-animation" data-delay="30">#}
+                        {#<li class="list-inline-item"><a class="text-facebook" href="#">facebook</a></li>#}
+                        {#<li class="list-inline-item"><a class="text-twiiter" href="#">Twitter</a></li>#}
+                        {#<li class="list-inline-item"><a class="text-linkedin" href="#">Linkedin</a></li>#}
+                        {#<li class="list-inline-item"><a class="text-instagram" href="#">Instagram</a></li>#}
+                    {#</ul>#}
                 </div>
 
             </div>
@@ -151,9 +155,11 @@
 
                 </div>
             </div>
+            </div>
  {% endblock %}
 {% block Js %}
-    {{ parent() }}
+    {#{{ parent() }}#}
+    <script src="{{ asset('Scripts/Templates/Matemagicas/jquery-1.12.3.min.js') }}"></script>
     <script src="{{ asset('Scripts/Templates/Matemagicas/p1.js') }}"></script>
     <script src="{{ asset('Scripts/Templates/Matemagicas/plug.js') }}"></script>
     <script src="{{ asset('Scripts/Templates/Matemagicas/main.js') }}"></script>

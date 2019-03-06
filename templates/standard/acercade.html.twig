@@ -1,236 +1,158 @@
 {% extends 'base.html.twig' %}
-{% block title %}Matemágicas - Acerca De {% endblock %}
+{% block title %}Matemágicas {% endblock %}
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('Css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('Css/magnific-popup.css') }}">
-
-    <link rel="stylesheet" href="{{ asset('Css/tooplate-style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('Css/Templates/matemagicas.css') }}">
+    <link rel="stylesheet" href="{{ asset('Css/Templates/c1.css') }}">
+    <link rel="stylesheet" href="{{ asset('Css/Templates/c2.css') }}">
 {% endblock %}
 {% block body %}
     {{ parent() }}
-     <div class="preloader">
-        <div class="spinner">
-            <span class="spinner-rotate"></span>
-        </div>
-    </div>
-    <section id="home" class="parallax-section">
+    <div style="background-color: white">
+    <!-- top header -->
+    <section class="top-header style-seven pad-top-150 pad-bottom-150 bg-pattern-2 mt-0 mb100">
         <div class="container">
             <div class="row">
-
-                <div class="col-md-5 offset-4 col-md-7 col-sm-12">
-                    <div class="home-thumb">
-                        <h1 class="wow fadeInUp" data-wow-delay="0.4s">¡Hola! Soy Diego el creador de Matemágicas</h1>
-                        <p class="wow fadeInUp white-color" data-wow-delay="0.6s">
-                            Y no, no soy un genio, fui un estudiante de sistemas que veía los números como un gran obstaculo para adquirir el título.
-                            <br><br>
-                            Sabía que esta ciencia se puede aprender con esfuerzo, y se me ocurrió una idea: ¿Y si existiera una plataforma que enseñe matemáticas de forma diferente y siguiendo una linea de aprendizaje?
-                        </p>
-                        <a href="#service" class="wow fadeInUp smoothScroll btn btn-default section-btn" data-wow-delay="1s">Muestrame más</a>
-                    </div>
+                <div class="col-lg-12 col-xl-8 offset-xl-2 text-center">
+                    <h1 class="has-animation" data-delay="10">Hello, my name is Cabe Deo</h1>
+                    <p class="has-animation" data-delay="20"> I'm a developer based in Paris,have a look at my portfolio below.</p>
+                    <ul class="social-text light list-inline has-animation" data-delay="30">
+                        <li class="list-inline-item"><a class="text-facebook" href="#">facebook</a></li>
+                        <li class="list-inline-item"><a class="text-twiiter" href="#">Twitter</a></li>
+                        <li class="list-inline-item"><a class="text-linkedin" href="#">Linkedin</a></li>
+                        <li class="list-inline-item"><a class="text-instagram" href="#">Instagram</a></li>
+                    </ul>
                 </div>
 
             </div>
         </div>
+        <div class="logo-profile"><img src="{{ asset('Img/photos/profile-round.png') }}" alt="logo"></div>
     </section>
-    <section id="service" class="parallax-section">
-        <div class="container">
-            <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-               <h2>Mis fortalezas y habilidades</h2>
-                <p>En realidad son muchas cosas, pero he aquí lo más relevante.</p>
-            </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="service-thumb">
-                        {#<i class="fa fa-smile-o"></i>#}
-                        <img src="{{ asset('Img/photos/habilidades-01.png') }}" class="w-100">
-                        <h4>Programación y diseño web</h4>
-                        <p>Dejar fluir la imaginación, solucionar problemas y crear cosas nuevas es una de mis pasiones.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="service-thumb">
-                        <img src="{{ asset('Img/photos/habilidades-02.png') }}" class="w-100">
-                        <h4>Enseñar</h4>
-                        <p>Me encanta enseñar sin asumir que el estudiante tiene conocimientos previos, Garantizando el aprendizaje </p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="service-thumb">
-                        <img src="{{ asset('Img/photos/habilidades-03.png') }}" class="w-100">
-                        <h4>Aprender</h4>
-                        <p>Aprender es una de las cosas más grandes y apasionantes de la vida. Nos capacita para enfrentar la vida</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="service-thumb">
-                        <img src="{{ asset('Img/photos/habilidades-04.png') }}" class="w-100">
-                        <h4>Espiritualidad</h4>
-                        <p>La ciencia y la fé no tienen por qué ser enemigas, Cientificos como Einstein creían en Dios, y está bien.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="about" class="parallax-section">
+    <!-- top header -->
+    <section class="blog-post style-two pad-75">
         <div class="container">
             <div class="row">
-
-                <div class="col-md-4 col-sm-12">
-                    <div class="about-image-thumb">
-                        <img src="{{ asset('Img/photos/me.jpg') }}" class="wow fadeInUp w-100" data-wow-delay="0.2s" alt="about image">
-                        <ul class="social-icon">
-                            <li><a href="https://www.facebook.com/diego.bastidas.90" class="fa fa-facebook"></a></li>
-                            {#<li><a href="" class="fa fa-twitter"></a></li>#}
-                            <li><a href="https://www.instagram.com/dfbastidas/" class="fa fa-instagram"></a></li>
-                            <li><a href="https://www.behance.net/diegofernaa106" class="fa fa-behance"></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-8 col-sm-12">
-                    <div class="about-thumb">
-                        <!-- SECTION TITLE -->
-                        <div class="wow fadeInUp section-title" data-wow-delay="0.6s">
-                            <h2>UN POCO MÁS SOBRE MÍ</h2>
-                            <p>Programador web, y apasionado por la enseñanza</p>
+                <div class="col-lg-10 offset-lg-1">
+                    <article class="has-animation" data-delay="0">
+                        <div class="entry-media">
+                            <img src="{{ asset('Img/photos/p-7.jpg') }}" alt="post-image">
                         </div>
-                        <div class="wow fadeInUp" data-wow-delay="0.8s">
-                            <p>Para ser sincero, Las matemáticas </p>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <section id="work" class="parallax-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <!-- SECTION TITLE -->
-                    <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                        <h2>Seleted Designs</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur venenatis tincidunt.</p>
-                    </div>
-                </div>
-                <div class="wow fadeInUp col-md-4 col-sm-12" data-wow-delay="0.4s">
-                    <!-- WORK THUMB -->
-                    <div class="work-thumb">
-                        <a href="{{ asset('Img/photos/work-image1.jpg') }}" class="image-popup ">
-                            <div class="work-thumb-overlay">
-                                <h4 class="white-color">First Title</h4>
-                                <h2>Graphic Design</h2>
-                            </div>
-                            <img src="{{ asset('Img/photos/work-image1.jpg') }}" class="img-responsive w-100" alt="Work 1">
-                        </a>
-                    </div>
-                </div>
-                <div class="wow fadeInUp col-md-4 col-sm-12" data-wow-delay="0.4s">
-                    <div class="work-thumb">
-                        <a href="{{ asset('Img/photos/work-image2.jpg') }}" class="image-popup">
-                            <div class="work-thumb-overlay">
-                                <h4 class="white-color">Title Two</h4>
-                                <h2>Photography</h2>
-                            </div>
-                            <img src="{{ asset('Img/photos/work-image2.jpg') }}" class="img-responsive w-100" alt="Work 2">
-                        </a>
-                    </div>
-                </div>
-                <div class="wow fadeInUp col-md-4 col-sm-12" data-wow-delay="0.4s">
-                    <div class="work-thumb">
-                        <a href="{{ asset('Img/photos/work-image3.jpg') }}" class="image-popup">
-                            <div class="work-thumb-overlay">
-                                <h4 class="white-color">Third Title</h4>
-                                <h2>illustration</h2>
-                            </div>
-                            <img src="{{ asset('Img/photos/work-image3.jpg') }}" class="img-responsive w-100" alt="Work 3">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact" class="parallax-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                        <h2>Get in touch</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur venenatis tincidunt.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-7 col-sm-10">
-                    <!-- CONTACT FORM HERE -->
-                    <div class="wow fadeInUp" data-wow-delay="0.4s">
-                        <form id="contact-form" action="#" method="get">
-                            <div class="col-md-6 col-sm-6">
-                                <input type="text" class="form-control" name="name" placeholder="Name" required="">
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <input type="email" class="form-control" name="email" placeholder="Email" required="">
-                            </div>
-                            <div class="col-md-12 col-sm-12">
-                                <textarea class="form-control" rows="5" name="message" placeholder="Message" required=""></textarea>
-                            </div>
-                            <div class="col-md-offset-8 col-md-4 col-sm-offset-6 col-sm-6">
-                                <button id="submit" type="submit" class="form-control" name="submit">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="col-md-5 col-sm-8">
-                    <!-- CONTACT INFO -->
-                    <div class="wow fadeInUp contact-info" data-wow-delay="0.4s">
-                        <div class="section-title">
-                            <h2>Contact Info</h2>
-                            <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis et tortor consectetur adipisicing lacinia tortor morbi ultricies.</p>
+                        <div class="entry-meta-content">
+                            <span class="entry-meta"><span>By</span> <a href="#">Cabe Jeo</a>   <span>in</span>  <a href="#">Beauty, Lifestyle</a> <span>at</span> <a href="#">August 4, 2017</a></span>
+                            <h2 class="entry-title"><a href="#">You work your way to creative thinking</a></h2>
                         </div>
 
-                        <p><i class="fa fa-map-marker"></i> 456 New Street 22000, New York City, USA</p>
-                        <p><i class="fa fa-comment"></i> <a href="mailto:info@company.com">info@company.com</a></p>
-                        <p><i class="fa fa-phone"></i> 010-020-0340</p>
-                    </div>
+                        <div class="entry-content-bottom">
+                            <p class="entry-content">Why your minute meal never works out the way you plan. The evolution of foodstuffs. How to cheat at dinner ideas and get away with it. What everyone is saying about dinner ideas. </p>
+                            <a href="#" class="entry-read-more"><span></span>Read More</a>
+                            <ul class="social-share list-inline">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                            </ul>
+                            <span class="entry-meta bold float-right">Share</span>
+                        </div>
+                    </article>
+
+                    <article class="has-animation" data-delay="0">
+                        <div class="entry-media">
+                            <img src="{{ asset('Img/photos/p-2.jpg') }}" alt="post-image">
+                        </div>
+                        <div class="entry-meta-content">
+                            <span class="entry-meta"><span>By</span> <a href="#">Cabe Jeo</a>   <span>in</span>  <a href="#">Beauty, Lifestyle</a> <span>at</span> <a href="#">August 4, 2017</a></span>
+                            <h2 class="entry-title"><a href="#">Good design is obvious and transparent</a></h2>
+                        </div>
+
+                        <div class="entry-content-bottom">
+                            <p class="entry-content">Why your minute meal never works out the way you plan. The evolution of foodstuffs. How to cheat at dinner ideas and get away with it. What everyone is saying about dinner ideas. </p>
+                            <a href="#" class="entry-read-more"><span></span>Read More</a>
+                            <ul class="social-share list-inline">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                            </ul>
+                            <span class="entry-meta bold float-right">Share</span>
+                        </div>
+                    </article>
+
+                    <article class="has-animation" data-delay="0">
+                        <div class="entry-media">
+                            <img src="{{ asset('Img/photos/p-1.jpg') }}" alt="post-image">
+                        </div>
+                        <div class="entry-meta-content">
+                            <span class="entry-meta"><span>By</span> <a href="#">Cabe Jeo</a>   <span>in</span>  <a href="#">Beauty, Lifestyle</a> <span>at</span> <a href="#">August 4, 2017</a></span>
+                            <h2 class="entry-title"><a href="#">If you do it right, it will last forever</a></h2>
+                        </div>
+
+                        <div class="entry-content-bottom">
+                            <p class="entry-content">Why your minute meal never works out the way you plan. The evolution of foodstuffs. How to cheat at dinner ideas and get away with it. What everyone is saying about dinner ideas. </p>
+                            <a href="#" class="entry-read-more"><span></span>Read More</a>
+                            <ul class="social-share list-inline">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                            </ul>
+                            <span class="entry-meta bold float-right">Share</span>
+                        </div>
+                    </article>
+
+                    <article class="has-animation" data-delay="0">
+                        <div class="entry-media">
+                            <img src="{{ asset('Img/photos/p-8.jpg') }}" alt="post-image">
+                        </div>
+                        <div class="entry-meta-content">
+                            <span class="entry-meta"><span>By</span> <a href="#">Cabe Jeo</a>   <span>in</span>  <a href="#">Beauty, Lifestyle</a> <span>at</span> <a href="#">August 4, 2017</a></span>
+                            <h2 class="entry-title"><a href="#">Its no secret that the digital industry is booming</a></h2>
+                        </div>
+
+                        <div class="entry-content-bottom">
+                            <p class="entry-content">Why your minute meal never works out the way you plan. The evolution of foodstuffs. How to cheat at dinner ideas and get away with it. What everyone is saying about dinner ideas. </p>
+                            <a href="#" class="entry-read-more"><span></span>Read More</a>
+                            <ul class="social-share list-inline">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                            </ul>
+                            <span class="entry-meta bold float-right">Share</span>
+                        </div>
+                    </article>
+
+                    <article class="has-animation" data-delay="0">
+                        <div class="entry-media">
+                            <img src="{{ asset('Img/photos/p-5.jpg') }}" alt="post-image">
+                        </div>
+                        <div class="entry-meta-content">
+                            <span class="entry-meta"><span>By</span> <a href="#">Cabe Jeo</a>   <span>in</span>  <a href="#">Beauty, Lifestyle</a> <span>at</span> <a href="#">August 4, 2017</a></span>
+                            <h2 class="entry-title"><a href="#">Ways your mother lied to you about food stuffs</a></h2>
+                        </div>
+
+                        <div class="entry-content-bottom">
+                            <p class="entry-content">Why your minute meal never works out the way you plan. The evolution of foodstuffs. How to cheat at dinner ideas and get away with it. What everyone is saying about dinner ideas. </p>
+                            <a href="#" class="entry-read-more"><span></span>Read More</a>
+                            <ul class="social-share list-inline">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                            </ul>
+                            <span class="entry-meta bold float-right">Share</span>
+                        </div>
+                    </article>
+
+
                 </div>
-
             </div>
-        </div>
-    </section>
-
-
-    <!-- FOOTER SECTION -->
-    <footer>
-        <div class="container">
-            <div class="row">
-
-                <div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay="0.8s">
-                    <p class="white-color">Copyright &copy; 2017 Your Company
-                        | Design: Tooplate</p>
-                    <div class="wow fadeInUp" data-wow-delay="1s">
-                        <ul class="social-icon">
-                            <li><a href="#" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-instagram"></a></li>
-                            <li><a href="#" class="fa fa-behance"></a></li>
-                            <li><a href="#" class="fa fa-github"></a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
-    </footer>
-
-
-
-{% endblock %}
+ {% endblock %}
 {% block Js %}
-    {{ parent() }}
-    <script src="{{ asset('Scripts/Templates/AcercaDe/jquery.js') }}"></script>
-    <script src="{{ asset('Scripts/Templates/AcercaDe/jquery.parallax.js') }}"></script>
-    <script src="{{ asset('Scripts/Templates/AcercaDe/smoothscroll.js') }}"></script>
-    <script src="{{ asset('Scripts/Templates/AcercaDe/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('Scripts/Templates/AcercaDe/magnific-popup-options.js') }}"></script>
-    <script src="{{ asset('Scripts/Templates/AcercaDe/wow.min.js') }}"></script>
-    <script src="{{ asset('Scripts/Templates/AcercaDe/custom.js') }}"></script>
+    {#{{ parent() }}#}
+    <script src="{{ asset('Scripts/Templates/Matemagicas/jquery-1.12.3.min.js') }}"></script>
+    <script src="{{ asset('Scripts/Templates/Matemagicas/p1.js') }}"></script>
+    <script src="{{ asset('Scripts/Templates/Matemagicas/plug.js') }}"></script>
+    <script src="{{ asset('Scripts/Templates/Matemagicas/main.js') }}"></script>
 {% endblock %}
