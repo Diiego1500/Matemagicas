@@ -2,8 +2,159 @@
 {% block title %}Matemágicas {% endblock %}
 {% block stylesheets %}
     {{ parent() }}
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('Css/Templates/matemagicas.css') }}">
+    <link rel="stylesheet" href="{{ asset('Css/Templates/c1.css') }}">
+    <link rel="stylesheet" href="{{ asset('Css/Templates/c2.css') }}">
 {% endblock %}
 {% block body %}
     {{ parent() }}
     <h1>Qué es matemágicas?</h1>
+
+
+
+
+    <!-- top header -->
+    <section class="top-header style-seven pad-top-150 pad-bottom-150 bg-pattern-2 mt-0 mb100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-xl-8 offset-xl-2 text-center">
+                    <h1 class="has-animation" data-delay="10">Hello, my name is Cabe Deo</h1>
+                    <p class="has-animation" data-delay="20"> I'm a developer based in Paris,have a look at my portfolio below.</p>
+                    <ul class="social-text light list-inline has-animation" data-delay="30">
+                        <li class="list-inline-item"><a class="text-facebook" href="#">facebook</a></li>
+                        <li class="list-inline-item"><a class="text-twiiter" href="#">Twitter</a></li>
+                        <li class="list-inline-item"><a class="text-linkedin" href="#">Linkedin</a></li>
+                        <li class="list-inline-item"><a class="text-instagram" href="#">Instagram</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="logo-profile"><img src="{{ asset('Img/photos/profile-round.png') }}" alt="logo"></div>
+    </section>
+    <!-- top header -->
+    <section class="blog-post style-two pad-75">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <article class="has-animation" data-delay="0">
+                        <div class="entry-media">
+                            <img src="{{ asset('Img/photos/p-7.jpg') }}" alt="post-image">
+                        </div>
+                        <div class="entry-meta-content">
+                            <span class="entry-meta"><span>By</span> <a href="#">Cabe Jeo</a>   <span>in</span>  <a href="#">Beauty, Lifestyle</a> <span>at</span> <a href="#">August 4, 2017</a></span>
+                            <h2 class="entry-title"><a href="#">You work your way to creative thinking</a></h2>
+                        </div>
+
+                        <div class="entry-content-bottom">
+                            <p class="entry-content">Why your minute meal never works out the way you plan. The evolution of foodstuffs. How to cheat at dinner ideas and get away with it. What everyone is saying about dinner ideas. </p>
+                            <a href="#" class="entry-read-more"><span></span>Read More</a>
+                            <ul class="social-share list-inline">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                            </ul>
+                            <span class="entry-meta bold float-right">Share</span>
+                        </div>
+                    </article>
+
+                    <article class="has-animation" data-delay="0">
+                        <div class="entry-media">
+                            <img src="{{ asset('Img/photos/p-2.jpg') }}" alt="post-image">
+                        </div>
+                        <div class="entry-meta-content">
+                            <span class="entry-meta"><span>By</span> <a href="#">Cabe Jeo</a>   <span>in</span>  <a href="#">Beauty, Lifestyle</a> <span>at</span> <a href="#">August 4, 2017</a></span>
+                            <h2 class="entry-title"><a href="#">Good design is obvious and transparent</a></h2>
+                        </div>
+
+                        <div class="entry-content-bottom">
+                            <p class="entry-content">Why your minute meal never works out the way you plan. The evolution of foodstuffs. How to cheat at dinner ideas and get away with it. What everyone is saying about dinner ideas. </p>
+                            <a href="#" class="entry-read-more"><span></span>Read More</a>
+                            <ul class="social-share list-inline">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                            </ul>
+                            <span class="entry-meta bold float-right">Share</span>
+                        </div>
+                    </article>
+
+                    <article class="has-animation" data-delay="0">
+                        <div class="entry-media">
+                            <img src="{{ asset('Img/photos/p-1.jpg') }}" alt="post-image">
+                        </div>
+                        <div class="entry-meta-content">
+                            <span class="entry-meta"><span>By</span> <a href="#">Cabe Jeo</a>   <span>in</span>  <a href="#">Beauty, Lifestyle</a> <span>at</span> <a href="#">August 4, 2017</a></span>
+                            <h2 class="entry-title"><a href="#">If you do it right, it will last forever</a></h2>
+                        </div>
+
+                        <div class="entry-content-bottom">
+                            <p class="entry-content">Why your minute meal never works out the way you plan. The evolution of foodstuffs. How to cheat at dinner ideas and get away with it. What everyone is saying about dinner ideas. </p>
+                            <a href="#" class="entry-read-more"><span></span>Read More</a>
+                            <ul class="social-share list-inline">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                            </ul>
+                            <span class="entry-meta bold float-right">Share</span>
+                        </div>
+                    </article>
+
+                    <article class="has-animation" data-delay="0">
+                        <div class="entry-media">
+                            <img src="{{ asset('Img/photos/p-8.jpg') }}" alt="post-image">
+                        </div>
+                        <div class="entry-meta-content">
+                            <span class="entry-meta"><span>By</span> <a href="#">Cabe Jeo</a>   <span>in</span>  <a href="#">Beauty, Lifestyle</a> <span>at</span> <a href="#">August 4, 2017</a></span>
+                            <h2 class="entry-title"><a href="#">Its no secret that the digital industry is booming</a></h2>
+                        </div>
+
+                        <div class="entry-content-bottom">
+                            <p class="entry-content">Why your minute meal never works out the way you plan. The evolution of foodstuffs. How to cheat at dinner ideas and get away with it. What everyone is saying about dinner ideas. </p>
+                            <a href="#" class="entry-read-more"><span></span>Read More</a>
+                            <ul class="social-share list-inline">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                            </ul>
+                            <span class="entry-meta bold float-right">Share</span>
+                        </div>
+                    </article>
+
+                    <article class="has-animation" data-delay="0">
+                        <div class="entry-media">
+                            <img src="{{ asset('Img/photos/p-5.jpg') }}" alt="post-image">
+                        </div>
+                        <div class="entry-meta-content">
+                            <span class="entry-meta"><span>By</span> <a href="#">Cabe Jeo</a>   <span>in</span>  <a href="#">Beauty, Lifestyle</a> <span>at</span> <a href="#">August 4, 2017</a></span>
+                            <h2 class="entry-title"><a href="#">Ways your mother lied to you about food stuffs</a></h2>
+                        </div>
+
+                        <div class="entry-content-bottom">
+                            <p class="entry-content">Why your minute meal never works out the way you plan. The evolution of foodstuffs. How to cheat at dinner ideas and get away with it. What everyone is saying about dinner ideas. </p>
+                            <a href="#" class="entry-read-more"><span></span>Read More</a>
+                            <ul class="social-share list-inline">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                            </ul>
+                            <span class="entry-meta bold float-right">Share</span>
+                        </div>
+                    </article>
+
+
+                </div>
+            </div>
+ {% endblock %}
+{% block Js %}
+    {{ parent() }}
+    <script src="{{ asset('Scripts/Templates/Matemagicas/p1.js') }}"></script>
+    <script src="{{ asset('Scripts/Templates/Matemagicas/plug.js') }}"></script>
+    <script src="{{ asset('Scripts/Templates/Matemagicas/main.js') }}"></script>
 {% endblock %}
