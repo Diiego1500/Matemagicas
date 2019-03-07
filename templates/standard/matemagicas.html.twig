@@ -1,166 +1,121 @@
 {% extends 'base.html.twig' %}
-{% block title %}Matemágicas {% endblock %}
+{% block title %}{{ parent() }} {% endblock %}
 {% block stylesheets %}
     {{ parent() }}
+    <meta name="description" content="Aprende, practica y resuelve problemas de matemáticas, Matemágicas es la comunidad perfecta para reforzar tus conocimientos, preguntar y explicar a las personas."/>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,500,500italic,700,900">
-
-
-    {#<link rel="stylesheet" href="{{ asset('Css/templatemo-misc.css') }}">#}
-    {#<link rel="stylesheet" href="{{ asset('Css/templatemo-style.css') }}">#}
-
     <link rel="stylesheet" href="{{ asset('Css/Templates/matemagicas.css') }}">
     <link rel="stylesheet" href="{{ asset('Css/Templates/c1.css') }}">
     <link rel="stylesheet" href="{{ asset('Css/Templates/c2.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('Css/templatemo-style.css') }}">
+    <meta property="og:url"           content="http://www.matemagicas.xyz" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Matemágicas | La plataforma para aprender matemáticas" />
+    <meta property="og:description"   content="Aprende, practica y resuelve problemas de matemáticas, Matemágicas es la comunidad perfecta para reforzar tus conocimientos, preguntar y explicar a las personas." />
+    <meta property="og:image"         content="{{ asset('Img/pet.png') }}" />
+    <!-- Facebook Button -->
 {% endblock %}
 {% block body %}
     {{ parent() }}
-    <div style="background-color: white">
-    <!-- top header -->
+    <div id="white" style="background-color: white">
     <section class="top-header style-seven pad-top-150 pad-bottom-150 bg-pattern-2 mt-0 mb100">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-xl-8 offset-xl-2 text-center">
+                <div class="col-lg-12  text-center">
                     <h1 class="has-animation" data-delay="10">Matemágicas, la plataforma perfecta para aprender matemáticas</h1>
                     <p class="has-animation" data-delay="20">Refuerza tus habilidades desarrollando ejercicios y problemas de matemáticas con un sistema que te califica de inmediato</p>
-                    {#<ul class="social-text light list-inline has-animation" data-delay="30">#}
-                        {#<li class="list-inline-item"><a class="text-facebook" href="#">facebook</a></li>#}
-                        {#<li class="list-inline-item"><a class="text-twiiter" href="#">Twitter</a></li>#}
-                        {#<li class="list-inline-item"><a class="text-linkedin" href="#">Linkedin</a></li>#}
-                        {#<li class="list-inline-item"><a class="text-instagram" href="#">Instagram</a></li>#}
-                    {#</ul>#}
+                      <div id="fb-root"></div>
+                        <!-- Your share button code -->
+                      <div class="fb-share-button" data-href="http://www.matemagicas.xyz" data-layout="button_count"></div>
                 </div>
-
             </div>
         </div>
-        <div class="logo-profile"><img src="{{ asset('Img/photos/profile-round.png') }}" alt="logo"></div>
     </section>
-    <!-- top header -->
     <section class="blog-post style-two pad-75">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <article class="has-animation" data-delay="0">
                         <div class="entry-media">
-                            <img src="{{ asset('Img/photos/p-7.jpg') }}" alt="post-image">
+                            <img src="{{ asset('Img/photos/Area-Estudio.jpg') }}" alt="Area-Estudio">
                         </div>
                         <div class="entry-meta-content">
-                            <span class="entry-meta"><span>By</span> <a href="#">Cabe Jeo</a>   <span>in</span>  <a href="#">Beauty, Lifestyle</a> <span>at</span> <a href="#">August 4, 2017</a></span>
-                            <h2 class="entry-title"><a href="#">You work your way to creative thinking</a></h2>
+                            <span class="entry-meta"><span>Area de estudio Matemágicas</span></span>
+                            <h2 class="entry-title"><a href="#">Un espacio para aprender</a></h2>
                         </div>
-
                         <div class="entry-content-bottom">
-                            <p class="entry-content">Why your minute meal never works out the way you plan. The evolution of foodstuffs. How to cheat at dinner ideas and get away with it. What everyone is saying about dinner ideas. </p>
-                            <a href="#" class="entry-read-more"><span></span>Read More</a>
-                            <ul class="social-share list-inline">
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                            </ul>
-                            <span class="entry-meta bold float-right">Share</span>
+                            <p class="entry-content">
+                            ¡Estás aquí! Felicitaciones, si deseas aprender matemáticas siguiendo una linea de
+                            aprendizaje ordenada y a tu ritmo, has llegado al lugar correcto. Matemagicas es
+                            el lugar donde podrás practicar con problemas y ejercicios de suma, resta, multiplicación, división,
+                            y creeme, tenemos MUCHO MÁS
+                            </p>
                         </div>
                     </article>
-
                     <article class="has-animation" data-delay="0">
                         <div class="entry-media">
-                            <img src="{{ asset('Img/photos/p-2.jpg') }}" alt="post-image">
+                            <img src="{{ asset('Img/photos/temarios.jpg') }}" alt="temarios">
                         </div>
                         <div class="entry-meta-content">
-                            <span class="entry-meta"><span>By</span> <a href="#">Cabe Jeo</a>   <span>in</span>  <a href="#">Beauty, Lifestyle</a> <span>at</span> <a href="#">August 4, 2017</a></span>
-                            <h2 class="entry-title"><a href="#">Good design is obvious and transparent</a></h2>
+                            <span class="entry-meta"><span>Estudia con los temas propuestos y avanza en tu conocimiento</span></span>
+                            <h2 class="entry-title"><a href="#">Matemágicas, la plataforma de los ejercicios y problemas matemáticos</a></h2>
                         </div>
-
                         <div class="entry-content-bottom">
-                            <p class="entry-content">Why your minute meal never works out the way you plan. The evolution of foodstuffs. How to cheat at dinner ideas and get away with it. What everyone is saying about dinner ideas. </p>
-                            <a href="#" class="entry-read-more"><span></span>Read More</a>
-                            <ul class="social-share list-inline">
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                            </ul>
-                            <span class="entry-meta bold float-right">Share</span>
+                            <p class="entry-content">Como lo lees, pero ¡hey! no queremos que te frustres, nuestra filosofía es que todos
+                                Pueden aprender esta ciencia, es por esto que hemos creado una plataforma en la que
+                                sentiras que juegas Matematicas mientras practicas y aprendes
+                            </p>
+                            <p class="entry-content">Es divertido, es fácil y es gratis, ya verás como tus calificaciones mejoran despues de 1 mes en nuestra plataforma</p>
+                            <p class="entry-content">
+                            Ya tienes en Internet la platadorma en donde encontrarás todo lo relacionado con
+                            matemáticas: Problemas, post cientificos, usos, una comunidad apasionada por la ciencia,
+                            la oportunidad de preguntar o responder y hasta un <a href="{{ path('blog',{'Categoryname':'All'}) }}" style="color: #0a8ecd">Blog</a> ¿A quién no le gustan los blogs?
+                            </p>
                         </div>
                     </article>
-
                     <article class="has-animation" data-delay="0">
                         <div class="entry-media">
-                            <img src="{{ asset('Img/photos/p-1.jpg') }}" alt="post-image">
+                            <img src="{{ asset('Img/photos/blog.jpg') }}" alt="blog">
                         </div>
                         <div class="entry-meta-content">
-                            <span class="entry-meta"><span>By</span> <a href="#">Cabe Jeo</a>   <span>in</span>  <a href="#">Beauty, Lifestyle</a> <span>at</span> <a href="#">August 4, 2017</a></span>
-                            <h2 class="entry-title"><a href="#">If you do it right, it will last forever</a></h2>
+                            <span class="entry-meta"><span>Blog</span></span>
+                            <h2 class="entry-title"><a href="#">Por que las matemáticas son mucho mas que numeros</a></h2>
                         </div>
-
                         <div class="entry-content-bottom">
-                            <p class="entry-content">Why your minute meal never works out the way you plan. The evolution of foodstuffs. How to cheat at dinner ideas and get away with it. What everyone is saying about dinner ideas. </p>
-                            <a href="#" class="entry-read-more"><span></span>Read More</a>
-                            <ul class="social-share list-inline">
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                            </ul>
-                            <span class="entry-meta bold float-right">Share</span>
+                            <p class="entry-content">¡Es asi! queremos inspirarte y enseñarte que las matemáticas son nuestras amigas y no nuestras
+                                enemigas, te lo enseñamos de la manera más dinámica posible, a través de videos, imágenes
+                                y sonidos, aprendiendo como si estuvieras jugando.</p>
                         </div>
                     </article>
-
                     <article class="has-animation" data-delay="0">
-                        <div class="entry-media">
-                            <img src="{{ asset('Img/photos/p-8.jpg') }}" alt="post-image">
-                        </div>
                         <div class="entry-meta-content">
-                            <span class="entry-meta"><span>By</span> <a href="#">Cabe Jeo</a>   <span>in</span>  <a href="#">Beauty, Lifestyle</a> <span>at</span> <a href="#">August 4, 2017</a></span>
-                            <h2 class="entry-title"><a href="#">Its no secret that the digital industry is booming</a></h2>
+                            <h2 class="entry-title">¿Qué estás esperando?</h2>
                         </div>
-
                         <div class="entry-content-bottom">
-                            <p class="entry-content">Why your minute meal never works out the way you plan. The evolution of foodstuffs. How to cheat at dinner ideas and get away with it. What everyone is saying about dinner ideas. </p>
-                            <a href="#" class="entry-read-more"><span></span>Read More</a>
-                            <ul class="social-share list-inline">
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                            </ul>
-                            <span class="entry-meta bold float-right">Share</span>
+                            <p class="entry-content">
+                                Toma acción, registrate en nuestra plataforma, NO TIENES NADA QUE PERDER pero tienes MUCHO QUE GANAR.
+                            </p>
+                            <p>No debemos escatimar en tiempo cuando de aprender se trata, adquiere conocimientos, compartelos y ayuda a otras personas.  Sin más que decir,
+                            te dejo el enlace para que te registres y empieces esta gran aventura: <a href="{{ path('index') }}" style="color: #0a8ecd">Registrate</a>
                         </div>
                     </article>
-
-                    <article class="has-animation" data-delay="0">
-                        <div class="entry-media">
-                            <img src="{{ asset('Img/photos/p-5.jpg') }}" alt="post-image">
-                        </div>
-                        <div class="entry-meta-content">
-                            <span class="entry-meta"><span>By</span> <a href="#">Cabe Jeo</a>   <span>in</span>  <a href="#">Beauty, Lifestyle</a> <span>at</span> <a href="#">August 4, 2017</a></span>
-                            <h2 class="entry-title"><a href="#">Ways your mother lied to you about food stuffs</a></h2>
-                        </div>
-
-                        <div class="entry-content-bottom">
-                            <p class="entry-content">Why your minute meal never works out the way you plan. The evolution of foodstuffs. How to cheat at dinner ideas and get away with it. What everyone is saying about dinner ideas. </p>
-                            <a href="#" class="entry-read-more"><span></span>Read More</a>
-                            <ul class="social-share list-inline">
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                            </ul>
-                            <span class="entry-meta bold float-right">Share</span>
-                        </div>
-                    </article>
-
-
                 </div>
             </div>
             </div>
  {% endblock %}
 {% block Js %}
-    {#{{ parent() }}#}
     <script src="{{ asset('Scripts/Templates/Matemagicas/jquery-1.12.3.min.js') }}"></script>
     <script src="{{ asset('Scripts/Templates/Matemagicas/p1.js') }}"></script>
     <script src="{{ asset('Scripts/Templates/Matemagicas/plug.js') }}"></script>
     <script src="{{ asset('Scripts/Templates/Matemagicas/main.js') }}"></script>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
 {% endblock %}
