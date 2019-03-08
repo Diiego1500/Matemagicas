@@ -224,7 +224,7 @@ class IndexController extends Controller
             10/*limit per page*/
         );
 
-        return $this->render('standard/userAnswers.html.twig', array('pagination' => $pagination));
+        return $this->render('standard/UserQuestions.html.twig', array('pagination' => $pagination));
     }
 
 

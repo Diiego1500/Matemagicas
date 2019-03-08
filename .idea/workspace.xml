@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="623a447c-a2d7-446b-8c36-88e7cc732324" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/Img/photos/home-bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/Img/photos/p-7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/Img/photos/work-image1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/Img/photos/work-image2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/Img/photos/work-image3.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Css/templates/matemagicas.css" afterPath="$PROJECT_DIR$/public/Css/templates/matemagicas.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Comunidad/Question.html.twig" afterPath="$PROJECT_DIR$/templates/Comunidad/Question.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html.twig" afterPath="$PROJECT_DIR$/templates/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/article.html.twig" afterPath="$PROJECT_DIR$/templates/blog/article.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/index.html.twig" afterPath="$PROJECT_DIR$/templates/blog/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/standard/UserQuestions.html.twig" afterPath="$PROJECT_DIR$/templates/standard/UserQuestions.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/standard/matemagicas.html.twig" afterPath="$PROJECT_DIR$/templates/standard/matemagicas.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -154,17 +151,83 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="matemagicas.html.twig" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="matemagicas.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/standard/matemagicas.html.twig">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1972">
+              <caret line="116" column="48" lean-forward="false" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserQuestions.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/standard/UserQuestions.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-              <folding>
-                <element signature="e#1590#1621#0#HTML" expanded="true" />
-                <element signature="e#5391#5413#0#HTML" expanded="true" />
-                <element signature="e#7368#7390#0#HTML" expanded="true" />
-              </folding>
+              <caret line="1" column="48" lean-forward="false" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3366">
+              <caret line="216" column="52" lean-forward="false" selection-start-line="216" selection-start-column="52" selection-end-line="216" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComunidadController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/ComunidadController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1428">
+              <caret line="92" column="58" lean-forward="false" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Question.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Comunidad/Question.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="51" lean-forward="false" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlogController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/BlogController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/blog/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userAnswers.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/standard/userAnswers.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -172,18 +235,18 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state relative-caret-position="1445">
+              <caret line="85" column="85" lean-forward="false" selection-start-line="85" selection-start-column="85" selection-end-line="85" selection-end-column="85" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="article.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/blog/article.html.twig">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="2907">
+              <caret line="171" column="74" lean-forward="false" selection-start-line="171" selection-start-column="61" selection-end-line="171" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -193,13 +256,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rest</find>
-      <find>ver</find>
-      <find>a litt</find>
-      <find>a li</find>
-      <find>a lit</find>
-      <find>title t</find>
-      <find>a l</find>
       <find>reso</find>
       <find>incl</find>
       <find>aun no</find>
@@ -223,6 +279,13 @@
       <find>home</find>
       <find>SHARE</find>
       <find>titi</find>
+      <find>MyQuestions</find>
+      <find>comu</find>
+      <find>Mis pre</find>
+      <find>Quest</find>
+      <find>Questio</find>
+      <find>Question/</find>
+      <find>blog/</find>
     </findStrings>
     <replaceStrings>
       <replace>white</replace>
@@ -240,6 +303,7 @@
       <dir>C:\xampp\htdocs\matemagicas</dir>
       <dir>C:\xampp\htdocs\matemagicas\public</dir>
       <dir>C:\xampp\htdocs\matemagicas\public\Css</dir>
+      <dir>C:\xampp\htdocs\Matemagicas\src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -248,7 +312,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Controller/PrimaryController.php" />
         <option value="$PROJECT_DIR$/templates/blog/email.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/BlogController.php" />
         <option value="$PROJECT_DIR$/src/Form/AnswerType.php" />
@@ -277,16 +340,13 @@
         <option value="$PROJECT_DIR$/templates/standard/Resources.html.twig" />
         <option value="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Security/login_content.html.twig" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/src/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/public/Scripts/Templates/login.js" />
         <option value="$PROJECT_DIR$/templates/standard/PracticalExercises.html.twig" />
-        <option value="$PROJECT_DIR$/templates/blog/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/ComunityQuestion.php" />
         <option value="$PROJECT_DIR$/src/Form/ComunityQuestionType.php" />
         <option value="$PROJECT_DIR$/templates/Comunidad/comunidad.html.twig" />
         <option value="$PROJECT_DIR$/config/services.yaml" />
         <option value="$PROJECT_DIR$/src/Controller/ComunidadController.php" />
-        <option value="$PROJECT_DIR$/templates/Comunidad/Question.html.twig" />
         <option value="$PROJECT_DIR$/templates/index/index.html.twig" />
         <option value="$PROJECT_DIR$/public/Css/templates/c1.css" />
         <option value="$PROJECT_DIR$/public/Css/templates/c2.css" />
@@ -296,9 +356,13 @@
         <option value="$PROJECT_DIR$/public/Css/main.css" />
         <option value="$PROJECT_DIR$/templates/standard/acercade.html.twig" />
         <option value="$PROJECT_DIR$/public/Css/templates/matemagicas.css" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/templates/blog/article.html.twig" />
         <option value="$PROJECT_DIR$/templates/standard/matemagicas.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/templates/standard/UserQuestions.html.twig" />
+        <option value="$PROJECT_DIR$/templates/Comunidad/Question.html.twig" />
+        <option value="$PROJECT_DIR$/templates/blog/index.html.twig" />
       </list>
     </option>
   </component>
@@ -418,7 +482,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="409" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1518" />
     <option name="height" value="1047" />
   </component>
@@ -438,8 +503,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -456,17 +519,19 @@
               <item name="Matemagicas" type="b2602c69:ProjectViewProjectNode" />
               <item name="Matemagicas" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="standard" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="SearchEverywhereHistoryKey" value="ss/Templates/matemagicas.css&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Css/templates/matemagicas.css&#10;Css/templatemo-style.css&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Css/templatemo-style.css&#10;Css/Templates/matemagicas.css&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Css/templates/matemagicas.css&#10;Css/Templates/c2.css&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Css/templates/c2.css&#10;Css/Templates/c1.css&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Css/templates/c1.css&#10;Comunidad/Question.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/Comunidad/Question.html.twig&#10;Comunidad/comunidad.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/Comunidad/comunidad.html.twig&#10;Img/tempIcons/22.png&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Img/tempIcons/22.png&#10;Img/tempIcons/11.png&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Img/tempIcons/11.png&#10;Scripts/Templates/login.js&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/public/Scripts/Templates/login.js&#10;Scripts/Templates/practicalExercises2.js&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/public/Scripts/Templates/practicalExercises2.js&#10;Scripts/Templates/practicalExercises.js&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/public/Scripts/Templates/practicalExercises.js&#10;index/index.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/index/index.html.twig&#10;standard/boardButton.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/standard/boardButton.html.twig&#10;standard/board.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/standard/board.html.twig&#10;standard/Resources.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/standard/Resources.html.twig&#10;Scripts/Templates/BlogIndex.js&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/public/Scripts/Templates/BlogIndex.js&#10;blog/index.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/blog/index.html.twig&#10;standard/ChooseLevel.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/standard/ChooseLevel.html.twig&#10;templates\standard\Success.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/Success.html.twig&#10;kernel&#9;null&#9;null&#10;kernel.php&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/src/Kernel.php&#10;standard/boardBool.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/boardBool.html.twig&#10;standard/Success.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/Success.html.twig&#10;standard/PracticalExercises.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/PracticalExercises.html.twig" />
+    <property name="SearchEverywhereHistoryKey" value="blog/index.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/blog/index.html.twig&#10;Comunidad/Question.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/Comunidad/Question.html.twig&#10;ss/Templates/matemagicas.css&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Css/templates/matemagicas.css&#10;Css/templatemo-style.css&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Css/templatemo-style.css&#10;Css/Templates/matemagicas.css&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Css/templates/matemagicas.css&#10;Css/Templates/c2.css&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Css/templates/c2.css&#10;Css/Templates/c1.css&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Css/templates/c1.css&#10;Comunidad/comunidad.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/Comunidad/comunidad.html.twig&#10;Img/tempIcons/22.png&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Img/tempIcons/22.png&#10;Img/tempIcons/11.png&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/public/Img/tempIcons/11.png&#10;Scripts/Templates/login.js&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/public/Scripts/Templates/login.js&#10;Scripts/Templates/practicalExercises2.js&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/public/Scripts/Templates/practicalExercises2.js&#10;Scripts/Templates/practicalExercises.js&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/public/Scripts/Templates/practicalExercises.js&#10;index/index.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/index/index.html.twig&#10;standard/boardButton.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/standard/boardButton.html.twig&#10;standard/board.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/standard/board.html.twig&#10;standard/Resources.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/standard/Resources.html.twig&#10;Scripts/Templates/BlogIndex.js&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/public/Scripts/Templates/BlogIndex.js&#10;standard/ChooseLevel.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/matemagicas/templates/standard/ChooseLevel.html.twig&#10;templates\standard\Success.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/Success.html.twig&#10;kernel&#9;null&#9;null&#10;kernel.php&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/src/Kernel.php&#10;standard/boardBool.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/boardBool.html.twig&#10;standard/Success.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/Success.html.twig&#10;standard/PracticalExercises.html.twig&#9;FILE&#9;file://C:/xampp/htdocs/Matemagicas/templates/standard/PracticalExercises.html.twig" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -655,28 +720,29 @@
       <workItem from="1551814591773" duration="614000" />
       <workItem from="1551896401464" duration="3660000" />
       <workItem from="1551910143952" duration="2897000" />
-      <workItem from="1551965205823" duration="11338000" />
+      <workItem from="1551965205823" duration="12826000" />
+      <workItem from="1552068141507" duration="1662000" />
+      <workItem from="1552072751543" duration="305000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="641771000" />
+    <option name="totallyTimeSpent" value="645226000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16791044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13326226" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -706,12 +772,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/Img/learn-icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Img/fondoo2.png" />
     <entry file="file://$PROJECT_DIR$/public/Img/logo.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -821,13 +881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Comunidad/comunidad.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="42" column="47" lean-forward="false" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/comunity/0aad83c932cba4561f52d2acec7baea2.jpeg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -841,27 +894,6 @@
     <entry file="file://$PROJECT_DIR$/public/comunity/499a29ca1cb091b5d2448107b4f0830e.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2788">
-          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Comunidad/Question.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="31" column="34" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ComunidadController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="46" column="13" lean-forward="false" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/Scripts/Templates/Matemagicas/p1.js">
@@ -945,18 +977,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blog/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/Css/templatemo-style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5185">
           <caret line="305" column="21" lean-forward="false" selection-start-line="305" selection-start-column="21" selection-end-line="305" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -967,40 +991,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/BlogController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="35" column="30" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/StandardController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="26" column="69" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/Img/photos/Sin título-1-02.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Img/photos/Sin título-1-02.png" />
     <entry file="file://$PROJECT_DIR$/public/Css/templates/matemagicas.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="685">
           <caret line="93" column="52" lean-forward="false" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1008,27 +1010,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/templates/Comunidad/comunidad.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        <state relative-caret-position="255">
+          <caret line="42" column="47" lean-forward="false" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/userAnswers.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/standard/matemagicas.html.twig">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="116" column="48" lean-forward="false" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2907">
+          <caret line="171" column="74" lean-forward="false" selection-start-line="171" selection-start-column="61" selection-end-line="171" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="85" column="85" lean-forward="false" selection-start-line="85" selection-start-column="85" selection-end-line="85" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/standard/UserQuestions.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-          <folding>
-            <element signature="e#1590#1621#0#HTML" expanded="true" />
-            <element signature="e#5391#5413#0#HTML" expanded="true" />
-            <element signature="e#7368#7390#0#HTML" expanded="true" />
-          </folding>
+          <caret line="1" column="48" lean-forward="false" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3366">
+          <caret line="216" column="52" lean-forward="false" selection-start-line="216" selection-start-column="52" selection-end-line="216" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ComunidadController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="92" column="58" lean-forward="false" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Comunidad/Question.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="51" lean-forward="false" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/BlogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

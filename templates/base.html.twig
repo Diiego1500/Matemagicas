@@ -73,11 +73,22 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('comunidad') }}" style="color: white">
-                                <strong>Comunidad</strong>
-                            </a>
-                        </li>
 
+
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <strong style="color:white;">Comunidad</strong>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #EFB60B; color: white">
+                                <a class="dropdown-item" href="{{ path('comunidad') }}"><strong style="color:white;">Preguntar o Responder</strong></a>
+                                <a class="dropdown-item" href="{{ path('UserQuestions') }}" style="color: white"><strong>Mis preguntas</strong> </a>
+
+
+
+                            </div>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ path('Salir') }}" style="color: white"></span>
                                 <strong>Salir</strong></a>
