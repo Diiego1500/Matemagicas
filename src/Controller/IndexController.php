@@ -61,7 +61,7 @@ class IndexController extends Controller
             if ($form->isSubmitted() && $form->isValid()) {
                 $data = $form->getData();
                 $message = (new \Swift_Message('FeedBack'))
-                    ->setFrom('info@foodies24-7.com')
+                    ->setFrom('contacto@matemagicas.xyz')
                     ->setTo('disenosolyluna@gmail.com')
                     ->setBody($data['Nombre'] . '-' . $data['Email'] . '-' . $data["Mensaje"]);
                 $mailer->send($message);
@@ -174,8 +174,8 @@ class IndexController extends Controller
         $email = $request->request->get('email');
         $user = $em->getRepository(UserData::class)->findOneBy(['email' => $email]);
         if ($user) {
-            $message = (new \Swift_Message('Blog'))
-                ->setFrom('info@foodies24-7.com')
+            $message = (new \Swift_Message('Matemágocas | Recupera tu contraseña'))
+                ->setFrom('contacto@matemagicas.xyz')
                 ->setTo($email)
                 ->setBody('Recientemente has solicitado los datos de acceso a Matemágicas. A continuación te los presentamos:
                             Usuario:' . $user->getUsername() . '

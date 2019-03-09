@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Entity\BlogArticle;
 use App\Entity\BlogCategory;
-use App\Entity\User;
 use Doctrine\ORM\NoResultException;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -73,8 +72,6 @@ class BlogController extends Controller
         $Category = $em->getRepository(BlogCategory::class)->getNameOnly($Article['categoria']);
         $text = html_entity_decode($Article['Section']);
         $LikesThisArticle = json_decode($Article['Likes']);
-
-
         $defaultData = array('message' => 'Type your message here');
         $form = $this->createFormBuilder($defaultData)
             ->add('Nombre', TextType::class)
@@ -86,7 +83,7 @@ class BlogController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
             $message = (new \Swift_Message('Blog'))
-                ->setFrom('info@foodies24-7.com')
+                ->setFrom('contacto@matemagicas.xyz')
                 ->setTo('disenosolyluna@gmail.com')
                 ->setBody($data['Nombre'].'-'.$data['Email'].'-'.$data["Mensaje"]);
             $mailer->send($message);

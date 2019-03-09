@@ -13,7 +13,7 @@ function Like() {
         success:function (data) {
             $('.counter').text(data['success']);
             $('.MyLike path').css('fill','EFB60B');
-            $('.MyLike2').attr('src','/Matemagicas/public/Img/src/LikeContains.svg');
+            $('.MyLike2').attr('src','/MatemagicasSyL/public/Img/src/LikeContains.svg');
         }
     })
 }

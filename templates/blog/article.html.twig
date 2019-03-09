@@ -4,6 +4,11 @@
     {{ parent() }}
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <meta property="og:url"           content="http://www.matemagicas.xyz/blog/post/{{ Article.url }}/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Matemágicas | {{ Article.title }}" />
+    <meta property="og:description"   content="{{ Article.metaDescription }}" />
+    <meta property="og:image"         content="{{ asset('Img/pet.png') }}" />
     <style type="text/css">
         .title {
             font-family: 'Acme', sans-serif;
@@ -12,13 +17,17 @@
             font-family: 'Roboto Slab', serif;
             font-size: 20px;
         }
+        body{
+            background-color: white;
+            background-image: url({{ asset('Img/Photos/fondo.png') }})
+        }
     </style>
 {% endblock %}
 {% block body %}
     {{ parent() }}
     {% if is_granted('ROLE_USER') %}
         {% set articulos = Text|split('[espacio]') %}
-        <div class="pb-5" style="background-color: white; border-radius: 6px">
+        <div class="pb-5" style=" border-radius: 6px">
             <div class="container">
                 <div class="row pt-5">
                     <div class="col-2 d-block d-sm-block d-md-none AddLike pointer">
@@ -46,7 +55,12 @@
                     </div>
                     <div class="col-11 d-none d-md-block">
                         <h1 class="title pt-3">{{ Article.title }}</h1>
-                        <h6 style="color: #0a8ecd">#{{ Category }} </h6>
+                        <h6 style="color: #0a8ecd"><img src="{{ asset('Img/src/clock.svg') }}" alt="clock"> {{ Article.createdAt |localizeddate('long', 'none', 'es_CO') }}</h6>
+                        <h6 style="color: #0a8ecd">#{{ Category }}
+                            <div id="fb-root"></div>
+                            <!-- Your share button code -->
+                            <div class="fb-share-button" data-href="http://www.matemagicas.xyz/blog/post/{{ Article.url }}/" data-layout="button_count"></div>
+                        </h6>
                     </div>
                 </div>
                 {% for articulo in articulos %}
@@ -94,4 +108,12 @@
     <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
     <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
     <script src="{{ asset('Scripts/Templates/Blog.js') }}"></script>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/es_CO/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 {% endblock %}

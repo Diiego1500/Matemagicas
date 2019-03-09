@@ -78,7 +78,7 @@ class ComunidadController extends Controller
             if (!$flush) {
                 $username = $this->getUser()->getUsername();
                 $message = (new \Swift_Message('Matemágicas-Han respondido tu pregunta.'))
-                    ->setFrom('info@foodies24-7.com')
+                    ->setFrom('contacto@matemagicas.xyz')
                     ->setTo($question->getUsuario()->getEmail())
                     ->setBody('El usuario.' . $username . ' ha respondido tu pregunta Realizada en Matemágicas, Es hora de echar un vistazo');
                 $mailer->send($message);
@@ -117,7 +117,7 @@ class ComunidadController extends Controller
             $QuestionUrl = $answer->getPregunta()->getUrl();
             $url = $this->generateUrl('SeeQuestion', array('url' => $QuestionUrl));
             $message = (new \Swift_Message('Matemágicas - Respuesta Aertada!'))
-                ->setFrom('info@foodies24-7.com')
+                ->setFrom('contacto@matemagicas.xyz')
                 ->setTo($EmailTo)
                 ->setBody('El usuario ' . $User . ' Ha marcado tu respuesta como correcta. Gracias por contribuir a la comunidad Matemágicas' . ' Mira tu logro aquí: ' . $url);
             $mailer->send($message);

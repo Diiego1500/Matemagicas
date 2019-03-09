@@ -56,6 +56,12 @@ class BlogArticle
     private $Likes='[]';
 
     /**
+     * @ORM\Column(type="string", length=250)
+     */
+    private $metaDescription;
+
+
+    /**
      * BlogArticle constructor.
      * @param $title
      * @param string $Img
@@ -156,6 +162,22 @@ class BlogArticle
     public function setLikes($Likes)
     {
         $this->Likes = $Likes;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMetaDescription()
+    {
+        return $this->metaDescription;
+    }
+
+    /**
+     * @param mixed $metaDescription
+     */
+    public function setMetaDescription($metaDescription)
+    {
+        $this->metaDescription = $metaDescription;
     }
 
 
