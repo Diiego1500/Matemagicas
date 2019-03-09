@@ -135,21 +135,22 @@
     <script src="{{ asset('Scripts/introJs/intro.js') }}"></script>
     <script src="{{ asset('Scripts/Templates/practicalExercises.js') }}"></script>
     <script>
-        function isMobile(){
-            return (
-                (navigator.userAgent.match(/Android/i)) ||
-                (navigator.userAgent.match(/webOS/i)) ||
-                (navigator.userAgent.match(/iPhone/i)) ||
-                (navigator.userAgent.match(/iPod/i)) ||
-                (navigator.userAgent.match(/iPad/i)) ||
-                (navigator.userAgent.match(/BlackBerry/i))
-            );
-        }
-
-        if(isMobile()){
-            $('#Active').removeClass( "active" );
-            $('#Image').removeClass( "mt-3" );
-        }
+//        function isMobile(){
+//            return (
+//                (navigator.userAgent.match(/Android/i)) ||
+//                (navigator.userAgent.match(/webOS/i)) ||
+//                (navigator.userAgent.match(/iPhone/i)) ||
+//                (navigator.userAgent.match(/iPod/i)) ||
+//                (navigator.userAgent.match(/iPad/i)) ||
+//                (navigator.userAgent.match(/BlackBerry/i))
+//            );
+//        }
+//
+//        if(isMobile()){
+//            $('#Active').hide();
+////            $('#Active').removeClass( "active" );
+//            $('#Image').removeClass( "mt-3" );
+//        }
 
     </script>
     {% if Exercise.Seeanswer %}
