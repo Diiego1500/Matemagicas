@@ -8,7 +8,7 @@ for (var i = 0; i < Board2.length; i++) {
         var id = this.getAttribute("data-index");
         answerArray[answerArray.length] = id;
         var td = document.createElement("td");
-        var content = '<img id="' + id + '" class="draggable drag-drop tablet animated zoomIn" src="/Matemagicas/public/Img/tempIcons/' + id + '.png" width="30px" height="30px"> ';
+        var content = '<img id="' + id + '" class="draggable drag-drop tablet animated zoomIn" src="/MatemagicasSyL/public/Img/tempIcons/' + id + '.png" width="30px" height="30px"> ';
         td.class = "AnswerField";
         td.innerHTML = content;
         document.getElementById("table_Answers").append(td);

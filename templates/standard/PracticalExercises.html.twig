@@ -28,6 +28,10 @@
 
                 <div class="{{ img }}">
                     {% include 'standard/Resources.html.twig' %}
+                    <div class="alert alert-primary" role="alert">
+                        <small class="mt-5">La sección de recursos contiene explicaciones sobre el tema</small>
+                    </div>
+
                     {#<div>#}
                         {#<img id="Image" src="{{ asset('Img/Exercises/')~Exercise.problemPath }}" data-step="2" class="mt-3"#}
                              {#data-intro="Este es el problema que te proponemos. Asegurate de leer el enunciado y analizar las operaciones que debes realizar."#}
@@ -72,13 +76,13 @@
                                     {% include('standard/romanBoard.html.twig') %}
                                 {% endif %}
                                 <br>
-                                <div class="text-center">
-                                    <button class="btn btn-info mb-2" onclick="javascript:introJs().start();"
-                                            data-step="8"
-                                            data-intro="Siempre estaré aquí para que puedas volver a ver esta guía c:">
-                                        <small>¿Necesitas ayuda?</small>
-                                    </button>
-                                </div>
+                                {#<div class="text-center">#}
+                                    {#<button class="btn btn-info mb-2" onclick="javascript:introJs().start();"#}
+                                            {#data-step="8"#}
+                                            {#data-intro="Siempre estaré aquí para que puedas volver a ver esta guía c:">#}
+                                        {#<small>¿Necesitas ayuda?</small>#}
+                                    {#</button>#}
+                                {#</div>#}
                             </div>
                         </div>
                     </div>
