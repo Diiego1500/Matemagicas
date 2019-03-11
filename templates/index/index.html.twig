@@ -82,17 +82,7 @@
 
                 </div>
             </div>
-            <div class="p-1 m-3">
-                <div class="col-md-12 mt-3" style="background-color: white; border-radius: 6px">
-                    <h4 class="text-center pt-3">Mis evaluaciones</h4>
-                    <hr>
-                    <div id="DonutChart" style="width: 100%; "></div>
-                    <div>
-                        <div id="gauge" style="width:250px; height:250px;  margin: 0 auto"></div>
-                    </div>
-                    <hr>
-                </div>
-            </div>
+
         </div>
         <div class="container mt-5 ml-5 pb-2 d-none d-lg-block mb-5"
              style="background-color: white; width: 48%; float: left; border-radius: 15px 15px 15px 15px;">
@@ -139,21 +129,18 @@
                                             <img class="d-block w-75" src="{{ asset('Img/goals/1.png') }}"
                                                  alt="First slide" style=" border-radius: 6px">
                                         </a>
-
                                     </div>
                                     <div class="carousel-item">
                                         <a href="https://www.patreon.com/matemagicas" target="_blank">
                                             <img class="d-block w-75" src="{{ asset('Img/goals/2.png') }}"
                                                  alt="Second slide" style="border-radius: 6px">
                                         </a>
-
                                     </div>
                                     <div class="carousel-item">
                                         <a href="https://www.patreon.com/matemagicas" target="_blank">
                                             <img class="d-block w-75" src="{{ asset('Img/goals/3.png') }}"
                                                  alt="Third slide" style="border-radius: 6px">
                                         </a>
-
                                     </div>
                                 </div>
                             </div>
@@ -229,27 +216,4 @@
     {{ parent() }}
     <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
     <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
-    <script src="{{ asset('Scripts/morris/raphael-min.js') }}"></script>
-    <script src="{{ asset('Scripts/morris/morris.min.js') }}"></script>
-    <script src="{{ asset('Scripts/justGage/justgage.js') }}"></script>
-    <script src="{{ asset('Scripts/Templates/index.js') }}"></script>
-    <script>
-        Morris.Donut({
-            element: 'DonutChart',
-            colors: ["#38e019", '#ff0000'],
-            data: [
-                {label: "Intentos Correctos", value: {{ app.user.statistics.successRate }} },
-                {label: "Intentos Fallidos", value: {{ app.user.statistics.errorRate }}},
-            ]
-        });
-        var g = new JustGage({
-            id: "gauge",
-            value: {{ solvedExercises|length }},
-            min: 0,
-            max: {{ lengthExercises }},
-            title: "Ejercicios Resueltos",
-            label: "",
-            levelColors: ["#ff0000", "#fcff29", "#38e019"]
-        });
-    </script>
 {% endblock %}

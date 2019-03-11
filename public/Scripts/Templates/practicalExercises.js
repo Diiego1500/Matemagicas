@@ -4,7 +4,6 @@ var ListaPlano =  ["moon", "rabbit", "robot", "rocket", "star"];
 
 for (var i = 0; i < Board2.length; i++) {
     Board2[i].addEventListener("click", function () {
-        console.log(this.getAttribute("data-index"));
         var id = this.getAttribute("data-index");
         answerArray[answerArray.length] = id;
         var td = document.createElement("td");
@@ -59,7 +58,6 @@ $('#VerifyAnswerDiv').click(function () {
         dataType: "json",
         beforeSend: function () {
             $('#loader').show();
-            console.log(answerArray);
         },
         success: function (data) {
             if (data['answer'] == true) {
@@ -108,8 +106,6 @@ interact('.draggable')
                     }else{
                         var content = '<img id="' + id + '" class="draggable drag-drop tablet animated zoomIn" style="position: absolute;  margin: auto;" src="/Matemagicas/public/Img/tempIcons/' + id + '.png" width="30px" height="30px"> ';
                     }
-
-                    console.log(content);
                 }
             }
             var td = $('#td' + id);

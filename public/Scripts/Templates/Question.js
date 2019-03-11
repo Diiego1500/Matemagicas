@@ -6,7 +6,6 @@ function  markCheck (obj){
         data: ({answerId:answerId}),
         dataType:"json",
         success:function (data) {
-            console.log(data['success']);
             location.reload();
         }
     })
