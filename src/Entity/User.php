@@ -57,6 +57,13 @@ class User extends BaseUser
      */
     private $imgProfile='anonimo.jpg';
 
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $UrlChangePass;
+
+
     /**
      * @ORM\Column(type="boolean")
      */
@@ -74,6 +81,8 @@ class User extends BaseUser
      * @ORM\OneToMany(targetEntity="App\Entity\ComunityAnswer", mappedBy="usuario")
      */
     private $Respuestas;
+
+
 
 
     /**
@@ -234,16 +243,19 @@ class User extends BaseUser
         $this->preguntas = $preguntas;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getUrlChangePass()
+    {
+        return $this->UrlChangePass;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
+    /**
+     * @param mixed $UrlChangePass
+     */
+    public function setUrlChangePass($UrlChangePass)
+    {
+        $this->UrlChangePass = $UrlChangePass;
+    }
 }

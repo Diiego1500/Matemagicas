@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-03-2019 a las 02:38:56
+-- Tiempo de generación: 18-03-2019 a las 01:54:14
 -- Versión del servidor: 10.1.29-MariaDB
 -- Versión de PHP: 7.2.0
 
@@ -90,27 +90,6 @@ CREATE TABLE `comunity_answer` (
   `creationdate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Volcado de datos para la tabla `comunity_answer`
---
-
-INSERT INTO `comunity_answer` (`id`, `answer`, `img`, `pregunta_id`, `usuario_id`, `correct`, `creationdate`) VALUES
-(9, 'Hola, esta es tu primera respuesta.', NULL, 11, 25, 1, '2019-02-11'),
-(10, 'Hola tercera pregunta, toma tu respuesta.', NULL, 13, 2, 1, '2019-02-11'),
-(11, 'hola, hay otra forma de solucionarlo, en realidad es muy simple, solo sumas aqui y sumas alla', NULL, 13, 2, 0, '2019-02-11'),
-(12, 'Hola, la respuesta es muy simple!', NULL, 12, 25, 0, '2019-02-11'),
-(13, 'Hola Dbastidas, he venido a ayudarte, tranquilo, todo estará bien\r\n\r\nVerás, para solucionar este problema solo debes utilizar la siquiente librería', NULL, 14, 2, 0, '2019-02-11'),
-(14, 'Hola Dbastidas, he venido a ayudarte, tranquilo, todo estará bien\r\n\r\nVerás, para solucionar este problema solo debes utilizar la siquiente librería: \r\n\r\n<a href=\"https://www.google.com.co/\">Google</a>\r\n\r\nY listo, todo funcionará de perlas ^^\r\n\r\nSaludos, Diego.', NULL, 14, 2, 1, '2019-02-11'),
-(15, 'Hola,ya pude solucionar, muchas gracias', NULL, 15, 2, 1, '2019-02-14'),
-(16, 'test', NULL, 15, 2, 0, '2019-02-14'),
-(17, 'test2', NULL, 15, 2, 0, '2019-02-14'),
-(18, 'SDFSDFSDF', NULL, 16, 2, 1, '2019-02-21'),
-(19, 'zsdasd', NULL, 16, 2, 0, '2019-03-01'),
-(20, 'asdasd', NULL, 17, 2, 1, '2019-03-01'),
-(21, '65465', NULL, 17, 2, 0, '2019-03-01'),
-(22, 'hola mundo, aqui probando mi respuesta \r\n\r\nesta es una prueba para saber si soy capaz', NULL, 19, 2, 0, '2019-03-05'),
-(23, 'Hola, podria hacerse de la siguiente manera.', NULL, 25, 2, 0, '2019-03-09');
-
 -- --------------------------------------------------------
 
 --
@@ -128,27 +107,6 @@ CREATE TABLE `comunity_question` (
   `solved` tinyint(1) NOT NULL,
   `file` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Volcado de datos para la tabla `comunity_question`
---
-
-INSERT INTO `comunity_question` (`id`, `title`, `question`, `image`, `usuario_id`, `date`, `url`, `solved`, `file`) VALUES
-(11, 'pregunta 1', 'Hola esta es mi primera pregunta.', NULL, 2, '2019-02-11', 'W2guhUGCtcTWN5bPrJyqv5l0I4VsFwXr', 1, NULL),
-(12, 'pregunta 2', 'Hola, esta es la segunda pregunta.', NULL, 2, '2019-02-11', 'Y6JyLlldNam67qPfgof2YfVvZrLHKTVP', 0, NULL),
-(13, 'hola, esta es mi tercera pregunta', 'Hola mundo, tercera pregunta', NULL, 25, '2019-02-11', 'DQKBJxJUoymUm8y9XTDkPENq2sbIgiGo', 1, NULL),
-(14, 'Lorem Ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur risus sem, aliquam sed lectus sit amet, iaculis ornare erat. Morbi ut eros tortor. Pellentesque vel augue facilisis purus vulputate rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec scelerisque leo. Maecenas nisi nulla, efficitur et condimentum sed, lobortis ac augue. Vivamus non ligula feugiat, imperdiet neque at, molestie mauris. Vivamus varius ex lorem, vitae luctus tellus feugiat vel. Maecenas ultrices id sapien et iaculis. Phasellus pretium eget justo id accumsan \\n\r\n\r\nInteger nec vestibulum tortor. Maecenas vehicula lorem eleifend tortor fringilla auctor. In hac habitasse platea dictumst. Suspendisse blandit, neque in finibus malesuada, justo magna porttitor odio, nec convallis mauris urna at tellus. Nulla finibus sit amet sem a suscipit. Ut scelerisque nunc neque, quis venenatis neque porttitor non. Fusce arcu nisl, tempor vel nunc nec, tincidunt venenatis arcu. Vivamus ornare consequat enim vitae varius. Nunc dui leo, consectetur nec lacus nec, semper eleifend urna. Cras nec elit scelerisque orci pretium mollis.', NULL, 2, '2019-02-11', 'noBgxakYHgetpdyfq6mB889UTX6Xi0AL', 1, NULL),
-(15, 'hola mundo', 'hola mundo\r\n\r\nsoy diego bastidas', NULL, 2, '2019-02-11', 'zZt5w763GcVidqbiirVW3pRXZCASI57x', 1, NULL),
-(16, 'prueba', 'hola mundo esta es otra prueba', NULL, 2, '2019-02-14', 'XYq0tmba3Nuop5qdl4Lw4K06cOzPpCEs', 1, NULL),
-(17, '<zx', 'dsf', NULL, 2, '2019-03-01', 'Pur79Aw5ZwvlbtPrs7BpfCfOJRcdXilM', 1, NULL),
-(18, 'Como calculo el area de un semicirculo', 'Resulta que tengo el area de este semicirculo y no tengo ni idea de como empezar, dejo el archivo adjunto', NULL, 2, '2019-03-05', 'xr3FzaySqeUDdiLxCurLwHIfEqlIlDDb', 0, '499a29ca1cb091b5d2448107b4f0830e.png'),
-(19, 'Como calculo el area de un semicirculo 2', 'asd', NULL, 2, '2019-03-05', 'z4nPq2X245xXqsWjXIt2zTkde0i8zUkV', 0, NULL),
-(20, NULL, NULL, NULL, 2, '2019-03-05', 'dEYwnmxJzk6SvY052SW7pWWCtfZoj7Ul', 0, NULL),
-(21, 'nombre dificil', 'prueba con nombre dificil', NULL, 2, '2019-03-05', 'KUi3XchwhDGARA4wK4CpkRM71QYLtvIs', 0, 'fb4b7cdcd4460bf2667300c44aadebc9.jpeg'),
-(22, 'Prueba 2', 'Desde el celular', NULL, 2, '2019-03-05', 'CxArLUpToMSFFJMBiBOkG4mybvfnJgnQ', 0, '2337f8487ca222f441cb53d109dc39cc.jpeg'),
-(23, 'CUAL ES LA INTEGRAL DE NOSEQUE', 'Dvz', NULL, 2, '2019-03-05', 'MqTciYKjgKkpIVkAMtzQxuQn82vS3QsD', 0, '0aad83c932cba4561f52d2acec7baea2.jpeg'),
-(24, 'prueba', 'hola', NULL, 2, '2019-03-09', '06mLGEZ9xMqVfxdmmFEYpOupqSUbBq2L', 0, '7e062c721cf8e95b4adb3ae634978140.png'),
-(25, 'como puedo resolver esta cuestion?', 'Ayuda, necesito que por favor me digan como resolver este problema:\r\n\r\nResulta que tengo mucho tiempo sin utilizar php storm y se encuentra bugueado, no muestra el código, adicional a esto estoy esperando que me responda por que esta cochinada es muy lenta.\r\n\r\naah y el after effects no quiere sonar, ayuda por favor!', NULL, 2, '2019-03-09', 'uXNmmbPT3clhJCsQTgBP7vrtPC8TOu3n', 0, 'df67a6697f78981fbbbf7fbf556b8d5a.png');
 
 -- --------------------------------------------------------
 
@@ -741,36 +699,16 @@ CREATE TABLE `user` (
   `available_themes` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `starts` smallint(6) NOT NULL,
   `img_profile` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `board_kind` tinyint(1) NOT NULL
+  `board_kind` tinyint(1) NOT NULL,
+  `url_change_pass` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `user`
 --
 
-INSERT INTO `user` (`id`, `statistics_id`, `username`, `username_canonical`, `email`, `email_canonical`, `enabled`, `salt`, `password`, `last_login`, `confirmation_token`, `password_requested_at`, `roles`, `solved_exercises`, `available_themes`, `starts`, `img_profile`, `board_kind`) VALUES
-(2, 1, 'dbastidas', 'dbastidas', 'diego.fernando.bastidas@correounivalle.edu.co', 'diego.fernando.bastidas@correounivalle.edu.co', 1, NULL, '$2y$13$f.GbQLAyBDlNRJpcbMYF2.jXccM9KCoGrcxiSxPit6dRwx21j8S.q', '2019-03-11 02:21:45', NULL, NULL, 'a:1:{i:0;s:10:\"ROLE_ADMIN\";}', '[\"17\",\"18\",\"19\",\"20\",\"21\",\"29\",\"30\",\"22\",\"23\",\"24\",\"25\",\"26\",\"27\",\"16\",\"15\",\"14\",\"13\",\"12\",\"11\",\"4\",\"6\",\"43\",\"42\",\"44\",\"41\",\"40\",\"39\",\"45\",\"46\",\"47\",\"48\",\"52\",\"51\",\"50\",\"49\",\"38\",\"37\",\"7\",\"8\",\"3\",\"31\",\"32\",\"33\",\"34\",\"35\",\"36\",\"5\",\"60\",\"61\",\"62\",\"63\",\"64\",\"65\",\"66\",\"59\",\"58\",\"57\",\"56\",\"55\",\"54\",\"53\",\"9\",\"10\",\"67\",\"68\",\"82\",\"83\",\"84\",\"85\",\"86\",\"87\",\"88\",\"89\",\"90\",\"91\",\"81\",\"80\",\"79\",\"69\",\"70\",\"71\",\"72\",\"73\",\"74\",\"75\",\"76\",\"77\",\"78\",\"92\",\"105\",\"106\",\"107\",\"108\",\"109\",\"110\",\"111\",\"112\",\"113\",\"104\",\"103\",\"102\",\"93\",\"94\",\"95\",\"96\",\"97\",\"98\",\"99\",\"100\",\"101\",\"114\",\"126\",\"127\",\"128\",\"129\",\"130\",\"131\",\"132\",\"133\",\"125\",\"124\",\"123\",\"115\",\"116\",\"117\",\"118\",\"119\",\"120\",\"121\",\"122\",\"134\",\"135\",\"146\",\"147\",\"148\",\"149\",\"150\",\"151\",\"152\",\"153\",\"145\",\"144\",\"136\",\"137\",\"138\",\"139\",\"140\",\"141\",\"142\",\"143\",\"154\",\"166\",\"167\",\"168\",\"169\",\"170\",\"171\",\"172\",\"173\",\"165\",\"164\",\"163\",\"155\",\"156\",\"157\",\"158\",\"159\",\"160\",\"161\",\"162\",\"174\",\"189\",\"190\",\"191\",\"192\",\"193\",\"194\",\"195\",\"196\",\"197\",\"198\",\"199\",\"188\",\"187\",\"176\",\"177\",\"178\",\"179\",\"180\",\"181\",\"182\",\"183\",\"184\",\"185\",\"186\",\"200\",\"201\",\"214\",\"213\",\"212\",\"211\",\"210\",\"209\",\"208\",\"207\",\"206\",\"205\",\"204\",\"203\",\"202\",\"215\",\"226\",\"227\",\"228\",\"229\",\"230\",\"231\",\"232\",\"233\",\"225\",\"224\",\"216\",\"217\",\"218\",\"219\",\"220\",\"221\",\"222\",\"223\",\"234\",\"246\",\"247\",\"248\",\"249\",\"250\",\"251\",\"252\",\"253\",\"245\",\"244\",\"243\",\"235\",\"236\",\"237\",\"238\",\"239\",\"240\",\"241\",\"242\",\"254\",\"255\",\"256\",\"266\",\"265\",\"264\",\"263\",\"262\",\"261\",\"260\",\"259\",\"258\",\"257\",\"267\",\"279\",\"280\",\"281\",\"282\",\"283\",\"284\",\"285\",\"286\",\"287\",\"278\",\"277\",\"268\",\"269\",\"270\",\"271\",\"272\",\"273\",\"274\",\"275\",\"276\",\"288\",\"289\",\"290\",\"291\",\"321\",\"322\",\"323\",\"335\",\"336\",\"337\",\"338\",\"339\",\"340\",\"341\",\"342\",\"343\",\"344\",\"334\",\"333\",\"332\",\"324\",\"325\",\"326\",\"327\",\"328\",\"329\",\"330\",\"331\",\"345\",\"354\",\"355\",\"356\",\"357\",\"358\",\"359\",\"353\",\"352\",\"351\",\"350\",\"349\",\"348\",\"347\",\"346\",\"360\",\"28\",\"319\",\"318\",\"317\",\"316\",\"312\",\"313\",\"314\",\"315\",\"320\",\"361\",\"368\",\"369\",\"367\",\"366\",\"365\",\"364\",\"363\",\"362\",\"370\",\"379\",\"378\",\"377\",\"376\",\"375\",\"374\",\"373\",\"372\",\"371\",\"388\",\"381\",\"382\",\"383\",\"384\",\"385\",\"386\",\"387\",\"389\",\"390\",\"391\",\"392\",\"393\",\"380\",\"394\",\"395\",\"396\",\"397\",\"398\",\"399\",\"400\",\"401\",\"402\",\"403\",\"404\",\"405\",\"406\",\"407\",\"408\",\"417\",\"416\",\"413\",\"409\",\"410\",\"418\",\"415\",\"411\",\"414\",\"412\",\"419\",\"420\",\"421\",\"422\",\"423\",\"424\",\"431\",\"430\",\"429\",\"425\",\"428\",\"427\",\"426\",\"432\",\"435\",\"434\",\"433\",\"436\",\"438\",\"437\",\"439\",\"440\",\"441\",\"446\",\"442\",\"445\",\"443\",\"444\",\"447\",\"452\",\"453\",\"451\",\"448\",\"449\",\"454\",\"458\",\"456\",\"455\",\"457\",\"450\",\"459\",\"460\",\"461\",\"462\",\"463\",\"464\",\"465\",\"472\",\"466\",\"467\",\"468\",\"469\",\"471\",\"470\",\"474\",\"486\",\"480\",\"481\",\"482\",\"484\",\"483\",\"478\",\"476\",\"477\",\"475\",\"479\",\"487\",\"488\",\"490\",\"508\",\"509\",\"511\",\"489\",\"491\",\"493\",\"495\",\"492\",\"494\",\"496\",\"506\",\"505\",\"498\",\"499\",\"500\"]', '[4,\"5\",6,7,8,9,10,11,12,13,14,15,15,16,16,5,5,6,7,8,9,10,11]', 2, 'DELjajceTqS49t8BLLACBjSFi8OCdM8H.png', 0),
-(13, 2, 'dbastidas150', 'dbastidas150', 'diegofernando150_@hotmail.es', 'diegofernando150_@hotmail.es', 1, NULL, '$2y$13$0d9hk4oiTQg4QJZV3sna5.WtJSXheK80rFBogaZfJBT7JjkoXjTK2', '2019-02-25 19:51:58', NULL, NULL, 'a:0:{}', '[\"19\"]', '[4]', 0, 'dQeRRM5LcuEJNFiFgsUVbkbXUFVASuHp.png', 0),
-(14, 4, 'mauro', 'mauro', 'maurobastidas@hotmail.com', 'maurobastidas@hotmail.com', 1, NULL, '$2y$13$6ZLkqZnu/z65u8sGSFGDWuYjBv5PbwNWBtCsvgq5DJcqQrRUjI/1S', '2018-07-05 23:19:08', NULL, NULL, 'a:0:{}', '[\"19\",\"20\",\"21\",\"22\"]', '[4]', 0, 'pBDfywqhUhJEALgPIr4oxaN2QlivF3Nm.png', 1),
-(15, 5, 'dahiana', 'dahiana', 'dahiana@gmail.com', 'dahiana@gmail.com', 1, NULL, '$2y$13$ZfSVsVcKDji3PoRj0v1sSO.EDoW8457JmPdJqc33AxxFjZ8DgFOQ.', '2018-05-09 22:52:45', NULL, NULL, 'a:0:{}', '[\"19\",\"20\",\"21\",\"22\"]', '[4]', 1, 'PQGOw4w3alQylItB5Ci3b910lwl4hFqr.png', 1),
-(16, 6, 'test', 'test', 'test@correounivalle.edu.co', 'test@correounivalle.edu.co', 1, NULL, '$2y$13$UFcosNk32FSNzB4C7oROw.CXZqzBJuMHBhYKGHryeYqs1Sj53b6ZO', '2018-07-11 01:33:57', NULL, NULL, 'a:0:{}', '[\"19\",\"20\",\"21\",\"368\"]', '[4]', 0, 'Rk3PCvRpIXzNYVfhpYAs4eNIOq9tDu0w.png', 1),
-(17, 7, 'Djaramillo', 'djaramillo', 'diana.jaramillo@live.com', 'diana.jaramillo@live.com', 1, NULL, '$2y$13$MKpd5kqoGQyp0tlDsDLyIelL7cBu0u24WeG4l4VpOeEyN49hO/dNu', '2018-10-28 23:47:43', NULL, NULL, 'a:0:{}', '[\"44\",\"41\",\"40\",\"39\",\"45\",\"46\",\"47\",\"48\",\"52\",\"51\",\"50\",\"49\",\"38\",\"37\",\"7\",\"8\",\"3\",\"29\",\"30\",\"31\",\"32\",\"33\",\"34\",\"35\",\"36\",\"5\"]', '[4,5,5]', 0, 'Qn99ggU2n76PvM3adhK3a7SRktpVb2fM.png', 1),
-(18, 8, 'ncalero', 'ncalero', 'nandreach@hotmail.com', 'nandreach@hotmail.com', 1, NULL, '$2y$13$GsSh60dr7IvZbpZ4C.dmJun8cJ.Th66824jUVqUW1R978JfD5AZp2', '2018-10-28 23:47:04', NULL, NULL, 'a:0:{}', '[\"17\",\"18\",\"19\",\"20\",\"21\",\"29\",\"30\",\"22\",\"23\",\"24\",\"25\",\"26\",\"27\",\"16\",\"15\",\"14\",\"13\",\"12\",\"11\",\"4\",\"6\",\"43\",\"42\",\"44\",\"41\",\"40\",\"39\",\"45\",\"46\",\"47\",\"48\",\"52\",\"51\",\"50\",\"49\",\"38\",\"37\",\"7\",\"8\",\"3\",\"31\",\"32\",\"33\",\"34\",\"35\",\"36\",\"5\",\"60\",\"61\",\"62\",\"63\",\"64\",\"65\",\"66\",\"59\",\"58\",\"57\",\"56\",\"55\",\"54\",\"53\",\"9\",\"10\",\"67\",\"68\",\"82\",\"83\",\"84\",\"85\",\"86\",\"87\",\"88\",\"89\",\"90\",\"91\",\"81\",\"80\",\"79\",\"69\",\"70\",\"71\",\"72\",\"73\",\"74\",\"75\",\"76\",\"77\",\"78\",\"92\",\"105\",\"106\",\"107\",\"108\",\"109\",\"110\",\"111\",\"112\",\"113\",\"104\",\"103\",\"102\",\"93\",\"94\",\"95\",\"96\",\"97\",\"98\",\"99\",\"100\",\"101\",\"114\",\"126\",\"127\",\"128\",\"129\",\"130\",\"131\",\"132\",\"133\",\"125\",\"124\",\"123\",\"115\",\"116\",\"117\",\"118\",\"119\",\"120\",\"121\",\"122\",\"134\",\"135\",\"146\",\"147\",\"148\",\"149\",\"150\",\"151\",\"152\",\"153\",\"145\",\"144\",\"136\",\"137\",\"138\",\"139\",\"140\",\"141\",\"142\",\"143\",\"154\",\"166\",\"167\",\"168\",\"169\",\"170\",\"171\",\"172\",\"173\",\"165\",\"164\",\"163\",\"155\",\"156\",\"157\",\"158\",\"159\",\"160\",\"161\",\"162\",\"174\",\"189\",\"190\",\"191\",\"192\",\"193\",\"194\",\"195\",\"196\",\"197\",\"198\",\"199\",\"188\",\"187\",\"176\",\"177\",\"178\",\"179\",\"180\",\"181\",\"182\",\"183\",\"184\",\"185\",\"186\",\"200\",\"201\",\"214\",\"213\",\"212\",\"211\",\"210\",\"209\",\"208\",\"207\",\"206\",\"205\",\"204\",\"203\",\"202\",\"215\",\"226\",\"227\",\"228\",\"229\",\"230\",\"231\",\"232\",\"233\",\"225\",\"224\",\"216\",\"217\",\"218\",\"219\",\"220\",\"221\",\"222\",\"223\",\"234\",\"246\",\"247\",\"248\",\"249\",\"250\",\"251\",\"252\",\"253\",\"245\",\"244\",\"243\",\"235\",\"236\",\"237\",\"238\",\"239\",\"240\",\"241\",\"242\",\"254\",\"255\",\"256\",\"266\",\"265\",\"264\",\"263\",\"262\",\"261\",\"260\",\"259\",\"258\",\"257\",\"267\",\"279\",\"280\",\"281\",\"282\",\"283\",\"284\",\"285\",\"286\",\"287\",\"278\",\"277\",\"268\",\"269\",\"270\",\"271\",\"272\",\"273\",\"274\",\"275\",\"276\",\"288\",\"289\",\"290\",\"291\",\"321\",\"322\",\"323\",\"335\",\"336\",\"337\",\"338\",\"339\",\"340\",\"341\",\"342\",\"343\",\"344\",\"334\",\"333\",\"332\",\"324\",\"325\",\"326\",\"327\",\"328\",\"329\",\"330\",\"331\",\"345\",\"354\",\"355\",\"356\",\"357\",\"358\",\"359\",\"353\",\"352\",\"351\",\"350\",\"349\",\"348\",\"347\",\"346\",\"360\",\"28\",\"319\",\"318\",\"317\",\"316\",\"312\",\"313\",\"314\",\"315\"]', '[4]', 0, 'obAZ5D0q21t2nbXK9mw7kfjJO3ds8Ftu.png', 1),
-(19, 9, 'computer', 'computer', 'computer@hotmail.com', 'computer@hotmail.com', 1, NULL, '$2y$13$i5K0/rrVwu9pLcX7dTWBZOrUEaAoDm2FtCs40mNpRTiYjKh1fvrM6', '2018-07-10 08:00:27', NULL, NULL, 'a:0:{}', '[\"19\",\"20\",\"21\",\"22\",\"23\",\"24\",\"25\"]', '[4]', 0, '5GzSTkpPsJSV7TI16WTmib72M8nc9PON.png', 1),
-(20, 10, 'andrea', 'andrea', 'Andrea@hotmail.com', 'andrea@hotmail.com', 1, NULL, '$2y$13$ODq/zsmqXYkPm8tYo9GUc.23GHrPA.UEkzQNfvsttoxdPX09jHXZ2', '2018-10-30 01:04:54', NULL, NULL, 'a:0:{}', '[\"19\",\"20\",\"44\",\"41\",\"40\",\"39\",\"45\",\"46\",\"47\",\"48\",\"52\",\"51\",\"50\",\"49\",\"38\",\"37\",\"7\",\"8\",\"3\",\"29\",\"30\",\"31\",\"32\",\"33\",\"34\",\"35\",\"36\",\"5\",\"108\",\"109\",\"110\",\"111\",\"112\",\"113\",\"104\",\"103\",\"102\",\"93\",\"94\",\"95\",\"96\",\"97\",\"98\",\"99\",\"100\",\"101\",\"114\",\"166\",\"167\",\"168\",\"169\",\"170\",\"171\",\"172\",\"173\",\"165\",\"164\",\"163\",\"155\",\"156\",\"157\",\"158\",\"159\",\"160\",\"161\",\"162\",\"174\",\"227\",\"228\",\"229\",\"230\",\"231\",\"232\",\"233\",\"225\",\"224\",\"216\",\"217\",\"218\",\"219\",\"220\",\"221\",\"222\",\"223\",\"234\",\"281\",\"282\",\"283\",\"284\",\"285\",\"286\",\"287\",\"278\",\"277\",\"268\",\"269\",\"270\",\"271\",\"272\",\"273\",\"274\",\"275\",\"276\",\"288\",\"289\",\"290\",\"291\",\"355\",\"356\",\"357\",\"358\",\"359\",\"353\",\"352\",\"351\",\"350\",\"349\",\"348\",\"347\",\"346\",\"360\"]', '[4,5,6,7,8,9,10]', 0, '5WqRWO4SAIhUbBRvuJJdN0SwMnYlau7a.png', 1),
-(21, 11, 'Andres06', 'andres06', 'gandresr06@gmail.com', 'gandresr06@gmail.com', 1, NULL, '$2y$13$Gjvxuj0Mzrf6IEs8y4HEVuHl0YLFYr4p3tH5hdBLAydCJXr.Lpqxy', '2018-07-16 15:17:06', NULL, NULL, 'a:0:{}', '[\"19\",\"20\"]', '[4]', 0, 'THPSASW8ACPGQsLd1IJpvVYvIdQ0XZ5a.png', 1),
-(22, 12, 'jennymy', 'jennymy', 'yenniyela2000@gmail.com', 'yenniyela2000@gmail.com', 1, NULL, '$2y$13$170wkRym62FeKn9zk0q7qeJhSeE29hRwVgq2veqIt2cQU346IHnhS', '2018-07-30 19:45:20', NULL, NULL, 'a:0:{}', '[\"19\",\"20\",\"21\"]', '[4]', 0, 'anonimo.jpg', 1),
-(23, 13, 'bela', 'bela', 'bela@hotmail.com', 'bela@hotmail.com', 1, NULL, '$2y$13$Fv/5tRELBKOeu.DIPntDX..wW5CEjnOyYJFJs.pM3S3ijmKznR5ea', '2018-09-24 00:18:33', NULL, NULL, 'a:0:{}', '[\"19\",\"20\"]', '[4]', 0, 'anonimo.jpg', 1),
-(24, 14, 'mbastidas', 'mbastidas', 'mateobastidas@gmail.com', 'mateobastidas@gmail.com', 1, NULL, '$2y$13$ON5Z2yQpEBpt5Ra3.iwCsuXeWxApG/h6OWH3rlIGKfElKbkElrDE2', '2018-09-24 00:32:45', NULL, NULL, 'a:0:{}', '[\"19\",\"20\",\"21\"]', '[4]', 0, 'anonimo.jpg', 1),
-(25, 15, 'dquiceno', 'dquiceno', 'dquiceno@test.com', 'dquiceno@test.com', 1, NULL, '$2y$13$.nbdclOmQQdXu1vBek3t9OB1e7k9pQh1YxiKKswySencBzbjfKJLm', '2019-03-05 20:07:18', NULL, NULL, 'a:0:{}', '[\"19\",\"20\",\"21\",\"22\",\"23\",\"24\"]', '[4]', 0, 'JFhKKzUBxQaWhNOFKmhuatwyi5nBIPUD.png', 1),
-(26, 16, 'reloj', 'reloj', 'Reloj@solyLuna.com', 'reloj@solyluna.com', 1, NULL, '$2y$13$yDlel3IKRdvajXGfNXbgi.rTY2HkN3O3naHUNdnMqE9fghEu7Bf6m', '2019-01-30 22:48:51', NULL, NULL, 'a:0:{}', '[]', '[4]', 0, 'anonimo.jpg', 1),
-(27, 17, 'yulis', 'yulis', 'yulis@hotmail.es', 'yulis@hotmail.es', 1, NULL, '$2y$13$cB9Y5jiD1HjsVozyf73yM.HYj7B1ACGUsdHpWuIzzYr.Aa5btVKB6', '2018-12-27 19:43:13', NULL, NULL, 'a:0:{}', '[]', '[4]', 0, 'anonimo.jpg', 1),
-(28, 18, 'jaramillo', 'jaramillo', 'jara@hotmail.com', 'jara@hotmail.com', 1, NULL, '$2y$13$JSLS5swSpCcltOTR12.y5uy7CVBS49jckZ8M1fsoSpRv1GjeEBpLa', '2018-12-31 20:27:48', NULL, NULL, 'a:0:{}', '[\"19\",\"20\",\"21\",\"22\",\"23\",\"24\",\"25\",\"26\",\"27\",\"16\",\"15\",\"14\",\"13\",\"12\",\"11\",\"4\",\"6\",\"44\",\"41\"]', '[4]', 0, 'anonimo.jpg', 0),
-(29, 19, 'rtest', 'rtest', 'rtest@hotmail.es', 'rtest@hotmail.es', 1, NULL, '$2y$13$5f6rGPMokoz0LcdGFOBOF.J7nFEiNnG6HujArvXEg.4mV8GHhf80u', '2019-02-13 23:17:34', NULL, NULL, 'N;', '[]', '[4]', 0, 'anonimo.jpg', 1),
-(30, 20, 'rtest2', 'rtest2', 'rtest2@hotmail.com', 'rtest2@hotmail.com', 1, NULL, '$2y$13$JgCK02N5DlVSM0yRJTNfAui8xsFiTeaRSc5ICkAOZuTuVwICcrrYm', '2019-02-14 14:37:18', NULL, NULL, 'N;', '[\"19\",\"20\",\"21\"]', '[4]', 0, 'anonimo.jpg', 0),
-(31, 21, 'dfastidas ', 'dfastidas ', 'dfbastidas@correounivalle.edu.co', 'dfbastidas@correounivalle.edu.co', 1, NULL, '$2y$13$xp5TCZX9IaBfaCXXd0PxaOwfpQNQNoOTdBmUZ2/b1JOPqXEXga1be', NULL, NULL, NULL, 'N;', '[]', '[4]', 0, 'anonimo.jpg', 0),
-(32, 22, 'dfbastidas', 'dfbastidas', 'Dfbastidas@test.com', 'dfbastidas@test.com', 1, NULL, '$2y$13$qdhfF2L6Sf/cymNS/9JgBO/oLvYfIclR30r3z6USRaPOjSPBbq0Qm', '2019-02-28 21:07:28', NULL, NULL, 'N;', '[\"19\",\"20\",\"21\",\"22\",\"23\",\"24\",\"25\",\"26\",\"27\",\"16\",\"15\",\"14\"]', '[4]', 0, 'anonimo.jpg', 0),
-(33, 23, 'daniquiceno', 'daniquiceno', 'daniquiceno@hotmail.com', 'daniquiceno@hotmail.com', 1, NULL, '$2y$13$Vz92jVK7tKMp2BM6GUq34.d6byTujJHO1uPQsF9kM.iF0ox0GiSia', NULL, NULL, NULL, 'N;', '[]', '[4]', 0, 'anonimo.jpg', 0);
+INSERT INTO `user` (`id`, `statistics_id`, `username`, `username_canonical`, `email`, `email_canonical`, `enabled`, `salt`, `password`, `last_login`, `confirmation_token`, `password_requested_at`, `roles`, `solved_exercises`, `available_themes`, `starts`, `img_profile`, `board_kind`, `url_change_pass`) VALUES
+(2, 1, 'dbastidas', 'dbastidas', 'diego.fernando.bastidas@correounivalle.edu.co', 'diego.fernando.bastidas@correounivalle.edu.co', 1, NULL, '$2y$13$DB0OYBZkSnBbyU4rOnkVduEA6vguwbBRlstFhijrKwfDlWKED7.jy', '2019-03-18 01:07:20', NULL, NULL, 'a:1:{i:0;s:10:\"ROLE_ADMIN\";}', '[\"17\",\"18\",\"19\",\"20\",\"21\",\"29\",\"30\",\"22\",\"23\",\"24\",\"25\",\"26\",\"27\",\"16\",\"15\",\"14\",\"13\",\"12\",\"11\",\"4\",\"6\",\"43\",\"42\",\"44\",\"41\",\"40\",\"39\",\"45\",\"46\",\"47\",\"48\",\"52\",\"51\",\"50\",\"49\",\"38\",\"37\",\"7\",\"8\",\"3\",\"31\",\"32\",\"33\",\"34\",\"35\",\"36\",\"5\",\"60\",\"61\",\"62\",\"63\",\"64\",\"65\",\"66\",\"59\",\"58\",\"57\",\"56\",\"55\",\"54\",\"53\",\"9\",\"10\",\"67\",\"68\",\"82\",\"83\",\"84\",\"85\",\"86\",\"87\",\"88\",\"89\",\"90\",\"91\",\"81\",\"80\",\"79\",\"69\",\"70\",\"71\",\"72\",\"73\",\"74\",\"75\",\"76\",\"77\",\"78\",\"92\",\"105\",\"106\",\"107\",\"108\",\"109\",\"110\",\"111\",\"112\",\"113\",\"104\",\"103\",\"102\",\"93\",\"94\",\"95\",\"96\",\"97\",\"98\",\"99\",\"100\",\"101\",\"114\",\"126\",\"127\",\"128\",\"129\",\"130\",\"131\",\"132\",\"133\",\"125\",\"124\",\"123\",\"115\",\"116\",\"117\",\"118\",\"119\",\"120\",\"121\",\"122\",\"134\",\"135\",\"146\",\"147\",\"148\",\"149\",\"150\",\"151\",\"152\",\"153\",\"145\",\"144\",\"136\",\"137\",\"138\",\"139\",\"140\",\"141\",\"142\",\"143\",\"154\",\"166\",\"167\",\"168\",\"169\",\"170\",\"171\",\"172\",\"173\",\"165\",\"164\",\"163\",\"155\",\"156\",\"157\",\"158\",\"159\",\"160\",\"161\",\"162\",\"174\",\"189\",\"190\",\"191\",\"192\",\"193\",\"194\",\"195\",\"196\",\"197\",\"198\",\"199\",\"188\",\"187\",\"176\",\"177\",\"178\",\"179\",\"180\",\"181\",\"182\",\"183\",\"184\",\"185\",\"186\",\"200\",\"201\",\"214\",\"213\",\"212\",\"211\",\"210\",\"209\",\"208\",\"207\",\"206\",\"205\",\"204\",\"203\",\"202\",\"215\",\"226\",\"227\",\"228\",\"229\",\"230\",\"231\",\"232\",\"233\",\"225\",\"224\",\"216\",\"217\",\"218\",\"219\",\"220\",\"221\",\"222\",\"223\",\"234\",\"246\",\"247\",\"248\",\"249\",\"250\",\"251\",\"252\",\"253\",\"245\",\"244\",\"243\",\"235\",\"236\",\"237\",\"238\",\"239\",\"240\",\"241\",\"242\",\"254\",\"255\",\"256\",\"266\",\"265\",\"264\",\"263\",\"262\",\"261\",\"260\",\"259\",\"258\",\"257\",\"267\",\"279\",\"280\",\"281\",\"282\",\"283\",\"284\",\"285\",\"286\",\"287\",\"278\",\"277\",\"268\",\"269\",\"270\",\"271\",\"272\",\"273\",\"274\",\"275\",\"276\",\"288\",\"289\",\"290\",\"291\",\"321\",\"322\",\"323\",\"335\",\"336\",\"337\",\"338\",\"339\",\"340\",\"341\",\"342\",\"343\",\"344\",\"334\",\"333\",\"332\",\"324\",\"325\",\"326\",\"327\",\"328\",\"329\",\"330\",\"331\",\"345\",\"354\",\"355\",\"356\",\"357\",\"358\",\"359\",\"353\",\"352\",\"351\",\"350\",\"349\",\"348\",\"347\",\"346\",\"360\",\"28\",\"319\",\"318\",\"317\",\"316\",\"312\",\"313\",\"314\",\"315\",\"320\",\"361\",\"368\",\"369\",\"367\",\"366\",\"365\",\"364\",\"363\",\"362\",\"370\",\"379\",\"378\",\"377\",\"376\",\"375\",\"374\",\"373\",\"372\",\"371\",\"388\",\"381\",\"382\",\"383\",\"384\",\"385\",\"386\",\"387\",\"389\",\"390\",\"391\",\"392\",\"393\",\"380\",\"394\",\"395\",\"396\",\"397\",\"398\",\"399\",\"400\",\"401\",\"402\",\"403\",\"404\",\"405\",\"406\",\"407\",\"408\",\"417\",\"416\",\"413\",\"409\",\"410\",\"418\",\"415\",\"411\",\"414\",\"412\",\"419\",\"420\",\"421\",\"422\",\"423\",\"424\",\"431\",\"430\",\"429\",\"425\",\"428\",\"427\",\"426\",\"432\",\"435\",\"434\",\"433\",\"436\",\"438\",\"437\",\"439\",\"440\",\"441\",\"446\",\"442\",\"445\",\"443\",\"444\",\"447\",\"452\",\"453\",\"451\",\"448\",\"449\",\"454\",\"458\",\"456\",\"455\",\"457\",\"450\",\"459\",\"460\",\"461\",\"462\",\"463\",\"464\",\"465\",\"472\",\"466\",\"467\",\"468\",\"469\",\"471\",\"470\",\"474\",\"486\",\"480\",\"481\",\"482\",\"484\",\"483\",\"478\",\"476\",\"477\",\"475\",\"479\",\"487\",\"488\",\"490\",\"508\",\"509\",\"511\",\"489\",\"491\",\"493\",\"495\",\"492\",\"494\",\"496\",\"506\",\"505\",\"498\",\"499\",\"500\"]', '[4,\"5\",6,7,8,9,10,11,12,13,14,15,15,16,16,5,5,6,7,8,9,10,11]', 2, 'DELjajceTqS49t8BLLACBjSFi8OCdM8H.png', 0, '42e2a2e8e2067487bf90d06d55cd0be10');
 
 -- --------------------------------------------------------
 
@@ -784,40 +722,6 @@ CREATE TABLE `user_data` (
   `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Volcado de datos para la tabla `user_data`
---
-
-INSERT INTO `user_data` (`id`, `email`, `username`, `password`) VALUES
-(1, 'diegofernando150_@hotmail.es', 'dbastidas150', '123'),
-(2, 'dbastidas@cc.com', 'dbastidas123', '123'),
-(3, 'diego.fernando.bastidas@correounivalle.edu.co', 'dbastidas', '123'),
-(4, 'jbastidas@correounivalle.edu.co', 'jbastidas', '123'),
-(5, 'random@correounivalle.edu.co', 'random', '123'),
-(6, 'test@correounivalle.edu.co', 'test', '123'),
-(7, 'diegofernando150_@hotmail.es', 'dbastidas150', '123'),
-(8, 'diegofernando150_@hotmail.es', 'dbastidas150', '123'),
-(9, 'maurobastidas@hotmail.com', 'mauro', '123'),
-(10, 'dahiana@gmail.com', 'dahiana', '123'),
-(11, 'test@correounivalle.edu.co', 'test', '123'),
-(12, 'diana.jaramillo@live.com', 'Djaramillo', '123'),
-(13, 'nandreach@hotmail.com', 'ncalero', '123'),
-(14, 'computer@hotmail.com', 'computer', '123'),
-(15, 'Andrea@hotmail.com', 'andrea', '123'),
-(16, 'gandresr06@gmail.com', 'Andres06', '12345'),
-(17, 'yenniyela2000@gmail.com', 'jennymy', '1004598699'),
-(18, 'bela@hotmail.com', 'bela', '123'),
-(19, 'mateobastidas@gmail.com', 'mbastidas', '123'),
-(20, 'dquiceno@test.com', 'dquiceno', '123'),
-(21, 'Reloj@solyLuna.com', 'reloj', '123'),
-(22, 'yulis@hotmail.es', 'yulis', '123'),
-(23, 'jara@hotmail.com', 'jaramillo', '123'),
-(24, 'rtest@hotmail.es', 'rtest', '123'),
-(25, 'rtest2@hotmail.com', 'rtest2', '123'),
-(26, 'dfbastidas@correounivalle.edu.co', 'dfastidas ', '123'),
-(27, 'Dfbastidas@test.com', 'dfbastidas', '123'),
-(28, 'daniquiceno@hotmail.com', 'daniquiceno', '123');
 
 -- --------------------------------------------------------
 
@@ -837,28 +741,7 @@ CREATE TABLE `user_statistics` (
 --
 
 INSERT INTO `user_statistics` (`id`, `trying`, `error_rate`, `success_rate`) VALUES
-(1, 1468, 203, 1268),
-(2, 16, 1, 15),
-(4, 8, 2, 6),
-(5, 4, 0, 4),
-(6, 7, 2, 5),
-(7, 26, 0, 26),
-(8, 408, 78, 366),
-(9, 7, 0, 7),
-(10, 129, 8, 121),
-(11, 3, 1, 2),
-(12, 4, 1, 3),
-(13, 3, 1, 2),
-(14, 3, 0, 3),
-(15, 6, 0, 6),
-(16, 0, 0, 0),
-(17, 0, 0, 0),
-(18, 20, 1, 19),
-(19, 0, 0, 0),
-(20, 3, 0, 3),
-(21, 0, 0, 0),
-(22, 17, 1, 16),
-(23, 0, 0, 0);
+(1, 1468, 203, 1268);
 
 --
 -- Índices para tablas volcadas
@@ -983,19 +866,19 @@ ALTER TABLE `theme`
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT de la tabla `user_data`
 --
 ALTER TABLE `user_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `user_statistics`
 --
 ALTER TABLE `user_statistics`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Restricciones para tablas volcadas

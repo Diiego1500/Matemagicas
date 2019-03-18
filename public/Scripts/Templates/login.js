@@ -43,7 +43,7 @@ $('#BtnForgot').click(function () {
     var Ruta = Routing.generate('EmailData');
     swal({
         title: 'Confirmación',
-        text: 'Se enviará un mensaje con los datos de acceso al correio '+email,
+        text: 'Se enviará un mensaje con los datos de acceso al correo '+email,
         type: 'question',
         showCancelButton: true,
         confirmButtonText: 'Aceptar',
@@ -61,7 +61,7 @@ $('#BtnForgot').click(function () {
                     dataType : "json",
                     success: function (data) {
                         if(data['Validation']==true){
-                            swal("Correcto", "Se ha enviado un mensaje con los datos de acceso a matemagicas al correo <br> "+email+"<br><strong>Revisa la carpeta de Span o correo no deseado</strong>", "success");
+                            swal("Correcto", "Se ha enviado un mensaje con un enlace para recuperar la cuenta al correo: <br> "+email+"<br><strong>Revisa la carpeta de Span o correo no deseado</strong>", "success");
                         }else{
                             swal("¡Ups!", "No se encontró un usuario con este correo", "error");
                         }
