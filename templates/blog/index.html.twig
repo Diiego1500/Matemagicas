@@ -70,8 +70,9 @@
                                        {#<img src="{{ asset('Img/src/clock.svg') }}" alt="clock">#}
                                         <p>{{ article.createdAt|localizeddate('long', 'none', 'es_CO') }}</p>
                                         <p>Categoría: {{ article.categoria.name }} | Me gusta: {{ v1 | length }} </p>
+                                        <p>{{ article.imageAuthor | raw }}</p>
                                     </span>
-                                    <p>{{ (article.Section | raw)|slice(0, 150) }} </p>
+                                    <p>{{ (article.Section | slice(0, 150)) | raw}} </p>
                                 </div>
                             </div>
                         </div>

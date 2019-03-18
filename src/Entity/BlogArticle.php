@@ -27,6 +27,11 @@ class BlogArticle
     private $Img='[]';
 
     /**
+     * @ORM\Column(type="string")
+     */
+    private $imageAuthor;
+
+    /**
      * @ORM\Column(type="string", length=100000)
      */
     private $Section;
@@ -179,6 +184,24 @@ class BlogArticle
     {
         $this->metaDescription = $metaDescription;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getImageAuthor()
+    {
+        return $this->imageAuthor;
+    }
+
+    /**
+     * @param mixed $imageAuthor
+     */
+    public function setImageAuthor($imageAuthor)
+    {
+        $this->imageAuthor = $imageAuthor;
+    }
+
+
 
 
 
