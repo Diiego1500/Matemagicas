@@ -25,15 +25,14 @@ class BlogController extends Controller
         $Categories = $em->getRepository(BlogCategory::class)->SearchNameCategory();
         $paginator = $this->get('knp_paginator');
         if ($Categoryname == 'All') {
-            $Articles = $em->getRepository(BlogArticle::class)->findAll();
-//            $Articles = $em->getRepository(BlogArticle::class)->searchAllArticles();
+//            $Articles = $em->getRepository(BlogArticle::class)->findAll();
+            $Articles = $em->getRepository(BlogArticle::class)->searchAllArticles();
         } else {
             $Category = $em->getRepository(BlogCategory::class)->searchCategoryByName($Categoryname);
-            $Articles = $em->getRepository(BlogArticle::class)->findBy(['categoria' => $Category]);
-
-//            $Articles = $em->getRepository(BlogArticle::class)->searchArticlesByCategory($Category);
+//            $Articles = $em->getRepository(BlogArticle::class)->findBy(['categoria' => $Category],['createdAt'=>'DESC']);
+            $Articles = $em->getRepository(BlogArticle::class)->searchArticlesByCategory($Category);
         }
-        $pagination = $paginator->paginate($Articles, $request->query->getInt('page', 1), 4);
+        $pagination = $paginator->paginate($Articles, $request->query->getInt('page', 1), 9);
         $pagination->setTemplate('bundles/KNPPaginatorBundle/Paginador.html.twig');
 
         return $this->render('blog/index.html.twig', array('pagination' => $pagination, "Categories" => $Categories,));
