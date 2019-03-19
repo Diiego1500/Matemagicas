@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Entity\BlogArticle;
 use App\Entity\BlogCategory;
+use App\Entity\BlogNotification;
+use App\Form\BlogNotificationType;
 use Doctrine\ORM\NoResultException;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -67,11 +69,13 @@ class BlogController extends Controller
     public function Article($Url, Request $request, \Swift_Mailer $mailer )
     {
         $em = $this->getDoctrine()->getManager();
+        $blogNotificacion = new BlogNotification();
         $Article = $em->getRepository(BlogArticle::class)->searchArticlesByUrl($Url);
         $Category = $em->getRepository(BlogCategory::class)->getNameOnly($Article['categoria']);
         $text = html_entity_decode($Article['Section']);
         $LikesThisArticle = json_decode($Article['Likes']);
         $defaultData = array('message' => 'Type your message here');
+        $formularioNotificacion = $this->createForm(BlogNotificationType::class, $blogNotificacion);
         $form = $this->createFormBuilder($defaultData)
             ->add('Nombre', TextType::class)
             ->add('Email', EmailType::class)
@@ -79,6 +83,7 @@ class BlogController extends Controller
             ->add('Enviar', SubmitType::class)
             ->getForm();
         $form->handleRequest($request);
+        $formularioNotificacion->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
             $message = (new \Swift_Message('Blog'))
@@ -89,6 +94,19 @@ class BlogController extends Controller
             $this->addFlash('notice','Tu mensaje se ha enviado');
             return $this->redirectToRoute('Article',['Url'=>$Url]);
         }
+        if($formularioNotificacion->isSubmitted() && $formularioNotificacion->isValid()){
+            $blogNotificacion= $formularioNotificacion->getData();
+
+            if($this->EmailExist($blogNotificacion->getEmail())){
+                $this->addFlash('success','Ya se encuentra registrado en nuestro sistema');
+            }else{
+                $em->persist($blogNotificacion);
+                $em->flush();
+                $this->addFlash('success','Ahora recibirás nuestros contenidos c:');
+            }
+
+            return $this->redirectToRoute('Article',['Url'=>$Url]);
+        }
 
         return $this->render('blog/article.html.twig',
             array(
@@ -96,11 +114,20 @@ class BlogController extends Controller
                 'Text' => $text,
                 "CantLikesThisArticle"=>$LikesThisArticle,
                 "Category"=>$Category,
-                'form'=>$form->createView()
+                'form'=>$form->createView(),
+                'formEmail'=>$formularioNotificacion->createView()
             )
         );
     }
 
+    private function EmailExist($email){
+        $em = $this->getDoctrine()->getManager();
+        $exist = $em->getRepository(BlogNotification::class)->findBy(['email'=>$email]);
+        if($exist){
+            return true;
+        }
+        return false;
+    }
 
     /**
      * @Route("/Like/", options={"expose"=true}, name="Like")

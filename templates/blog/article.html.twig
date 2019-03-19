@@ -27,6 +27,23 @@
 {% endblock %}
 {% block body %}
     {{ parent() }}
+    <div class="container">
+        {% for message in app.flashes('notice') %}
+            <div class="alert alert-notice">
+                <div class="alert alert-success" role="alert">
+                    {{ message }}
+                </div>
+            </div>
+        {% endfor %}
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-notice">
+                <div class="alert alert-success" role="alert">
+                    {{ message }}
+                </div>
+
+            </div>
+        {% endfor %}
+    </div>
     {% if is_granted('ROLE_USER') %}
         {% set articulos = Text|split('[espacio]') %}
         <div class="pb-5" style=" border-radius: 6px">
@@ -87,7 +104,6 @@
             </div>
         </div>
     {% elseif is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
-
         {% set articulos = Text|split('[espacio]') %}
         <div class="pb-5">
             <div class="container">
@@ -98,11 +114,15 @@
                         <div class="mt-2 text-center counter">{{ CantLikesThisArticle| length }}</div>
                     </div>
                     <div class="col-10 d-block d-sm-block d-md-none"><h1 class="title pt-3">{{ Article.title }}</h1>
-                        <h6 style="color: #0a8ecd"><img src="{{ asset('Img/src/clock.svg') }}" alt="clock"> {{ Article.createdAt |localizeddate('long', 'none', 'es_CO') }}</h6>
+                        <h6 style="color: #0a8ecd"><img src="{{ asset('Img/src/clock.svg') }}"
+                                                        alt="clock"> {{ Article.createdAt |localizeddate('long', 'none', 'es_CO') }}
+                        </h6>
                         <h6 style="color: #0a8ecd">#{{ Category }}
                             <div id="fb-root"></div>
                             <!-- Your share button code -->
-                            <div class="fb-share-button" data-href="http://www.matemagicas.xyz/blog/post/{{ Article.url }}/" data-layout="button_count"></div>
+                            <div class="fb-share-button"
+                                 data-href="http://www.matemagicas.xyz/blog/post/{{ Article.url }}/"
+                                 data-layout="button_count"></div>
                         </h6>
                     </div>
                 </div>
@@ -128,12 +148,17 @@
                 {% for articulo in articulos %}
                     <p class="section">{{ articulo | raw }}</p>
                 {% endfor %}
-
+                <div class="jumbotron text-center">
+                    <h5 class="my-3">¿Deseas leer más publicaciones como esta? Sólo necesitamos tu Email para
+                        notificarte sobre nuevos Posts</h5>
+                    {{ form_start(formEmail) }}
+                    {{ form_widget(formEmail.email,{attr:{'class':'form-control','placeholder':'Correo electrónico'}}) }}
+                    {{ form_widget(formEmail.Enviar,{attr:{'class':'btn btn-success mt-3'}}) }}
+                    {{ form_end(formEmail) }}
+                </div>
                 {% include 'blog/email.html.twig' %}
             </div>
-
         </div>
-
     {% endif %}
 {% endblock %}
 {% block Js %}
