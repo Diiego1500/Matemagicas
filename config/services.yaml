@@ -6,6 +6,14 @@ parameters:
     getHost: 'localhost/MatemagicasDev/public/index.php/recover/'
 
 services:
+    app.command.mails:
+            class: App\Command\SendBlogByMailCommand
+            arguments:
+                - "%kernel.root_dir%"
+                - "@doctrine.orm.default_entity_manager"
+            tags:
+                - { name: console.command }
+
     twig.extension.intl:
         class: Twig_Extensions_Extension_Intl
         tags:
