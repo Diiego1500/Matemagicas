@@ -6,12 +6,12 @@ use App\Entity\BlogArticle;
 use App\Entity\BlogNotification;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputArgument;
+//use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
+//use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Symfony\Component\Validator\Constraints\DateTime;
+//use Symfony\Component\Validator\Constraints\DateTime;
 
 class SendBlogByMailCommand extends Command
 {
@@ -58,7 +58,7 @@ class SendBlogByMailCommand extends Command
         $message = (new \Swift_Message('POST MATEMÁGICAS: '.$post->getTitle()))
             ->setFrom('contacto@matemagicas.xyz')
             ->setTo($Sendto)
-            ->setBody('Matemágicas ha creado un nuevo Post, visitalo en: ',  'text/html');
+            ->setBody('Matemágicas ha creado un nuevo Post, visitalo en este  <a href="matemagicas.xyz/blog/post/'.$post->getUrl().'">enlace</a>',  'text/html');
         $mailer->send($message);
     }
 }
