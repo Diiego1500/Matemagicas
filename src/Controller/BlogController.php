@@ -149,4 +149,21 @@ class BlogController extends Controller
         }
         return new JsonResponse(['success' => count($Likes) ]);
     }
+
+    /**
+     * @Route("/unsubscribe/{secretToken}/", name="unsubscribe")
+     */
+    public function unsubscribe($secretToken){
+        $em = $this->getDoctrine()->getManager();
+        $blogNotification = $em->getRepository(BlogNotification::class)->findOneBy(['secretToken'=>$secretToken]);
+        if($blogNotification){
+            $this->addFlash('mensaje','Ya no recibirás nuestras notificaciones');
+            $em->remove($blogNotification);
+            $em->flush();
+        }
+        else{
+            $this->addFlash('mensaje','No estás en nuestra lista de notificaciones');
+        }
+        return $this->render('standard/unsubscribed.html.twig');
+    }
 }

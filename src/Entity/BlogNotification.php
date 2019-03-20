@@ -30,6 +30,10 @@ class BlogNotification
      * @ORM\Column(type="boolean")
      */
     private $activate;
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $secretToken;
 
     /**
      * BlogNotification constructor.
@@ -42,6 +46,7 @@ class BlogNotification
         $this->email = $email;
         $this->blogRecibido = $blogRecibido;
         $this->activate = $activate;
+        $this->secretToken = md5(uniqid());
     }
 
     /**
@@ -91,6 +96,15 @@ class BlogNotification
     {
         $this->activate = $activate;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getSecretToken()
+    {
+        return $this->secretToken;
+    }
+
 
 
 

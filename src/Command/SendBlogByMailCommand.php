@@ -42,7 +42,11 @@ class SendBlogByMailCommand extends Command
             $BlogNotifications = $em->getRepository(BlogNotification::class)->findAll();
             foreach($BlogNotifications as $blognotification){
                 if($blognotification->getActivate()){
-                    $this->SendPost($blognotification->getEmail(), $mailer, $Post);
+                    $this->SendPost($blognotification->getEmail(), $mailer, $Post, $blognotification);
+                    $recibidos = json_decode($blognotification->getBlogRecibido());
+                    $recibidos[]=$Post->getId();
+                    $blognotification->setBlogRecibido(json_encode($recibidos));
+                    $em->flush();
                     $io->success('Enviando Post: ' . $blognotification->getEmail());
                 }
             }
@@ -53,12 +57,14 @@ class SendBlogByMailCommand extends Command
 
 
 
-    public function SendPost($Sendto, $mailer, $post)
+    public function SendPost($Sendto, $mailer, $post,$blognotification)
     {
-        $message = (new \Swift_Message('POST MATEMÁGICAS: '.$post->getTitle()))
+        $message = (new \Swift_Message('NUEVO POST MATEMÁGICAS: '.$post->getTitle()))
             ->setFrom('contacto@matemagicas.xyz')
             ->setTo($Sendto)
-            ->setBody('Matemágicas ha creado un nuevo Post, visitalo en este  <a href="matemagicas.xyz/blog/post/'.$post->getUrl().'">enlace</a>',  'text/html');
+            ->setBody('Matemágicas ha creado un nuevo Post, visitalo en este  <a href="localhost/MatemagicasDev/public/index.php/blog/post/'.$post->getUrl().'/">enlace</a> <br><br>
+                    Si no deseas recibir más notificaciones, haz click: <a href="localhost/MatemagicasDev/public/index.php/unsubscribe/'.$blognotification->getSecretToken().'/">aquí</a>'
+                ,  'text/html');
         $mailer->send($message);
     }
 }

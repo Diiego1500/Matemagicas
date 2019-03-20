@@ -80,6 +80,16 @@ class BlogArticle
         $this->createdAt = new \DateTime();
     }
 
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+
 
     /**
      * @return mixed

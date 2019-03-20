@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ parent() }}
+    <div class="container">
+        {% for message in app.flashes('mensaje') %}
+            <div class="alert alert-danger" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        <h6>Sin embargo, puedes registrarte para seguir estudiando en <a href="{{ path('index') }}">Matemágicas</a></h6>
+    </div>
+{% endblock %}
