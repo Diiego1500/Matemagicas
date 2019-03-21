@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\BlogNotification;
 use App\Entity\ComunityAnswer;
 use App\Entity\ComunityQuestion;
 use App\Entity\PracticalExercise;
@@ -136,6 +137,7 @@ class IndexController extends Controller
      */
     public function RegisterUser(Request $request)
     {
+        $em=$this->getDoctrine()->getManager();
         if (!$request->isXmlHttpRequest()) {
             throw new Exception("this is not an ajax Call");
         }
@@ -143,6 +145,11 @@ class IndexController extends Controller
         $username = $request->request->get('username');
         $password = $request->request->get('password');
         $RegisterStatus = $this->CreateAndRegisterUser($email, $username, $password);
+        $blogNotification = $em->getRepository(BlogNotification::class)->findOneBy(['email'=>$email]);
+        if(!$blogNotification){
+            $em->persist(new BlogNotification($email));
+            $em->flush();
+        }
         $array = array();
         switch ($RegisterStatus) {
             case User::EMAIL_EXIST:
