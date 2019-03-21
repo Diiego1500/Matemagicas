@@ -21,7 +21,8 @@ class PrimaryController extends Controller
      */
     public function MatematicaAritmetica(){
         $MATEMATICAARITMETICA = 1;
-        $response = $this->forward('App\Controller\StandardController::SearchSection', array('section'=>$MATEMATICAARITMETICA));
+        $accessible = true;
+        $response = $this->forward('App\Controller\StandardController::SearchSection', array('section'=>$MATEMATICAARITMETICA, 'accessible'=>$accessible));
         return $response;
     }
 
@@ -30,8 +31,13 @@ class PrimaryController extends Controller
      */
     public  function geometria(){
         $GEOMETRIA = 2;
+        $user = $this->getUser();
+        $ThemesUnlokeds = json_decode($user->getAvailableThemes());
+        $accessible = false;
+        if(in_array(14, $ThemesUnlokeds)){$accessible=true;}
         $response = $this->forward('App\Controller\StandardController::SearchSection', array(
-           'section'=>$GEOMETRIA
+            'section'=>$GEOMETRIA,
+            'accessible'=>$accessible
         ));
         return $response;
     }

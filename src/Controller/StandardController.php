@@ -18,15 +18,15 @@ class StandardController extends Controller
 {
 
     /**
-     * @Route("/section/{section}/", name="section")
+     * @Route("/section/{section}/{accessible}", name="section")
      */
-    public function SearchSection($section)
+    public function SearchSection($section,$accessible)
     {
         $em = $this->getDoctrine()->getManager();
         $user = $this->getUser();
         $AvailablesThemes = json_decode($user->getAvailableThemes());
         $themes = $em->getRepository(Theme::class)->searchThemeBySection($section);
-        return $this->render('standard/themes.html.twig', array('themes' => $themes, 'AvailablesThemes' => $AvailablesThemes, 'section' => $section));
+        return $this->render('standard/themes.html.twig', array('themes' => $themes, 'AvailablesThemes' => $AvailablesThemes, 'section' => $section,'accessible'=>$accessible));
     }
 
 
