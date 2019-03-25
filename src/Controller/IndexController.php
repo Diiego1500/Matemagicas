@@ -63,7 +63,7 @@ class IndexController extends Controller
             if ($form->isSubmitted() && $form->isValid()) {
                 $data = $form->getData();
                 $message = (new \Swift_Message('FeedBack'))
-                    ->setFrom('contacto@matemagicas.xyz')
+                    ->setFrom('info@matemagicas.xyz')
                     ->setTo('disenosolyluna@gmail.com')
                     ->setBody($data['Nombre'] . '-' . $data['Email'] . '-' . $data["Mensaje"]);
                 $mailer->send($message);
@@ -184,7 +184,7 @@ class IndexController extends Controller
         $host= $this->getParameter('getHost');
         if ($user) {
             $message = (new \Swift_Message('Matemágicas | Recupera tu contraseña'))
-                ->setFrom('contacto@matemagicas.xyz')
+                ->setFrom('info@matemagicas.xyz')
                 ->setTo($email)
                 ->setBody('Recientemente has solicitado recuperar tu cuenta de Matemágicas, para hacerlo, haz click a en el siguiente: <br> '
 //                    . '<a href="www.matemagicas.xyz/recover/' .$user->getUrlChangePass(). '">Enlace</a> <br>

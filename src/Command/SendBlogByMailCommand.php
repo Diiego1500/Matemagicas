@@ -36,7 +36,7 @@ class SendBlogByMailCommand extends Command
         $io = new SymfonyStyle($input, $output);
         if($Post) {
             $transport = (new \Swift_SmtpTransport('smtp.hostinger.co', 587 ))
-                ->setUsername('contacto@matemagicas.xyz')
+                ->setUsername('info@matemagicas.xyz')
                 ->setPassword('Maatemagicas150');
             $mailer = new \Swift_Mailer($transport);
             $BlogNotifications = $em->getRepository(BlogNotification::class)->findAll();
@@ -60,7 +60,7 @@ class SendBlogByMailCommand extends Command
     public function SendPost($Sendto, $mailer, $post,$blognotification)
     {
         $message = (new \Swift_Message('NUEVO POST MATEMÁGICAS: '.$post->getTitle()))
-            ->setFrom('contacto@matemagicas.xyz')
+            ->setFrom('info@matemagicas.xyz')
             ->setTo($Sendto)
             ->setBody('Matemágicas ha creado un nuevo Post, visitalo en este  <a href="localhost/MatemagicasDev/public/index.php/blog/post/'.$post->getUrl().'/">enlace</a> <br><br>
                     Si no deseas recibir más notificaciones, haz click: <a href="localhost/MatemagicasDev/public/index.php/unsubscribe/'.$blognotification->getSecretToken().'/">aquí</a>'

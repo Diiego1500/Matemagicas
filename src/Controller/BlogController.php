@@ -87,7 +87,7 @@ class BlogController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
             $message = (new \Swift_Message('Blog'))
-                ->setFrom('contacto@matemagicas.xyz')
+                ->setFrom('info@matemagicas.xyz')
                 ->setTo('disenosolyluna@gmail.com')
                 ->setBody($data['Nombre'].'-'.$data['Email'].'-'.$data["Mensaje"]);
             $mailer->send($message);
@@ -165,5 +165,38 @@ class BlogController extends Controller
             $this->addFlash('mensaje','No estás en nuestra lista de notificaciones');
         }
         return $this->render('standard/unsubscribed.html.twig');
+    }
+
+
+
+    /**
+     * @Route("/sendEmailtoSubscribers/71sa7e68c6fd4r0d56b4ed921ctc723tokenbb2/", name="sendEmailtoSubscribers")
+     */
+    public function sendEmailtoSubscribers(\Swift_Mailer $mailer){
+        $em = $this->getDoctrine()->getManager();
+        $BlogNotifications = $em->getRepository(BlogNotification::class)->findAll();
+        $Post = $em->getRepository(BlogArticle::class)->findOneBy(['createdAt'=>new \DateTime()]);
+        foreach($BlogNotifications as $blognotification){
+            if($blognotification->getActivate()){
+                $this->SendPost($blognotification->getEmail(), $mailer, $Post, $blognotification);
+                $recibidos = json_decode($blognotification->getBlogRecibido());
+                $recibidos[]=$Post->getId();
+                $blognotification->setBlogRecibido(json_encode($recibidos));
+                $em->flush();
+            }
+        }
+        return new JsonResponse(["success"=>true]);
+    }
+
+
+    public function SendPost($Sendto, $mailer, $post,$blognotification)
+    {
+        $message = (new \Swift_Message('NUEVO POST MATEMÁGICAS: '.$post->getTitle()))
+            ->setFrom('info@matemagicas.xyz')
+            ->setTo($Sendto)
+            ->setBody('Matemágicas ha creado un nuevo Post, visitalo en este  <a href="localhost/MatemagicasDev/public/index.php/blog/post/'.$post->getUrl().'/">enlace</a> <br><br>
+                    Si no deseas recibir más notificaciones, haz click: <a href="localhost/MatemagicasDev/public/index.php/unsubscribe/'.$blognotification->getSecretToken().'/">aquí</a>'
+                ,  'text/html');
+        $mailer->send($message);
     }
 }
