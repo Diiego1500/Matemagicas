@@ -58,7 +58,7 @@ class BlogArticleRepository extends ServiceEntityRepository
     {
         return $this->getEntityManager()
             ->createQuery('
-            SELECT article.id, article.title, article.Section, article.createdAt, IDENTITY(article.categoria) as categoria, article.Likes, article.url, article.metaDescription
+            SELECT article.id, article.Img, article.title, article.Section, article.createdAt, IDENTITY(article.categoria) as categoria, article.Likes, article.url, article.metaDescription
             FROM App\Entity\BlogArticle article
             WHERE article.url =:Url
             ')
