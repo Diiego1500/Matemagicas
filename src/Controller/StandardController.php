@@ -295,15 +295,19 @@ class StandardController extends Controller
             );
         }
         // return response in XML format
-        $response = new Response(
-            $this->renderView('sitemap/sitemap.html.twig', array( 'urls' => $urls,
-                'hostname' => $hostname)),
-            200
-        );
+        $response = new Response($this->renderView('sitemap/sitemap.html.twig', array( 'urls' => $urls, 'hostname' => $hostname)), 200 );
         $response->headers->set('Content-Type', 'text/xml');
 
         return $response;
 
+    }
+
+
+    /**
+     * @Route("/robots.txt", name="robots", defaults={"_format"="txt"})
+     */
+    public function robots(){
+        return new Response($this->renderView('robots.txt'));
     }
 
 }
