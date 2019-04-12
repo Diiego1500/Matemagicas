@@ -30,6 +30,17 @@ class BlogArticleRepository extends ServiceEntityRepository
             ');
     }
 
+    public function ReturnsearchAllArticles()
+    {
+        return $this->getEntityManager()
+            ->createQuery('
+            SELECT article
+            FROM App\Entity\BlogArticle article
+            ORDER BY article.createdAt DESC
+            ')
+            ->getResult();
+    }
+
     public function searchArticlesByCategory($CategoryId)
     {
         return $this->getEntityManager()

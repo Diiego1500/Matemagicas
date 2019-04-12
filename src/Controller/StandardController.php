@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\BlogArticle;
 use App\Entity\GlobalsTips;
 use App\Entity\Theme;
 use App\Entity\User;
@@ -10,6 +11,7 @@ use Symfony\Component\Debug\Exception\ContextErrorException;
 use Symfony\Component\Debug\Exception\FatalThrowableError;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use App\Entity\PracticalExercise;
@@ -268,6 +270,40 @@ class StandardController extends Controller
             $str .= $keyspace[random_int(0, $max)];
         }
         return $str . '.png';
+    }
+
+
+
+    /**
+     * @Route("/sitemap/sitemap.xml", name="sitemap", defaults={"_format"="xml"})
+     */
+    public function showAction(Request $request) {
+        $em = $this->getDoctrine()->getManager();
+        $urls = array();
+        $hostname = $request->getSchemeAndHttpHost();
+
+        // add static urls
+        $urls[] = array('loc' => $this->generateUrl('index'));
+        $urls[] = array('loc' => $this->generateUrl('definicion'));
+
+        // add static urls with optional tags
+        $urls[] = array('loc' => $this->generateUrl('fos_user_security_login'), 'changefreq' => 'monthly', 'priority' => '1.0');
+        // add dynamic urls, like blog posts from your DB
+        foreach ($em->getRepository(BlogArticle::class)->ReturnsearchAllArticles() as $post) {
+            $urls[] = array(
+                'loc' => $this->generateUrl('Article',array('Url'=>$post->getUrl())),'lastmod'=>$post->getCreatedAt()->format('Y-m-d'), 'priority'=>'1.0'
+            );
+        }
+        // return response in XML format
+        $response = new Response(
+            $this->renderView('sitemap/sitemap.html.twig', array( 'urls' => $urls,
+                'hostname' => $hostname)),
+            200
+        );
+        $response->headers->set('Content-Type', 'text/xml');
+
+        return $response;
+
     }
 
 }
